@@ -1,0 +1,12 @@
+D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\bin\Debug\EManagementSystem.exe.config
+D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\bin\Debug\EManagementSystem.exe
+D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\bin\Debug\EManagementSystem.pdb
+D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.Form1.resources
+D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.Properties.Resources.resources
+D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.csproj.GenerateResource.cache
+D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.csproj.CoreCompileInputs.cache
+D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.exe
+D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.pdb
+D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.frmLogin.resources
+D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.csprojAssemblyReference.cache
+D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.frmRegister.resources
