@@ -10,3 +10,5 @@ D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSys
 D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.frmLogin.resources
 D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.csprojAssemblyReference.cache
 D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.frmRegister.resources
+D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.frmForgotPasswordUser.resources
+D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.frmdashboard.resources

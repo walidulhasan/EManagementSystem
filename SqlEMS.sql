@@ -26,7 +26,15 @@ USE EMS
 GO
 CREATE TABLE loginInfo
 (
-	userName VARCHAR(30),
-	userPassword VARCHAR(10)
+	userName VARCHAR(30) NOT NULL,
+	userPassword VARCHAR(10) NOT NULL
 )
 Go
+INSERT INTO loginInfo VALUES ('admin','ad1234')
+GO
+
+SELECT * FROM loginInfo
+GO
+
+SELECT * FROM loginInfo WHERE userName='admin' or userPassword='slfs'
+GO

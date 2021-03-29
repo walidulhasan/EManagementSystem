@@ -53,9 +53,9 @@ namespace EManagementSystem
             this.label1.ForeColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(28, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 34);
+            this.label1.Size = new System.Drawing.Size(249, 33);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Get Started";
+            this.label1.Text = "REGISTRATION";
             // 
             // label2
             // 
@@ -131,6 +131,7 @@ namespace EManagementSystem
             this.checkbxShowPass.TabIndex = 3;
             this.checkbxShowPass.Text = "Show Password";
             this.checkbxShowPass.UseVisualStyleBackColor = true;
+            this.checkbxShowPass.CheckedChanged += new System.EventHandler(this.checkbxShowPass_CheckedChanged);
             // 
             // btnRegister
             // 
@@ -144,6 +145,7 @@ namespace EManagementSystem
             this.btnRegister.TabIndex = 4;
             this.btnRegister.Text = "REGISTER";
             this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // btnClear
             // 
@@ -157,6 +159,7 @@ namespace EManagementSystem
             this.btnClear.TabIndex = 5;
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // label5
             // 
@@ -184,7 +187,7 @@ namespace EManagementSystem
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(256, 54);
+            this.pictureBox1.Location = new System.Drawing.Point(285, 53);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 68);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -213,7 +216,7 @@ namespace EManagementSystem
             this.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "";

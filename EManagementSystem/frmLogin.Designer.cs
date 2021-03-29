@@ -42,6 +42,7 @@ namespace EManagementSystem
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +75,7 @@ namespace EManagementSystem
             this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label6.Location = new System.Drawing.Point(122, 597);
+            this.label6.Location = new System.Drawing.Point(122, 573);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(148, 25);
             this.label6.TabIndex = 17;
@@ -86,11 +87,11 @@ namespace EManagementSystem
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label5.Location = new System.Drawing.Point(91, 555);
+            this.label5.Location = new System.Drawing.Point(79, 534);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(228, 23);
+            this.label5.Size = new System.Drawing.Size(247, 23);
             this.label5.TabIndex = 18;
-            this.label5.Text = "Already Have an Account !!";
+            this.label5.Text = "If you want to create Account";
             // 
             // btnClear
             // 
@@ -105,6 +106,7 @@ namespace EManagementSystem
             this.btnClear.TabIndex = 15;
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnRegister
             // 
@@ -120,6 +122,7 @@ namespace EManagementSystem
             this.btnRegister.TabIndex = 2;
             this.btnRegister.Text = "LOGIN";
             this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // checkbxShowPass
             // 
@@ -134,6 +137,7 @@ namespace EManagementSystem
             this.checkbxShowPass.TabIndex = 14;
             this.checkbxShowPass.Text = "Show Password";
             this.checkbxShowPass.UseVisualStyleBackColor = true;
+            this.checkbxShowPass.CheckedChanged += new System.EventHandler(this.checkbxShowPass_CheckedChanged);
             // 
             // txtPassword
             // 
@@ -185,9 +189,22 @@ namespace EManagementSystem
             this.label7.ForeColor = System.Drawing.Color.Transparent;
             this.label7.Location = new System.Drawing.Point(34, 74);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(191, 33);
+            this.label7.Size = new System.Drawing.Size(123, 33);
             this.label7.TabIndex = 7;
-            this.label7.Text = "Get Started";
+            this.label7.Text = "LOG IN";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(60, 614);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(281, 23);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Forgot Your Password/UserName?";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // frmLogin
             // 
@@ -197,6 +214,7 @@ namespace EManagementSystem
             this.ClientSize = new System.Drawing.Size(407, 662);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnRegister);
@@ -231,5 +249,6 @@ namespace EManagementSystem
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label4;
     }
 }
