@@ -29,7 +29,7 @@ namespace EManagementSystem
         private void button1_Click(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM loginInfo WHERE userName='"+txtRecover.Text+"' or userPassword='"+txtRecover.Text+"'", con);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM loginInfo WHERE userEmail='"+txtRecover.Text+"'", con);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
             {

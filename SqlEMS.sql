@@ -27,10 +27,11 @@ GO
 CREATE TABLE loginInfo
 (
 	userName VARCHAR(30) NOT NULL,
-	userPassword VARCHAR(10) NOT NULL
+	userPassword VARCHAR(10) NOT NULL,
+	userEmail VARCHAR(30) NOT NULL
 )
 Go
-INSERT INTO loginInfo VALUES ('admin','ad1234')
+INSERT INTO loginInfo VALUES ('admin','ad1234','ad@gmail.com')
 GO
 
 SELECT * FROM loginInfo
@@ -38,3 +39,4 @@ GO
 
 SELECT * FROM loginInfo WHERE userName='admin' or userPassword='slfs'
 GO
+

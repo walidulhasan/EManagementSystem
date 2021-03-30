@@ -33,8 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>C:\Users\User\Downloads\UiDesignDemo\UiDesignDemo\bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +51,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="COMinfo\uccIpage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="COMinfo\uccIpage.Designer.cs">
+      <DependentUpon>uccIpage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COMinfo\uccIpage1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="COMinfo\uccIpage1.Designer.cs">
+      <DependentUpon>uccIpage1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COMinfo\ucclpageM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="COMinfo\ucclpageM.Designer.cs">
+      <DependentUpon>ucclpageM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connection.cs" />
     <Compile Include="dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +81,18 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmComInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmComInfo.Designer.cs">
+      <DependentUpon>frmComInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployee.Designer.cs">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="frmForgotPasswordUser.cs">
       <SubType>Form</SubType>
@@ -78,11 +114,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="COMinfo\uccIpage.resx">
+      <DependentUpon>uccIpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COMinfo\uccIpage1.resx">
+      <DependentUpon>uccIpage1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COMinfo\ucclpageM.resx">
+      <DependentUpon>ucclpageM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmComInfo.resx">
+      <DependentUpon>frmComInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployee.resx">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmForgotPasswordUser.resx">
       <DependentUpon>frmForgotPasswordUser.cs</DependentUpon>

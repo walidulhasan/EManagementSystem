@@ -14,6 +14,7 @@ namespace EManagementSystem
 {
     public partial class frmRegister : Form
     {
+        public Point mouseLocation;
         SqlConnection con = new SqlConnection(@"Data Source=WALIDULHASAN\MAHMUDSABUJ;Initial Catalog=EMS;Integrated Security=True");
         public frmRegister()
         {
@@ -28,19 +29,19 @@ namespace EManagementSystem
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if(txtUsername.Text == "" || txtPassword.Text == "" || txtConfirmpassword.Text == "")
+            if(txtUsername.Text == "" || txtPassword.Text == "" || txtConfirmpassword.Text == "" || txtEmail.Text == "")
             {
                 MessageBox.Show("Username and Password fields are empty","Registration Failed",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             else if (txtPassword.Text == txtConfirmpassword.Text)
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand(@"INSERT INTO loginInfo VALUES ('" + txtUsername.Text + "','" + txtPassword.Text + "')",con);
+                SqlCommand cmd = new SqlCommand(@"INSERT INTO loginInfo VALUES ('" + txtUsername.Text + "','" + txtPassword.Text + "','" + txtEmail.Text + "')", con);
                 cmd.ExecuteNonQuery();
                 con.Close();
                 clear();
                 //this.Hide();
-                //MessageBox.Show("Your Account has been Successfully Created","Registration Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Your Account has been Successfully Created","Registration Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 //frmLogin log = new frmLogin();
                 //log.Show();
 
@@ -57,6 +58,7 @@ namespace EManagementSystem
         {
             txtUsername.Text = "";
             txtPassword.Text = "";
+            txtEmail.Text = "";
             txtConfirmpassword.Text = "";
         }
 
@@ -78,6 +80,26 @@ namespace EManagementSystem
                 txtPassword.PasswordChar = '*';
                 txtConfirmpassword.PasswordChar = '*';
             }
+        }
+
+        private void mouse_down(object sender, MouseEventArgs e)
+        {
+            mouseLocation = new Point(-e.X, -e.Y);
+        }
+
+        private void mouse_move(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Point mousePose = Control.MousePosition;
+                mousePose.Offset(mouseLocation.X, mouseLocation.Y);
+                Location = mousePose;
+            }
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -13,6 +13,7 @@ namespace EManagementSystem
 {
     public partial class frmLogin : Form
     {
+        public Point mouseLocation;
         SqlConnection con = new SqlConnection(@"Data Source=WALIDULHASAN\MAHMUDSABUJ;Initial Catalog=EMS;Integrated Security=True");
         public frmLogin()
         {
@@ -79,6 +80,21 @@ namespace EManagementSystem
         {
             dataclear();
 
+        }
+
+        private void mouse_Down(object sender, MouseEventArgs e)
+        {
+            mouseLocation = new Point(-e.X,-e.Y);
+        }
+
+        private void mouse_Move(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Point mousePose = Control.MousePosition;
+                mousePose.Offset(mouseLocation.X, mouseLocation.Y);
+                Location = mousePose;
+            }
         }
     }
 }

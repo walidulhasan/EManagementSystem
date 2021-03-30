@@ -43,37 +43,40 @@ namespace EManagementSystem
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(243, 34);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(436, 46);
             this.label1.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(621, 68);
+            this.label1.Size = new System.Drawing.Size(669, 73);
             this.label1.TabIndex = 0;
             this.label1.Text = "E-Management System";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(394, 122);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(614, 184);
             this.label2.Margin = new System.Windows.Forms.Padding(14, 0, 14, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(312, 68);
+            this.label2.Size = new System.Drawing.Size(335, 73);
             this.label2.TabIndex = 1;
             this.label2.Text = "Version 2.0";
             // 
             // progressbr
             // 
             this.progressbr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.progressbr.Location = new System.Drawing.Point(-2, 454);
+            this.progressbr.Location = new System.Drawing.Point(-14, 733);
             this.progressbr.Name = "progressbr";
-            this.progressbr.Size = new System.Drawing.Size(1092, 23);
+            this.progressbr.Size = new System.Drawing.Size(1590, 23);
             this.progressbr.TabIndex = 2;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.ErrorImage = null;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(482, 209);
+            this.pictureBox1.Location = new System.Drawing.Point(665, 310);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 82);
+            this.pictureBox1.Size = new System.Drawing.Size(261, 161);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -86,19 +89,19 @@ namespace EManagementSystem
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(830, 407);
+            this.label3.Location = new System.Drawing.Point(1315, 684);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(248, 32);
+            this.label3.Size = new System.Drawing.Size(195, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "powered by WHBA";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(36F, 68F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(29F, 55F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1090, 476);
+            this.ClientSize = new System.Drawing.Size(1575, 756);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.progressbr);
