@@ -63,5 +63,11 @@ namespace EManagementSystem
             cinfo.Show();
             
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            frmEmployeePage emp = new frmEmployeePage();
+            emp.Show();
+        }
     }
 }
