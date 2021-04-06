@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace EManagementSystem
 {
     public partial class frmdashboard : Form
@@ -58,16 +59,47 @@ namespace EManagementSystem
 
         private void pictureBox11_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            
             frmComInfo cinfo = new frmComInfo();
             cinfo.Show();
-            
+            this.Hide();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             frmEmployeePage emp = new frmEmployeePage();
             emp.Show();
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            frmReportForm rf = new frmReportForm();
+            rf.Show();
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            frmAbout fa = new frmAbout();
+            fa.Show();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            frmview fv = new frmview();
+            fv.Show();
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            frmNotice no = new frmNotice();
+            no.Show();
+            this.Hide();
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            frmCEPsearching ser = new frmCEPsearching();
+            ser.Show();
         }
     }
 }

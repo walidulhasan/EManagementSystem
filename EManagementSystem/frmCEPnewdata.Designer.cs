@@ -34,8 +34,12 @@ namespace EManagementSystem
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPersonal = new System.Windows.Forms.TabPage();
-            this.tabAcademic = new System.Windows.Forms.TabPage();
-            this.tabOfficial = new System.Windows.Forms.TabPage();
+            this.btnUpload = new System.Windows.Forms.Button();
+            this.picShow = new System.Windows.Forms.PictureBox();
+            this.dataGridViewPersonal = new System.Windows.Forms.DataGridView();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkBoxMaritalStatus = new System.Windows.Forms.CheckBox();
             this.rdFemale = new System.Windows.Forms.RadioButton();
@@ -60,58 +64,60 @@ namespace EManagementSystem
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.dataGridViewPersonal = new System.Windows.Forms.DataGridView();
+            this.tabAcademic = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtSpecial = new System.Windows.Forms.TextBox();
             this.txtMast = new System.Windows.Forms.TextBox();
             this.txtHons = new System.Windows.Forms.TextBox();
             this.txtHsc = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.txtSsc = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.tabOfficial = new System.Windows.Forms.TabPage();
+            this.txtFOid = new System.Windows.Forms.TextBox();
+            this.btnOFshow = new System.Windows.Forms.Button();
+            this.btnOFdelete = new System.Windows.Forms.Button();
+            this.btnOFupdate = new System.Windows.Forms.Button();
+            this.btnOFsearch = new System.Windows.Forms.Button();
+            this.btnOFsave = new System.Windows.Forms.Button();
+            this.btnOFclear = new System.Windows.Forms.Button();
+            this.dataGridOF = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.txtOFproPosition = new System.Windows.Forms.TextBox();
+            this.txtOFpresPosition = new System.Windows.Forms.TextBox();
+            this.txtOFprePosition = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtOFbranch = new System.Windows.Forms.TextBox();
+            this.txtOFbrCode = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.btnUpload = new System.Windows.Forms.Button();
-            this.picShow = new System.Windows.Forms.PictureBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPersonal.SuspendLayout();
-            this.tabAcademic.SuspendLayout();
-            this.tabOfficial.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picShow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonal)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.tabAcademic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.tabOfficial.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridOF)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picShow)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -166,34 +172,84 @@ namespace EManagementSystem
             this.tabPersonal.TabIndex = 0;
             this.tabPersonal.Text = "Personla Information";
             // 
-            // tabAcademic
+            // btnUpload
             // 
-            this.tabAcademic.BackColor = System.Drawing.Color.MidnightBlue;
-            this.tabAcademic.Controls.Add(this.dataGridView1);
-            this.tabAcademic.Controls.Add(this.button1);
-            this.tabAcademic.Controls.Add(this.button2);
-            this.tabAcademic.Controls.Add(this.groupBox2);
-            this.tabAcademic.Location = new System.Drawing.Point(4, 22);
-            this.tabAcademic.Name = "tabAcademic";
-            this.tabAcademic.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAcademic.Size = new System.Drawing.Size(1315, 801);
-            this.tabAcademic.TabIndex = 1;
-            this.tabAcademic.Text = "Academic Data";
+            this.btnUpload.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnUpload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpload.FlatAppearance.BorderSize = 2;
+            this.btnUpload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpload.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpload.ForeColor = System.Drawing.Color.White;
+            this.btnUpload.Location = new System.Drawing.Point(977, 302);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(221, 41);
+            this.btnUpload.TabIndex = 8;
+            this.btnUpload.Text = "Upload";
+            this.btnUpload.UseVisualStyleBackColor = false;
             // 
-            // tabOfficial
+            // picShow
             // 
-            this.tabOfficial.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.tabOfficial.Controls.Add(this.button3);
-            this.tabOfficial.Controls.Add(this.button4);
-            this.tabOfficial.Controls.Add(this.dataGridView2);
-            this.tabOfficial.Controls.Add(this.groupBox4);
-            this.tabOfficial.Controls.Add(this.groupBox3);
-            this.tabOfficial.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabOfficial.Location = new System.Drawing.Point(4, 22);
-            this.tabOfficial.Name = "tabOfficial";
-            this.tabOfficial.Size = new System.Drawing.Size(1315, 801);
-            this.tabOfficial.TabIndex = 2;
-            this.tabOfficial.Text = "Official with other";
+            this.picShow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picShow.Location = new System.Drawing.Point(977, 58);
+            this.picShow.Name = "picShow";
+            this.picShow.Size = new System.Drawing.Size(221, 228);
+            this.picShow.TabIndex = 7;
+            this.picShow.TabStop = false;
+            // 
+            // dataGridViewPersonal
+            // 
+            this.dataGridViewPersonal.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewPersonal.BackgroundColor = System.Drawing.Color.Indigo;
+            this.dataGridViewPersonal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPersonal.GridColor = System.Drawing.Color.White;
+            this.dataGridViewPersonal.Location = new System.Drawing.Point(3, 699);
+            this.dataGridViewPersonal.Name = "dataGridViewPersonal";
+            this.dataGridViewPersonal.Size = new System.Drawing.Size(1309, 94);
+            this.dataGridViewPersonal.TabIndex = 6;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.ErrorImage = null;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1061, 586);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(68, 56);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.FlatAppearance.BorderSize = 2;
+            this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(972, 395);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(242, 65);
+            this.btnSave.TabIndex = 4;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClear.FlatAppearance.BorderSize = 2;
+            this.btnClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(972, 487);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(242, 65);
+            this.btnClear.TabIndex = 4;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
             // 
             // groupBox1
             // 
@@ -390,7 +446,6 @@ namespace EManagementSystem
             this.label17.Size = new System.Drawing.Size(121, 31);
             this.label17.TabIndex = 12;
             this.label17.Text = "NID No :";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label16
             // 
@@ -469,58 +524,62 @@ namespace EManagementSystem
             this.label1.TabIndex = 6;
             this.label1.Text = "Title :";
             // 
-            // btnClear
+            // tabAcademic
             // 
-            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClear.FlatAppearance.BorderSize = 2;
-            this.btnClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(972, 487);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(242, 65);
-            this.btnClear.TabIndex = 4;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = false;
+            this.tabAcademic.BackColor = System.Drawing.Color.MidnightBlue;
+            this.tabAcademic.Controls.Add(this.dataGridView1);
+            this.tabAcademic.Controls.Add(this.button1);
+            this.tabAcademic.Controls.Add(this.button2);
+            this.tabAcademic.Controls.Add(this.groupBox2);
+            this.tabAcademic.Location = new System.Drawing.Point(4, 22);
+            this.tabAcademic.Name = "tabAcademic";
+            this.tabAcademic.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAcademic.Size = new System.Drawing.Size(1315, 801);
+            this.tabAcademic.TabIndex = 1;
+            this.tabAcademic.Text = "Academic Data";
             // 
-            // btnSave
+            // dataGridView1
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.FlatAppearance.BorderSize = 2;
-            this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(972, 395);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(242, 65);
-            this.btnSave.TabIndex = 4;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Indigo;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.Color.White;
+            this.dataGridView1.Location = new System.Drawing.Point(537, 56);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(647, 489);
+            this.dataGridView1.TabIndex = 7;
             // 
-            // pictureBox2
+            // button1
             // 
-            this.pictureBox2.ErrorImage = null;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1061, 586);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(68, 56);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(295, 585);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(154, 65);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Save";
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // dataGridViewPersonal
+            // button2
             // 
-            this.dataGridViewPersonal.BackgroundColor = System.Drawing.Color.Indigo;
-            this.dataGridViewPersonal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPersonal.GridColor = System.Drawing.Color.White;
-            this.dataGridViewPersonal.Location = new System.Drawing.Point(3, 699);
-            this.dataGridViewPersonal.Name = "dataGridViewPersonal";
-            this.dataGridViewPersonal.Size = new System.Drawing.Size(1309, 94);
-            this.dataGridViewPersonal.TabIndex = 6;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 2;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(95, 585);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(154, 65);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Clear";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // groupBox2
             // 
@@ -577,6 +636,14 @@ namespace EManagementSystem
             this.txtHsc.TabIndex = 1;
             this.txtHsc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(130, 50);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(238, 32);
+            this.textBox6.TabIndex = 1;
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // txtSsc
             // 
             this.txtSsc.Location = new System.Drawing.Point(130, 118);
@@ -612,6 +679,15 @@ namespace EManagementSystem
             this.label10.TabIndex = 0;
             this.label10.Text = "Honour\'s :";
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(63, 54);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(60, 24);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "JSC :";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -630,75 +706,163 @@ namespace EManagementSystem
             this.label8.TabIndex = 0;
             this.label8.Text = "SSC :";
             // 
-            // button1
+            // tabOfficial
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(295, 585);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(154, 65);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = false;
+            this.tabOfficial.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.tabOfficial.Controls.Add(this.txtFOid);
+            this.tabOfficial.Controls.Add(this.btnOFshow);
+            this.tabOfficial.Controls.Add(this.label23);
+            this.tabOfficial.Controls.Add(this.btnOFdelete);
+            this.tabOfficial.Controls.Add(this.btnOFupdate);
+            this.tabOfficial.Controls.Add(this.btnOFsearch);
+            this.tabOfficial.Controls.Add(this.btnOFsave);
+            this.tabOfficial.Controls.Add(this.btnOFclear);
+            this.tabOfficial.Controls.Add(this.dataGridOF);
+            this.tabOfficial.Controls.Add(this.groupBox4);
+            this.tabOfficial.Controls.Add(this.groupBox3);
+            this.tabOfficial.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabOfficial.Location = new System.Drawing.Point(4, 22);
+            this.tabOfficial.Name = "tabOfficial";
+            this.tabOfficial.Size = new System.Drawing.Size(1315, 801);
+            this.tabOfficial.TabIndex = 2;
+            this.tabOfficial.Text = "Official with other";
             // 
-            // button2
+            // txtFOid
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(95, 585);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(154, 65);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = false;
+            this.txtFOid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.txtFOid.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFOid.ForeColor = System.Drawing.Color.White;
+            this.txtFOid.Location = new System.Drawing.Point(68, 549);
+            this.txtFOid.Multiline = true;
+            this.txtFOid.Name = "txtFOid";
+            this.txtFOid.Size = new System.Drawing.Size(145, 37);
+            this.txtFOid.TabIndex = 11;
+            this.txtFOid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // dataGridView1
+            // btnOFshow
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Indigo;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(537, 56);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(647, 489);
-            this.dataGridView1.TabIndex = 7;
+            this.btnOFshow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnOFshow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOFshow.FlatAppearance.BorderSize = 2;
+            this.btnOFshow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnOFshow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOFshow.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOFshow.ForeColor = System.Drawing.Color.White;
+            this.btnOFshow.Location = new System.Drawing.Point(841, 230);
+            this.btnOFshow.Name = "btnOFshow";
+            this.btnOFshow.Size = new System.Drawing.Size(242, 65);
+            this.btnOFshow.TabIndex = 9;
+            this.btnOFshow.Text = "Show";
+            this.btnOFshow.UseVisualStyleBackColor = false;
+            this.btnOFshow.Click += new System.EventHandler(this.btnOFshow_Click);
             // 
-            // textBox2
+            // btnOFdelete
             // 
-            this.textBox2.Location = new System.Drawing.Point(28, 203);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(212, 32);
-            this.textBox2.TabIndex = 2;
+            this.btnOFdelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnOFdelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOFdelete.FlatAppearance.BorderSize = 2;
+            this.btnOFdelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnOFdelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOFdelete.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOFdelete.ForeColor = System.Drawing.Color.White;
+            this.btnOFdelete.Location = new System.Drawing.Point(627, 542);
+            this.btnOFdelete.Name = "btnOFdelete";
+            this.btnOFdelete.Size = new System.Drawing.Size(130, 50);
+            this.btnOFdelete.TabIndex = 9;
+            this.btnOFdelete.Text = "Delete";
+            this.btnOFdelete.UseVisualStyleBackColor = false;
+            this.btnOFdelete.Click += new System.EventHandler(this.btnOFdelete_Click);
             // 
-            // label14
+            // btnOFupdate
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(83, 181);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(155, 24);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Present Position";
+            this.btnOFupdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnOFupdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOFupdate.FlatAppearance.BorderSize = 2;
+            this.btnOFupdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnOFupdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOFupdate.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOFupdate.ForeColor = System.Drawing.Color.White;
+            this.btnOFupdate.Location = new System.Drawing.Point(447, 542);
+            this.btnOFupdate.Name = "btnOFupdate";
+            this.btnOFupdate.Size = new System.Drawing.Size(130, 50);
+            this.btnOFupdate.TabIndex = 9;
+            this.btnOFupdate.Text = "Update";
+            this.btnOFupdate.UseVisualStyleBackColor = false;
+            this.btnOFupdate.Click += new System.EventHandler(this.btnOFupdate_Click);
+            // 
+            // btnOFsearch
+            // 
+            this.btnOFsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnOFsearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOFsearch.FlatAppearance.BorderSize = 2;
+            this.btnOFsearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnOFsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOFsearch.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOFsearch.ForeColor = System.Drawing.Color.White;
+            this.btnOFsearch.Location = new System.Drawing.Point(258, 542);
+            this.btnOFsearch.Name = "btnOFsearch";
+            this.btnOFsearch.Size = new System.Drawing.Size(130, 50);
+            this.btnOFsearch.TabIndex = 9;
+            this.btnOFsearch.Text = "Search";
+            this.btnOFsearch.UseVisualStyleBackColor = false;
+            this.btnOFsearch.Click += new System.EventHandler(this.btnOFsearch_Click);
+            // 
+            // btnOFsave
+            // 
+            this.btnOFsave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnOFsave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOFsave.FlatAppearance.BorderSize = 2;
+            this.btnOFsave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnOFsave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOFsave.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOFsave.ForeColor = System.Drawing.Color.White;
+            this.btnOFsave.Location = new System.Drawing.Point(841, 99);
+            this.btnOFsave.Name = "btnOFsave";
+            this.btnOFsave.Size = new System.Drawing.Size(242, 65);
+            this.btnOFsave.TabIndex = 9;
+            this.btnOFsave.Text = "Save";
+            this.btnOFsave.UseVisualStyleBackColor = false;
+            this.btnOFsave.Click += new System.EventHandler(this.btnOFsave_Click);
+            // 
+            // btnOFclear
+            // 
+            this.btnOFclear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnOFclear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOFclear.FlatAppearance.BorderSize = 2;
+            this.btnOFclear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnOFclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOFclear.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOFclear.ForeColor = System.Drawing.Color.White;
+            this.btnOFclear.Location = new System.Drawing.Point(841, 361);
+            this.btnOFclear.Name = "btnOFclear";
+            this.btnOFclear.Size = new System.Drawing.Size(242, 65);
+            this.btnOFclear.TabIndex = 10;
+            this.btnOFclear.Text = "Clear";
+            this.btnOFclear.UseVisualStyleBackColor = false;
+            this.btnOFclear.Click += new System.EventHandler(this.btnOFclear_Click);
+            // 
+            // dataGridOF
+            // 
+            this.dataGridOF.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridOF.BackgroundColor = System.Drawing.Color.Indigo;
+            this.dataGridOF.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridOF.GridColor = System.Drawing.Color.White;
+            this.dataGridOF.Location = new System.Drawing.Point(8, 616);
+            this.dataGridOF.Name = "dataGridOF";
+            this.dataGridOF.Size = new System.Drawing.Size(1299, 177);
+            this.dataGridOF.TabIndex = 8;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.label15);
-            this.groupBox4.Controls.Add(this.textBox5);
-            this.groupBox4.Controls.Add(this.textBox4);
-            this.groupBox4.Controls.Add(this.textBox3);
+            this.groupBox4.Controls.Add(this.txtOFproPosition);
+            this.groupBox4.Controls.Add(this.txtOFpresPosition);
+            this.groupBox4.Controls.Add(this.txtOFprePosition);
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox4.Location = new System.Drawing.Point(91, 51);
+            this.groupBox4.ForeColor = System.Drawing.Color.DarkBlue;
+            this.groupBox4.Location = new System.Drawing.Point(68, 40);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(331, 452);
             this.groupBox4.TabIndex = 2;
@@ -714,6 +878,42 @@ namespace EManagementSystem
             this.label15.TabIndex = 0;
             this.label15.Text = "Promotion Position";
             // 
+            // txtOFproPosition
+            // 
+            this.txtOFproPosition.ForeColor = System.Drawing.Color.DarkBlue;
+            this.txtOFproPosition.Location = new System.Drawing.Point(48, 355);
+            this.txtOFproPosition.Name = "txtOFproPosition";
+            this.txtOFproPosition.Size = new System.Drawing.Size(251, 32);
+            this.txtOFproPosition.TabIndex = 2;
+            this.txtOFproPosition.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtOFpresPosition
+            // 
+            this.txtOFpresPosition.ForeColor = System.Drawing.Color.DarkBlue;
+            this.txtOFpresPosition.Location = new System.Drawing.Point(48, 237);
+            this.txtOFpresPosition.Name = "txtOFpresPosition";
+            this.txtOFpresPosition.Size = new System.Drawing.Size(251, 32);
+            this.txtOFpresPosition.TabIndex = 2;
+            this.txtOFpresPosition.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtOFprePosition
+            // 
+            this.txtOFprePosition.ForeColor = System.Drawing.Color.DarkBlue;
+            this.txtOFprePosition.Location = new System.Drawing.Point(48, 112);
+            this.txtOFprePosition.Name = "txtOFprePosition";
+            this.txtOFprePosition.Size = new System.Drawing.Size(251, 32);
+            this.txtOFprePosition.TabIndex = 2;
+            this.txtOFprePosition.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(83, 181);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(155, 24);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Present Position";
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -723,150 +923,66 @@ namespace EManagementSystem
             this.label13.TabIndex = 0;
             this.label13.Text = "Privious Position ";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(28, 97);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(212, 32);
-            this.textBox1.TabIndex = 2;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(68, 61);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(128, 24);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Branch Code";
-            // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.txtOFbranch);
+            this.groupBox3.Controls.Add(this.txtOFbrCode);
             this.groupBox3.Controls.Add(this.label20);
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox3.Location = new System.Drawing.Point(434, 51);
+            this.groupBox3.ForeColor = System.Drawing.Color.DarkBlue;
+            this.groupBox3.Location = new System.Drawing.Point(411, 40);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(279, 452);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Branch Code";
             // 
+            // txtOFbranch
+            // 
+            this.txtOFbranch.ForeColor = System.Drawing.Color.DarkBlue;
+            this.txtOFbranch.Location = new System.Drawing.Point(28, 217);
+            this.txtOFbranch.Name = "txtOFbranch";
+            this.txtOFbranch.Size = new System.Drawing.Size(212, 32);
+            this.txtOFbranch.TabIndex = 2;
+            this.txtOFbranch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtOFbrCode
+            // 
+            this.txtOFbrCode.ForeColor = System.Drawing.Color.DarkBlue;
+            this.txtOFbrCode.Location = new System.Drawing.Point(28, 111);
+            this.txtOFbrCode.Name = "txtOFbrCode";
+            this.txtOFbrCode.Size = new System.Drawing.Size(212, 32);
+            this.txtOFbrCode.TabIndex = 2;
+            this.txtOFbrCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(99, 167);
+            this.label20.Location = new System.Drawing.Point(99, 181);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(76, 24);
             this.label20.TabIndex = 0;
             this.label20.Text = "Branch";
             // 
-            // dataGridView2
+            // label19
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.Indigo;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.GridColor = System.Drawing.Color.White;
-            this.dataGridView2.Location = new System.Drawing.Point(8, 616);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1223, 110);
-            this.dataGridView2.TabIndex = 8;
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(68, 75);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(128, 24);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Branch Code";
             // 
-            // button3
+            // label23
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(857, 163);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(242, 65);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Save";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(857, 255);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(242, 65);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Clear";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(48, 112);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(251, 32);
-            this.textBox3.TabIndex = 2;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(48, 237);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(251, 32);
-            this.textBox4.TabIndex = 2;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(48, 355);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(251, 32);
-            this.textBox5.TabIndex = 2;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(63, 54);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(60, 24);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "JSC :";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(130, 50);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(238, 32);
-            this.textBox6.TabIndex = 1;
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnUpload
-            // 
-            this.btnUpload.BackColor = System.Drawing.Color.DarkCyan;
-            this.btnUpload.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUpload.FlatAppearance.BorderSize = 2;
-            this.btnUpload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpload.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpload.ForeColor = System.Drawing.Color.White;
-            this.btnUpload.Location = new System.Drawing.Point(977, 302);
-            this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(221, 41);
-            this.btnUpload.TabIndex = 8;
-            this.btnUpload.Text = "Upload";
-            this.btnUpload.UseVisualStyleBackColor = false;
-            // 
-            // picShow
-            // 
-            this.picShow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picShow.Location = new System.Drawing.Point(977, 58);
-            this.picShow.Name = "picShow";
-            this.picShow.Size = new System.Drawing.Size(221, 228);
-            this.picShow.TabIndex = 7;
-            this.picShow.TabStop = false;
+            this.label23.AutoSize = true;
+            this.label23.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label23.Location = new System.Drawing.Point(107, 517);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(62, 24);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Of-ID";
             // 
             // frmCEPnewdata
             // 
@@ -883,21 +999,22 @@ namespace EManagementSystem
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPersonal.ResumeLayout(false);
-            this.tabAcademic.ResumeLayout(false);
-            this.tabOfficial.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picShow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonal)).EndInit();
+            this.tabAcademic.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabOfficial.ResumeLayout(false);
+            this.tabOfficial.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridOF)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picShow)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -952,24 +1069,30 @@ namespace EManagementSystem
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridOF;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtOFbranch;
+        private System.Windows.Forms.TextBox txtOFbrCode;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button btnOFsave;
+        private System.Windows.Forms.Button btnOFclear;
+        private System.Windows.Forms.TextBox txtOFpresPosition;
+        private System.Windows.Forms.TextBox txtOFprePosition;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtOFproPosition;
         private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.PictureBox picShow;
+        private System.Windows.Forms.Button btnOFdelete;
+        private System.Windows.Forms.Button btnOFupdate;
+        private System.Windows.Forms.Button btnOFsearch;
+        private System.Windows.Forms.Button btnOFshow;
+        private System.Windows.Forms.TextBox txtFOid;
+        private System.Windows.Forms.Label label23;
     }
 }

@@ -19,15 +19,13 @@ namespace EManagementSystem
         #region Home Button
         private void button7_Click(object sender, EventArgs e)
         {
-            frmdashboard db = new frmdashboard();
-            db.Show();
             this.Close();
         }
         #endregion
         #region Exit application
         private void btnexit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
         #endregion
         #region For Child Form Load

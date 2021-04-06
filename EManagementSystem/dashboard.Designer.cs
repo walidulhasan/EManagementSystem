@@ -187,6 +187,7 @@ namespace EManagementSystem
             // pictureBox4
             // 
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.ErrorImage = null;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(71, 207);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
@@ -202,7 +203,7 @@ namespace EManagementSystem
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label3.Location = new System.Drawing.Point(66, 375);
+            this.label3.Location = new System.Drawing.Point(62, 375);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(141, 30);
@@ -213,20 +214,21 @@ namespace EManagementSystem
             // 
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(220, 207);
+            this.pictureBox5.Location = new System.Drawing.Point(232, 207);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(125, 165);
+            this.pictureBox5.Size = new System.Drawing.Size(122, 165);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 3;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label4.Location = new System.Drawing.Point(556, 375);
+            this.label4.Location = new System.Drawing.Point(571, 375);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 30);
@@ -237,10 +239,10 @@ namespace EManagementSystem
             // 
             this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(369, 207);
+            this.pictureBox6.Location = new System.Drawing.Point(393, 207);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(133, 164);
+            this.pictureBox6.Size = new System.Drawing.Size(122, 165);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
@@ -250,7 +252,7 @@ namespace EManagementSystem
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label5.Location = new System.Drawing.Point(384, 374);
+            this.label5.Location = new System.Drawing.Point(398, 374);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(112, 30);
@@ -261,10 +263,10 @@ namespace EManagementSystem
             // 
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(525, 207);
+            this.pictureBox7.Location = new System.Drawing.Point(554, 207);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(135, 164);
+            this.pictureBox7.Size = new System.Drawing.Size(122, 165);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 3;
             this.pictureBox7.TabStop = false;
@@ -274,7 +276,7 @@ namespace EManagementSystem
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label6.Location = new System.Drawing.Point(246, 375);
+            this.label6.Location = new System.Drawing.Point(255, 375);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 30);
@@ -285,44 +287,46 @@ namespace EManagementSystem
             // 
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(694, 208);
+            this.pictureBox8.Location = new System.Drawing.Point(715, 207);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(147, 164);
+            this.pictureBox8.Size = new System.Drawing.Size(122, 165);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 3;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label7.Location = new System.Drawing.Point(76, 612);
+            this.label7.Location = new System.Drawing.Point(83, 612);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(99, 30);
             this.label7.TabIndex = 4;
-            this.label7.Text = "Notice";
+            this.label7.Text = "E-Send";
             // 
             // pictureBox9
             // 
             this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(878, 208);
+            this.pictureBox9.Location = new System.Drawing.Point(876, 207);
             this.pictureBox9.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(134, 163);
+            this.pictureBox9.Size = new System.Drawing.Size(122, 165);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 3;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label8.Location = new System.Drawing.Point(902, 375);
+            this.label8.Location = new System.Drawing.Point(889, 375);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(97, 30);
@@ -340,12 +344,13 @@ namespace EManagementSystem
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 3;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
             // pictureBox11
             // 
             this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(220, 444);
+            this.pictureBox11.Location = new System.Drawing.Point(232, 444);
             this.pictureBox11.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(125, 162);
@@ -358,19 +363,20 @@ namespace EManagementSystem
             // 
             this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(382, 444);
+            this.pictureBox12.Location = new System.Drawing.Point(396, 444);
             this.pictureBox12.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(120, 162);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 3;
             this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
             // 
             // pictureBox13
             // 
             this.pictureBox13.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(547, 444);
+            this.pictureBox13.Location = new System.Drawing.Point(555, 444);
             this.pictureBox13.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(123, 162);
@@ -382,10 +388,10 @@ namespace EManagementSystem
             // 
             this.pictureBox14.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(892, 444);
+            this.pictureBox14.Location = new System.Drawing.Point(877, 444);
             this.pictureBox14.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(121, 162);
+            this.pictureBox14.Size = new System.Drawing.Size(135, 162);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 3;
             this.pictureBox14.TabStop = false;
@@ -394,7 +400,7 @@ namespace EManagementSystem
             // 
             this.pictureBox15.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(703, 444);
+            this.pictureBox15.Location = new System.Drawing.Point(717, 444);
             this.pictureBox15.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(121, 162);
@@ -407,7 +413,7 @@ namespace EManagementSystem
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label9.Location = new System.Drawing.Point(542, 609);
+            this.label9.Location = new System.Drawing.Point(550, 609);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(132, 30);
@@ -419,7 +425,7 @@ namespace EManagementSystem
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label10.Location = new System.Drawing.Point(894, 609);
+            this.label10.Location = new System.Drawing.Point(878, 609);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(132, 30);
@@ -431,7 +437,7 @@ namespace EManagementSystem
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label11.Location = new System.Drawing.Point(713, 609);
+            this.label11.Location = new System.Drawing.Point(711, 609);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(132, 30);
@@ -443,7 +449,7 @@ namespace EManagementSystem
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label12.Location = new System.Drawing.Point(713, 375);
+            this.label12.Location = new System.Drawing.Point(706, 375);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(141, 30);
@@ -455,7 +461,7 @@ namespace EManagementSystem
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label13.Location = new System.Drawing.Point(228, 612);
+            this.label13.Location = new System.Drawing.Point(230, 612);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(129, 30);
@@ -467,7 +473,7 @@ namespace EManagementSystem
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label14.Location = new System.Drawing.Point(386, 612);
+            this.label14.Location = new System.Drawing.Point(411, 612);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(90, 30);

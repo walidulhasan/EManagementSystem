@@ -21,5 +21,33 @@ namespace EManagementSystem
         {
             this.Close();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Branch code DEMO : BC01\n Branch Name: [District latter 2 / SubDistrict latter 2 with poition BC]","Demo of Data Entry",MessageBoxButtons.OKCancel,MessageBoxIcon.Information);
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("District Name:Bhola\n SubDistrict Name: Charfasson\n Address: Cf Bazar AbPlaza 6th f,R4,5,6", "Branch Location DEMO", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            clear();
+        }
+        private void clear()
+        {
+            txtBaddress.Text = "";
+            txtBcode.Text = "";
+            txtBDname.Text = "";
+            txtBname.Text = "";
+            txtBSDname.Text = "";
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

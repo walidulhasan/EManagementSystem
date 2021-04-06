@@ -139,7 +139,7 @@ namespace EManagementSystem
             this.btnlawPolicy.Name = "btnlawPolicy";
             this.btnlawPolicy.Size = new System.Drawing.Size(186, 74);
             this.btnlawPolicy.TabIndex = 1;
-            this.btnlawPolicy.Text = "All Branch";
+            this.btnlawPolicy.Text = "Add Branch";
             this.btnlawPolicy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnlawPolicy.UseVisualStyleBackColor = true;
             this.btnlawPolicy.Click += new System.EventHandler(this.btnlawPolicy_Click);
