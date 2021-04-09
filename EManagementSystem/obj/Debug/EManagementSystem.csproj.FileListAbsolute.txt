@@ -47,9 +47,9 @@ D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\bin\Debug\stdole.dll
 D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.jodays.resources
 D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.frmAbout.resources
 D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.frmtwitter.resources
-D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.csprojAssemblyReference.cache
 D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.frmwebsite.resources
 D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.youtube.resources
 D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.github.resources
 D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.frmview.resources
 D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.frmNotice.resources
+D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.csprojAssemblyReference.cache

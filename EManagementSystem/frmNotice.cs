@@ -87,6 +87,7 @@ namespace EManagementSystem
         {
             frmdashboard db = new frmdashboard();
             db.Show();
+            this.Hide();
         }
     }
 }

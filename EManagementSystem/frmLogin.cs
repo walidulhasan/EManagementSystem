@@ -14,7 +14,8 @@ namespace EManagementSystem
     public partial class frmLogin : Form
     {
         public Point mouseLocation;
-        SqlConnection con = new SqlConnection(@"Data Source=WALIDULHASAN\MAHMUDSABUJ;Initial Catalog=EMS;Integrated Security=True");
+        //SqlConnection con = new SqlConnection(@"Data Source=WALIDULHASAN\MAHMUDSABUJ;Initial Catalog=EMS;Integrated Security=True");
+        Connection c = new Connection();
         public frmLogin()
         {
             InitializeComponent();
@@ -52,8 +53,8 @@ namespace EManagementSystem
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            con.Open();
-            SqlCommand cmd = new SqlCommand(@"SELECT * FROM loginInfo WHERE userName='"+txtUsername.Text+"' and userPassword='"+txtPassword.Text+"'", con);
+            c.con.Open();
+            SqlCommand cmd = new SqlCommand(@"SELECT * FROM loginInfo WHERE userName='"+txtUsername.Text+"' and userPassword='"+txtPassword.Text+"'", c.con);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read()== true)
             {
@@ -65,7 +66,7 @@ namespace EManagementSystem
             {
                 MessageBox.Show("Invalid Username or Password,Please Correct data provide","Login Failed",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 dataclear();
-                con.Close();
+                c.con.Close();
             }
             
         }

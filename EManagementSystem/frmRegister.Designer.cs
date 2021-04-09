@@ -137,7 +137,7 @@ namespace EManagementSystem
             this.checkbxShowPass.Location = new System.Drawing.Point(324, 521);
             this.checkbxShowPass.Name = "checkbxShowPass";
             this.checkbxShowPass.Size = new System.Drawing.Size(207, 36);
-            this.checkbxShowPass.TabIndex = 3;
+            this.checkbxShowPass.TabIndex = 4;
             this.checkbxShowPass.Text = "Show Password";
             this.checkbxShowPass.UseVisualStyleBackColor = true;
             this.checkbxShowPass.CheckedChanged += new System.EventHandler(this.checkbxShowPass_CheckedChanged);
@@ -152,7 +152,7 @@ namespace EManagementSystem
             this.btnRegister.Location = new System.Drawing.Point(124, 680);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(387, 66);
-            this.btnRegister.TabIndex = 4;
+            this.btnRegister.TabIndex = 5;
             this.btnRegister.Text = "REGISTER";
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
@@ -167,7 +167,7 @@ namespace EManagementSystem
             this.btnClear.Location = new System.Drawing.Point(124, 779);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(387, 75);
-            this.btnClear.TabIndex = 5;
+            this.btnClear.TabIndex = 6;
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -180,7 +180,7 @@ namespace EManagementSystem
             this.label5.Location = new System.Drawing.Point(162, 875);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(327, 32);
-            this.label5.TabIndex = 5;
+            this.label5.TabIndex = 7;
             this.label5.Text = "Already Have an Account !!";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -193,7 +193,7 @@ namespace EManagementSystem
             this.label6.Location = new System.Drawing.Point(227, 926);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(179, 32);
-            this.label6.TabIndex = 6;
+            this.label6.TabIndex = 8;
             this.label6.Text = "Back to LOGIN";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -227,7 +227,7 @@ namespace EManagementSystem
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(530, 50);
-            this.txtEmail.TabIndex = 2;
+            this.txtEmail.TabIndex = 3;
             // 
             // panel1
             // 

@@ -30,25 +30,32 @@ namespace EManagementSystem
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCEPbranch));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtBcode = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.txtBname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtBname = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBcode = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtBaddress = new System.Windows.Forms.TextBox();
             this.txtBSDname = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtBDname = new System.Windows.Forms.TextBox();
-            this.txtBaddress = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.picBZname = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -56,6 +63,8 @@ namespace EManagementSystem
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBZname)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -83,6 +92,7 @@ namespace EManagementSystem
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.picBZname);
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtBname);
@@ -90,33 +100,12 @@ namespace EManagementSystem
             this.groupBox1.Controls.Add(this.txtBcode);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(98, 98);
+            this.groupBox1.Location = new System.Drawing.Point(25, 98);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(388, 447);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Branch";
-            // 
-            // txtBcode
-            // 
-            this.txtBcode.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBcode.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtBcode.Location = new System.Drawing.Point(31, 117);
-            this.txtBcode.Multiline = true;
-            this.txtBcode.Name = "txtBcode";
-            this.txtBcode.Size = new System.Drawing.Size(329, 39);
-            this.txtBcode.TabIndex = 0;
-            this.txtBcode.Text = "BC01";
-            this.txtBcode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(126, 74);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 27);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Branch Code";
             // 
             // pictureBox2
             // 
@@ -131,6 +120,15 @@ namespace EManagementSystem
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(94, 224);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(206, 27);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Branch Zone Name ";
+            // 
             // txtBname
             // 
             this.txtBname.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -140,17 +138,29 @@ namespace EManagementSystem
             this.txtBname.Name = "txtBname";
             this.txtBname.Size = new System.Drawing.Size(329, 39);
             this.txtBname.TabIndex = 1;
-            this.txtBname.Text = "BHCHBC01";
+            this.txtBname.Text = "BHCHBHCH01";
             this.txtBname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label2
+            // label1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(126, 224);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 27);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Branch Name";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(126, 74);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 27);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Branch Code";
+            // 
+            // txtBcode
+            // 
+            this.txtBcode.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBcode.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtBcode.Location = new System.Drawing.Point(31, 117);
+            this.txtBcode.Multiline = true;
+            this.txtBcode.Name = "txtBcode";
+            this.txtBcode.Size = new System.Drawing.Size(329, 39);
+            this.txtBcode.TabIndex = 0;
+            this.txtBcode.Text = "BHCH01";
+            this.txtBcode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBox2
             // 
@@ -163,7 +173,7 @@ namespace EManagementSystem
             this.groupBox2.Controls.Add(this.txtBDname);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(602, 98);
+            this.groupBox2.Location = new System.Drawing.Point(442, 98);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(388, 447);
             this.groupBox2.TabIndex = 2;
@@ -183,6 +193,15 @@ namespace EManagementSystem
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(154, 311);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(90, 27);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Address";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -191,6 +210,17 @@ namespace EManagementSystem
             this.label3.Size = new System.Drawing.Size(119, 27);
             this.label3.TabIndex = 1;
             this.label3.Text = "SubDistrict";
+            // 
+            // txtBaddress
+            // 
+            this.txtBaddress.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBaddress.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.txtBaddress.Location = new System.Drawing.Point(31, 354);
+            this.txtBaddress.Multiline = true;
+            this.txtBaddress.Name = "txtBaddress";
+            this.txtBaddress.Size = new System.Drawing.Size(329, 39);
+            this.txtBaddress.TabIndex = 2;
+            this.txtBaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtBSDname
             // 
@@ -223,26 +253,6 @@ namespace EManagementSystem
             this.txtBDname.TabIndex = 0;
             this.txtBDname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtBaddress
-            // 
-            this.txtBaddress.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBaddress.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.txtBaddress.Location = new System.Drawing.Point(31, 354);
-            this.txtBaddress.Multiline = true;
-            this.txtBaddress.Name = "txtBaddress";
-            this.txtBaddress.Size = new System.Drawing.Size(329, 39);
-            this.txtBaddress.TabIndex = 2;
-            this.txtBaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(154, 311);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 27);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Address";
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(51)))));
@@ -251,13 +261,14 @@ namespace EManagementSystem
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(1088, 230);
+            this.button1.Location = new System.Drawing.Point(1144, 111);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(134, 56);
             this.button1.TabIndex = 0;
             this.button1.Text = "Save";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -267,7 +278,7 @@ namespace EManagementSystem
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(1107, 337);
+            this.button2.Location = new System.Drawing.Point(1160, 471);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(103, 67);
             this.button2.TabIndex = 1;
@@ -277,6 +288,8 @@ namespace EManagementSystem
             // 
             // dataGridView1
             // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -285,12 +298,106 @@ namespace EManagementSystem
             this.dataGridView1.Size = new System.Drawing.Size(1317, 251);
             this.dataGridView1.TabIndex = 4;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.FlatAppearance.BorderSize = 2;
+            this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(1144, 382);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(134, 52);
+            this.btnDelete.TabIndex = 5;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.FlatAppearance.BorderSize = 2;
+            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Location = new System.Drawing.Point(1144, 204);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(134, 52);
+            this.btnSearch.TabIndex = 6;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdate.FlatAppearance.BorderSize = 2;
+            this.btnUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(1144, 293);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(134, 52);
+            this.btnUpdate.TabIndex = 7;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.Red;
+            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(842, 212);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(251, 39);
+            this.comboBox1.TabIndex = 8;
+            this.comboBox1.Visible = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.ErrorImage = null;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(1100, 217);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(38, 28);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click_1);
+            // 
+            // picBZname
+            // 
+            this.picBZname.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBZname.ErrorImage = null;
+            this.picBZname.Image = ((System.Drawing.Image)(resources.GetObject("picBZname.Image")));
+            this.picBZname.Location = new System.Drawing.Point(318, 216);
+            this.picBZname.Name = "picBZname";
+            this.picBZname.Size = new System.Drawing.Size(42, 35);
+            this.picBZname.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBZname.TabIndex = 2;
+            this.picBZname.TabStop = false;
+            this.picBZname.Click += new System.EventHandler(this.picBZname_Click);
+            // 
             // frmCEPbranch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1323, 870);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -309,6 +416,8 @@ namespace EManagementSystem
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBZname)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -334,5 +443,11 @@ namespace EManagementSystem
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox picBZname;
     }
 }

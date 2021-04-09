@@ -13,7 +13,8 @@ namespace EManagementSystem
 {
     public partial class frmForgotPasswordUser : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=WALIDULHASAN\MAHMUDSABUJ;Initial Catalog=EMS;Integrated Security=True");
+        //SqlConnection con = new SqlConnection(@"Data Source=WALIDULHASAN\MAHMUDSABUJ;Initial Catalog=EMS;Integrated Security=True");
+        Connection c = new Connection();
         public frmForgotPasswordUser()
         {
             InitializeComponent();
@@ -28,8 +29,8 @@ namespace EManagementSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM loginInfo WHERE userEmail='"+txtRecover.Text+"'", con);
+            c.con.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM loginInfo WHERE userEmail='"+txtRecover.Text+"'", c.con);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
             {
@@ -39,7 +40,7 @@ namespace EManagementSystem
             {
                 MessageBox.Show("Data Does not match","Please Provide Right Information",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
-            con.Close();
+            c.con.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

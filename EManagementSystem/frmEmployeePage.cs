@@ -81,6 +81,7 @@ namespace EManagementSystem
 
         private void btnlawPolicy_Click(object sender, EventArgs e)
         {
+            //MessageBox.Show("Page Does not Work!!!!\nSystem UPGRADING","Working",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Warning);
             openChildForm(new frmCEPbranch());
         }
 

@@ -34,25 +34,31 @@ namespace EManagementSystem
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPersonal = new System.Windows.Forms.TabPage();
-            this.btnUpload = new System.Windows.Forms.Button();
-            this.picShow = new System.Windows.Forms.PictureBox();
+            this.btnPEUpload = new System.Windows.Forms.Button();
+            this.PEpicShow = new System.Windows.Forms.PictureBox();
             this.dataGridViewPersonal = new System.Windows.Forms.DataGridView();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
+            this.picSearchinfor = new System.Windows.Forms.PictureBox();
+            this.btnPEdelete = new System.Windows.Forms.Button();
+            this.btnPEupdate = new System.Windows.Forms.Button();
+            this.btnPEsearch = new System.Windows.Forms.Button();
+            this.btnPESave = new System.Windows.Forms.Button();
+            this.btnPEClear = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBoxMaritalStatus = new System.Windows.Forms.CheckBox();
+            this.PEcomboBoxMstatus = new System.Windows.Forms.ComboBox();
             this.rdFemale = new System.Windows.Forms.RadioButton();
             this.rdMale = new System.Windows.Forms.RadioButton();
-            this.dateTimeJoinDate = new System.Windows.Forms.DateTimePicker();
-            this.dateTimeDateofBirth = new System.Windows.Forms.DateTimePicker();
-            this.txtSocialId = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.txtFatherName = new System.Windows.Forms.TextBox();
-            this.txtNid = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.comboBoxTitle = new System.Windows.Forms.ComboBox();
+            this.picNIDinfo = new System.Windows.Forms.PictureBox();
+            this.PEdateTimeJoinDate = new System.Windows.Forms.DateTimePicker();
+            this.PEdateTimeDateofBirth = new System.Windows.Forms.DateTimePicker();
+            this.txtPESocialId = new System.Windows.Forms.TextBox();
+            this.txtPEEmail = new System.Windows.Forms.TextBox();
+            this.txtPEPhone = new System.Windows.Forms.TextBox();
+            this.txtPEFatherName = new System.Windows.Forms.TextBox();
+            this.txtPENid = new System.Windows.Forms.TextBox();
+            this.txtPEName = new System.Windows.Forms.TextBox();
+            this.comboBox2PEid = new System.Windows.Forms.ComboBox();
+            this.comboBoxPEId = new System.Windows.Forms.ComboBox();
+            this.PEcomboBoxTitle = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -61,29 +67,49 @@ namespace EManagementSystem
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txid = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
             this.tabAcademic = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtACid = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.btnACdelete = new System.Windows.Forms.Button();
+            this.btnACupdate = new System.Windows.Forms.Button();
+            this.btnACsearch = new System.Windows.Forms.Button();
+            this.dataGridAC = new System.Windows.Forms.DataGridView();
+            this.btnACsave = new System.Windows.Forms.Button();
+            this.btnACclear = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtSpecial = new System.Windows.Forms.TextBox();
-            this.txtMast = new System.Windows.Forms.TextBox();
-            this.txtHons = new System.Windows.Forms.TextBox();
-            this.txtHsc = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.txtSsc = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txtACspecialvalue = new System.Windows.Forms.TextBox();
+            this.txtACsresult = new System.Windows.Forms.TextBox();
+            this.txtACmresult = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.txtACHresult = new System.Windows.Forms.TextBox();
+            this.txtACiresult = new System.Windows.Forms.TextBox();
+            this.txtACaresult = new System.Windows.Forms.TextBox();
+            this.txtaid = new System.Windows.Forms.TextBox();
+            this.txtACOresult = new System.Windows.Forms.TextBox();
+            this.comboBoxACmasters = new System.Windows.Forms.ComboBox();
+            this.comboBoxAChonus = new System.Windows.Forms.ComboBox();
+            this.comboBoxIlevel = new System.Windows.Forms.ComboBox();
+            this.comboBoxACalevel = new System.Windows.Forms.ComboBox();
+            this.comboBoxAcOlevel = new System.Windows.Forms.ComboBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.tabOfficial = new System.Windows.Forms.TabPage();
             this.txtFOid = new System.Windows.Forms.TextBox();
-            this.btnOFshow = new System.Windows.Forms.Button();
+            this.label23 = new System.Windows.Forms.Label();
             this.btnOFdelete = new System.Windows.Forms.Button();
             this.btnOFupdate = new System.Windows.Forms.Button();
             this.btnOFsearch = new System.Windows.Forms.Button();
@@ -91,32 +117,38 @@ namespace EManagementSystem
             this.btnOFclear = new System.Windows.Forms.Button();
             this.dataGridOF = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.pictureBoxofshow = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.txtOFproPosition = new System.Windows.Forms.TextBox();
-            this.txtOFpresPosition = new System.Windows.Forms.TextBox();
-            this.txtOFprePosition = new System.Windows.Forms.TextBox();
+            this.comboBoxOFPro = new System.Windows.Forms.ComboBox();
+            this.comboBoxOFPre = new System.Windows.Forms.ComboBox();
+            this.comboBoxOFPri = new System.Windows.Forms.ComboBox();
+            this.txtOfid = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.comboBoxOFBC = new System.Windows.Forms.ComboBox();
             this.txtOFbranch = new System.Windows.Forms.TextBox();
-            this.txtOFbrCode = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPersonal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picShow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PEpicShow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSearchinfor)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picNIDinfo)).BeginInit();
             this.tabAcademic.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAC)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabOfficial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridOF)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxofshow)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -158,44 +190,53 @@ namespace EManagementSystem
             // tabPersonal
             // 
             this.tabPersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.tabPersonal.Controls.Add(this.btnUpload);
-            this.tabPersonal.Controls.Add(this.picShow);
+            this.tabPersonal.Controls.Add(this.btnPEUpload);
+            this.tabPersonal.Controls.Add(this.PEpicShow);
             this.tabPersonal.Controls.Add(this.dataGridViewPersonal);
-            this.tabPersonal.Controls.Add(this.pictureBox2);
-            this.tabPersonal.Controls.Add(this.btnSave);
-            this.tabPersonal.Controls.Add(this.btnClear);
+            this.tabPersonal.Controls.Add(this.picSearchinfor);
+            this.tabPersonal.Controls.Add(this.btnPEdelete);
+            this.tabPersonal.Controls.Add(this.btnPEupdate);
+            this.tabPersonal.Controls.Add(this.btnPEsearch);
+            this.tabPersonal.Controls.Add(this.btnPESave);
+            this.tabPersonal.Controls.Add(this.btnPEClear);
             this.tabPersonal.Controls.Add(this.groupBox1);
+            this.tabPersonal.Controls.Add(this.txid);
+            this.tabPersonal.Controls.Add(this.label28);
             this.tabPersonal.Location = new System.Drawing.Point(4, 22);
             this.tabPersonal.Name = "tabPersonal";
             this.tabPersonal.Padding = new System.Windows.Forms.Padding(3);
             this.tabPersonal.Size = new System.Drawing.Size(1315, 801);
             this.tabPersonal.TabIndex = 0;
             this.tabPersonal.Text = "Personla Information";
+
             // 
-            // btnUpload
+            // btnPEUpload
             // 
-            this.btnUpload.BackColor = System.Drawing.Color.DarkCyan;
-            this.btnUpload.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUpload.FlatAppearance.BorderSize = 2;
-            this.btnUpload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpload.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpload.ForeColor = System.Drawing.Color.White;
-            this.btnUpload.Location = new System.Drawing.Point(977, 302);
-            this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(221, 41);
-            this.btnUpload.TabIndex = 8;
-            this.btnUpload.Text = "Upload";
-            this.btnUpload.UseVisualStyleBackColor = false;
+            this.btnPEUpload.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnPEUpload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPEUpload.FlatAppearance.BorderSize = 2;
+            this.btnPEUpload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnPEUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPEUpload.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPEUpload.ForeColor = System.Drawing.Color.White;
+            this.btnPEUpload.Location = new System.Drawing.Point(977, 302);
+            this.btnPEUpload.Name = "btnPEUpload";
+            this.btnPEUpload.Size = new System.Drawing.Size(221, 41);
+            this.btnPEUpload.TabIndex = 1;
+            this.btnPEUpload.Text = "Upload";
+            this.btnPEUpload.UseVisualStyleBackColor = false;
+            this.btnPEUpload.Click += new System.EventHandler(this.btnPEUpload_Click);
             // 
-            // picShow
+            // PEpicShow
             // 
-            this.picShow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picShow.Location = new System.Drawing.Point(977, 58);
-            this.picShow.Name = "picShow";
-            this.picShow.Size = new System.Drawing.Size(221, 228);
-            this.picShow.TabIndex = 7;
-            this.picShow.TabStop = false;
+            this.PEpicShow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PEpicShow.ErrorImage = null;
+            this.PEpicShow.Location = new System.Drawing.Point(977, 58);
+            this.PEpicShow.Name = "PEpicShow";
+            this.PEpicShow.Size = new System.Drawing.Size(221, 228);
+            this.PEpicShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PEpicShow.TabIndex = 7;
+            this.PEpicShow.TabStop = false;
             // 
             // dataGridViewPersonal
             // 
@@ -208,63 +249,121 @@ namespace EManagementSystem
             this.dataGridViewPersonal.Size = new System.Drawing.Size(1309, 94);
             this.dataGridViewPersonal.TabIndex = 6;
             // 
-            // pictureBox2
+            // picSearchinfor
             // 
-            this.pictureBox2.ErrorImage = null;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1061, 586);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(68, 56);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
+            this.picSearchinfor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picSearchinfor.ErrorImage = null;
+            this.picSearchinfor.Image = ((System.Drawing.Image)(resources.GetObject("picSearchinfor.Image")));
+            this.picSearchinfor.Location = new System.Drawing.Point(1220, 433);
+            this.picSearchinfor.Name = "picSearchinfor";
+            this.picSearchinfor.Size = new System.Drawing.Size(47, 35);
+            this.picSearchinfor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSearchinfor.TabIndex = 5;
+            this.picSearchinfor.TabStop = false;
+            this.picSearchinfor.Click += new System.EventHandler(this.picSearchinfor_Click);
             // 
-            // btnSave
+            // btnPEdelete
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.FlatAppearance.BorderSize = 2;
-            this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(972, 395);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(242, 65);
-            this.btnSave.TabIndex = 4;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnPEdelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnPEdelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPEdelete.FlatAppearance.BorderSize = 2;
+            this.btnPEdelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnPEdelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPEdelete.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPEdelete.ForeColor = System.Drawing.Color.White;
+            this.btnPEdelete.Location = new System.Drawing.Point(972, 555);
+            this.btnPEdelete.Name = "btnPEdelete";
+            this.btnPEdelete.Size = new System.Drawing.Size(242, 51);
+            this.btnPEdelete.TabIndex = 4;
+            this.btnPEdelete.Text = "Delete";
+            this.btnPEdelete.UseVisualStyleBackColor = false;
+            this.btnPEdelete.Click += new System.EventHandler(this.btnPEdelete_Click);
             // 
-            // btnClear
+            // btnPEupdate
             // 
-            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClear.FlatAppearance.BorderSize = 2;
-            this.btnClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(972, 487);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(242, 65);
-            this.btnClear.TabIndex = 4;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnPEupdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnPEupdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPEupdate.FlatAppearance.BorderSize = 2;
+            this.btnPEupdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnPEupdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPEupdate.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPEupdate.ForeColor = System.Drawing.Color.White;
+            this.btnPEupdate.Location = new System.Drawing.Point(972, 490);
+            this.btnPEupdate.Name = "btnPEupdate";
+            this.btnPEupdate.Size = new System.Drawing.Size(242, 51);
+            this.btnPEupdate.TabIndex = 3;
+            this.btnPEupdate.Text = "Update";
+            this.btnPEupdate.UseVisualStyleBackColor = false;
+            this.btnPEupdate.Click += new System.EventHandler(this.btnPEupdate_Click);
+            // 
+            // btnPEsearch
+            // 
+            this.btnPEsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnPEsearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPEsearch.FlatAppearance.BorderSize = 2;
+            this.btnPEsearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnPEsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPEsearch.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPEsearch.ForeColor = System.Drawing.Color.White;
+            this.btnPEsearch.Location = new System.Drawing.Point(972, 425);
+            this.btnPEsearch.Name = "btnPEsearch";
+            this.btnPEsearch.Size = new System.Drawing.Size(242, 51);
+            this.btnPEsearch.TabIndex = 2;
+            this.btnPEsearch.Text = "Search";
+            this.btnPEsearch.UseVisualStyleBackColor = false;
+            this.btnPEsearch.Click += new System.EventHandler(this.btnPEsearch_Click);
+            // 
+            // btnPESave
+            // 
+            this.btnPESave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnPESave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPESave.FlatAppearance.BorderSize = 2;
+            this.btnPESave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnPESave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPESave.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPESave.ForeColor = System.Drawing.Color.White;
+            this.btnPESave.Location = new System.Drawing.Point(972, 360);
+            this.btnPESave.Name = "btnPESave";
+            this.btnPESave.Size = new System.Drawing.Size(242, 51);
+            this.btnPESave.TabIndex = 1;
+            this.btnPESave.Text = "Save";
+            this.btnPESave.UseVisualStyleBackColor = false;
+            this.btnPESave.Click += new System.EventHandler(this.btnPESave_Click);
+            // 
+            // btnPEClear
+            // 
+            this.btnPEClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnPEClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPEClear.FlatAppearance.BorderSize = 2;
+            this.btnPEClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnPEClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPEClear.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPEClear.ForeColor = System.Drawing.Color.White;
+            this.btnPEClear.Location = new System.Drawing.Point(972, 620);
+            this.btnPEClear.Name = "btnPEClear";
+            this.btnPEClear.Size = new System.Drawing.Size(242, 51);
+            this.btnPEClear.TabIndex = 5;
+            this.btnPEClear.Text = "Clear";
+            this.btnPEClear.UseVisualStyleBackColor = false;
+            this.btnPEClear.Click += new System.EventHandler(this.btnPEClear_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkBoxMaritalStatus);
+            this.groupBox1.Controls.Add(this.PEcomboBoxMstatus);
             this.groupBox1.Controls.Add(this.rdFemale);
             this.groupBox1.Controls.Add(this.rdMale);
-            this.groupBox1.Controls.Add(this.dateTimeJoinDate);
-            this.groupBox1.Controls.Add(this.dateTimeDateofBirth);
-            this.groupBox1.Controls.Add(this.txtSocialId);
-            this.groupBox1.Controls.Add(this.txtEmail);
-            this.groupBox1.Controls.Add(this.txtPhone);
-            this.groupBox1.Controls.Add(this.txtFatherName);
-            this.groupBox1.Controls.Add(this.txtNid);
-            this.groupBox1.Controls.Add(this.txtName);
-            this.groupBox1.Controls.Add(this.comboBoxTitle);
+            this.groupBox1.Controls.Add(this.picNIDinfo);
+            this.groupBox1.Controls.Add(this.PEdateTimeJoinDate);
+            this.groupBox1.Controls.Add(this.PEdateTimeDateofBirth);
+            this.groupBox1.Controls.Add(this.txtPESocialId);
+            this.groupBox1.Controls.Add(this.txtPEEmail);
+            this.groupBox1.Controls.Add(this.txtPEPhone);
+            this.groupBox1.Controls.Add(this.txtPEFatherName);
+            this.groupBox1.Controls.Add(this.txtPENid);
+            this.groupBox1.Controls.Add(this.txtPEName);
+            this.groupBox1.Controls.Add(this.comboBox2PEid);
+            this.groupBox1.Controls.Add(this.comboBoxPEId);
+            this.groupBox1.Controls.Add(this.PEcomboBoxTitle);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label21);
             this.groupBox1.Controls.Add(this.label18);
@@ -273,37 +372,43 @@ namespace EManagementSystem
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label27);
             this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label26);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(24, 22);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(816, 638);
+            this.groupBox1.Size = new System.Drawing.Size(763, 660);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personal Data";
             // 
-            // checkBoxMaritalStatus
+            // PEcomboBoxMstatus
             // 
-            this.checkBoxMaritalStatus.AutoSize = true;
-            this.checkBoxMaritalStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxMaritalStatus.Location = new System.Drawing.Point(283, 556);
-            this.checkBoxMaritalStatus.Name = "checkBoxMaritalStatus";
-            this.checkBoxMaritalStatus.Size = new System.Drawing.Size(15, 14);
-            this.checkBoxMaritalStatus.TabIndex = 28;
-            this.checkBoxMaritalStatus.UseVisualStyleBackColor = true;
+            this.PEcomboBoxMstatus.Font = new System.Drawing.Font("Times New Roman", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PEcomboBoxMstatus.FormattingEnabled = true;
+            this.PEcomboBoxMstatus.Items.AddRange(new object[] {
+            "Single",
+            "Engaged",
+            "Married",
+            "Divorced"});
+            this.PEcomboBoxMstatus.Location = new System.Drawing.Point(283, 512);
+            this.PEcomboBoxMstatus.Name = "PEcomboBoxMstatus";
+            this.PEcomboBoxMstatus.Size = new System.Drawing.Size(347, 37);
+            this.PEcomboBoxMstatus.TabIndex = 10;
             // 
             // rdFemale
             // 
             this.rdFemale.AutoSize = true;
             this.rdFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdFemale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
-            this.rdFemale.Location = new System.Drawing.Point(371, 266);
+            this.rdFemale.Location = new System.Drawing.Point(371, 247);
             this.rdFemale.Name = "rdFemale";
             this.rdFemale.Size = new System.Drawing.Size(122, 35);
-            this.rdFemale.TabIndex = 27;
+            this.rdFemale.TabIndex = 5;
             this.rdFemale.TabStop = true;
             this.rdFemale.Text = "Female";
             this.rdFemale.UseVisualStyleBackColor = true;
@@ -313,102 +418,133 @@ namespace EManagementSystem
             this.rdMale.AutoSize = true;
             this.rdMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdMale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
-            this.rdMale.Location = new System.Drawing.Point(283, 266);
+            this.rdMale.Location = new System.Drawing.Point(283, 247);
             this.rdMale.Name = "rdMale";
             this.rdMale.Size = new System.Drawing.Size(90, 35);
-            this.rdMale.TabIndex = 26;
+            this.rdMale.TabIndex = 4;
             this.rdMale.TabStop = true;
             this.rdMale.Text = "Male";
             this.rdMale.UseVisualStyleBackColor = true;
             // 
-            // dateTimeJoinDate
+            // picNIDinfo
             // 
-            this.dateTimeJoinDate.CalendarFont = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeJoinDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeJoinDate.Location = new System.Drawing.Point(283, 582);
-            this.dateTimeJoinDate.Name = "dateTimeJoinDate";
-            this.dateTimeJoinDate.Size = new System.Drawing.Size(451, 38);
-            this.dateTimeJoinDate.TabIndex = 25;
+            this.picNIDinfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picNIDinfo.ErrorImage = null;
+            this.picNIDinfo.Image = ((System.Drawing.Image)(resources.GetObject("picNIDinfo.Image")));
+            this.picNIDinfo.Location = new System.Drawing.Point(649, 299);
+            this.picNIDinfo.Name = "picNIDinfo";
+            this.picNIDinfo.Size = new System.Drawing.Size(47, 35);
+            this.picNIDinfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picNIDinfo.TabIndex = 5;
+            this.picNIDinfo.TabStop = false;
+            this.picNIDinfo.Click += new System.EventHandler(this.picNIDinfo_Click);
             // 
-            // dateTimeDateofBirth
+            // PEdateTimeJoinDate
             // 
-            this.dateTimeDateofBirth.CalendarFont = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeDateofBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeDateofBirth.Location = new System.Drawing.Point(283, 150);
-            this.dateTimeDateofBirth.Name = "dateTimeDateofBirth";
-            this.dateTimeDateofBirth.Size = new System.Drawing.Size(451, 38);
-            this.dateTimeDateofBirth.TabIndex = 24;
+            this.PEdateTimeJoinDate.CalendarFont = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PEdateTimeJoinDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PEdateTimeJoinDate.Location = new System.Drawing.Point(283, 563);
+            this.PEdateTimeJoinDate.Name = "PEdateTimeJoinDate";
+            this.PEdateTimeJoinDate.Size = new System.Drawing.Size(451, 38);
+            this.PEdateTimeJoinDate.TabIndex = 11;
             // 
-            // txtSocialId
+            // PEdateTimeDateofBirth
             // 
-            this.txtSocialId.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSocialId.Location = new System.Drawing.Point(283, 492);
-            this.txtSocialId.Name = "txtSocialId";
-            this.txtSocialId.Size = new System.Drawing.Size(347, 38);
-            this.txtSocialId.TabIndex = 22;
+            this.PEdateTimeDateofBirth.CalendarFont = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PEdateTimeDateofBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PEdateTimeDateofBirth.Location = new System.Drawing.Point(283, 131);
+            this.PEdateTimeDateofBirth.Name = "PEdateTimeDateofBirth";
+            this.PEdateTimeDateofBirth.Size = new System.Drawing.Size(451, 38);
+            this.PEdateTimeDateofBirth.TabIndex = 2;
             // 
-            // txtEmail
+            // txtPESocialId
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(283, 435);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(347, 38);
-            this.txtEmail.TabIndex = 21;
+            this.txtPESocialId.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPESocialId.Location = new System.Drawing.Point(283, 460);
+            this.txtPESocialId.Name = "txtPESocialId";
+            this.txtPESocialId.Size = new System.Drawing.Size(347, 38);
+            this.txtPESocialId.TabIndex = 9;
             // 
-            // txtPhone
+            // txtPEEmail
             // 
-            this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.Location = new System.Drawing.Point(283, 373);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(347, 38);
-            this.txtPhone.TabIndex = 20;
+            this.txtPEEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPEEmail.Location = new System.Drawing.Point(283, 408);
+            this.txtPEEmail.Name = "txtPEEmail";
+            this.txtPEEmail.Size = new System.Drawing.Size(347, 38);
+            this.txtPEEmail.TabIndex = 8;
             // 
-            // txtFatherName
+            // txtPEPhone
             // 
-            this.txtFatherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFatherName.Location = new System.Drawing.Point(283, 207);
-            this.txtFatherName.Name = "txtFatherName";
-            this.txtFatherName.Size = new System.Drawing.Size(347, 38);
-            this.txtFatherName.TabIndex = 19;
+            this.txtPEPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPEPhone.Location = new System.Drawing.Point(283, 354);
+            this.txtPEPhone.Name = "txtPEPhone";
+            this.txtPEPhone.Size = new System.Drawing.Size(347, 38);
+            this.txtPEPhone.TabIndex = 7;
             // 
-            // txtNid
+            // txtPEFatherName
             // 
-            this.txtNid.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNid.Location = new System.Drawing.Point(283, 318);
-            this.txtNid.Name = "txtNid";
-            this.txtNid.Size = new System.Drawing.Size(347, 38);
-            this.txtNid.TabIndex = 18;
+            this.txtPEFatherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPEFatherName.Location = new System.Drawing.Point(283, 188);
+            this.txtPEFatherName.Name = "txtPEFatherName";
+            this.txtPEFatherName.Size = new System.Drawing.Size(347, 38);
+            this.txtPEFatherName.TabIndex = 3;
             // 
-            // txtName
+            // txtPENid
             // 
-            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(283, 93);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(347, 38);
-            this.txtName.TabIndex = 23;
+            this.txtPENid.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPENid.Location = new System.Drawing.Point(283, 299);
+            this.txtPENid.Name = "txtPENid";
+            this.txtPENid.Size = new System.Drawing.Size(347, 38);
+            this.txtPENid.TabIndex = 6;
             // 
-            // comboBoxTitle
+            // txtPEName
             // 
-            this.comboBoxTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxTitle.FormattingEnabled = true;
-            this.comboBoxTitle.Items.AddRange(new object[] {
+            this.txtPEName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPEName.Location = new System.Drawing.Point(283, 74);
+            this.txtPEName.Name = "txtPEName";
+            this.txtPEName.Size = new System.Drawing.Size(347, 38);
+            this.txtPEName.TabIndex = 1;
+            // 
+            // comboBox2PEid
+            // 
+            this.comboBox2PEid.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2PEid.FormattingEnabled = true;
+            this.comboBox2PEid.Location = new System.Drawing.Point(596, 615);
+            this.comboBox2PEid.Name = "comboBox2PEid";
+            this.comboBox2PEid.Size = new System.Drawing.Size(138, 39);
+            this.comboBox2PEid.TabIndex = 13;
+            // 
+            // comboBoxPEId
+            // 
+            this.comboBoxPEId.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxPEId.FormattingEnabled = true;
+            this.comboBoxPEId.Location = new System.Drawing.Point(280, 614);
+            this.comboBoxPEId.Name = "comboBoxPEId";
+            this.comboBoxPEId.Size = new System.Drawing.Size(138, 39);
+            this.comboBoxPEId.TabIndex = 12;
+            // 
+            // PEcomboBoxTitle
+            // 
+            this.PEcomboBoxTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PEcomboBoxTitle.FormattingEnabled = true;
+            this.PEcomboBoxTitle.Items.AddRange(new object[] {
             "Mr",
             "Mrs",
             "Miss",
             "Ms",
             "Mx",
             "Sir"});
-            this.comboBoxTitle.Location = new System.Drawing.Point(283, 36);
-            this.comboBoxTitle.Name = "comboBoxTitle";
-            this.comboBoxTitle.Size = new System.Drawing.Size(93, 39);
-            this.comboBoxTitle.TabIndex = 17;
+            this.PEcomboBoxTitle.Location = new System.Drawing.Point(283, 17);
+            this.PEcomboBoxTitle.Name = "PEcomboBoxTitle";
+            this.PEcomboBoxTitle.Size = new System.Drawing.Size(93, 39);
+            this.PEcomboBoxTitle.TabIndex = 0;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
-            this.label7.Location = new System.Drawing.Point(79, 211);
+            this.label7.Location = new System.Drawing.Point(79, 192);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(184, 31);
             this.label7.TabIndex = 15;
@@ -419,7 +555,7 @@ namespace EManagementSystem
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
-            this.label21.Location = new System.Drawing.Point(120, 586);
+            this.label21.Location = new System.Drawing.Point(120, 567);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(143, 31);
             this.label21.TabIndex = 14;
@@ -430,7 +566,7 @@ namespace EManagementSystem
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
-            this.label18.Location = new System.Drawing.Point(63, 548);
+            this.label18.Location = new System.Drawing.Point(63, 515);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(200, 31);
             this.label18.TabIndex = 13;
@@ -441,7 +577,7 @@ namespace EManagementSystem
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
-            this.label17.Location = new System.Drawing.Point(142, 322);
+            this.label17.Location = new System.Drawing.Point(142, 303);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(121, 31);
             this.label17.TabIndex = 12;
@@ -452,7 +588,7 @@ namespace EManagementSystem
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
-            this.label16.Location = new System.Drawing.Point(130, 496);
+            this.label16.Location = new System.Drawing.Point(130, 464);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(133, 31);
             this.label16.TabIndex = 11;
@@ -463,7 +599,7 @@ namespace EManagementSystem
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
-            this.label6.Location = new System.Drawing.Point(163, 439);
+            this.label6.Location = new System.Drawing.Point(163, 412);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 31);
             this.label6.TabIndex = 10;
@@ -474,7 +610,7 @@ namespace EManagementSystem
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
-            this.label5.Location = new System.Drawing.Point(119, 377);
+            this.label5.Location = new System.Drawing.Point(119, 358);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(144, 31);
             this.label5.TabIndex = 9;
@@ -485,29 +621,51 @@ namespace EManagementSystem
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
-            this.label4.Location = new System.Drawing.Point(146, 268);
+            this.label4.Location = new System.Drawing.Point(146, 249);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(117, 31);
             this.label4.TabIndex = 8;
             this.label4.Text = "Gender :";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
+            this.label27.Location = new System.Drawing.Point(456, 619);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(138, 31);
+            this.label27.TabIndex = 16;
+            this.label27.Text = "Office ID :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
-            this.label3.Location = new System.Drawing.Point(72, 154);
+            this.label3.Location = new System.Drawing.Point(72, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(191, 31);
             this.label3.TabIndex = 7;
             this.label3.Text = "Date Of Birth :";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
+            this.label26.Location = new System.Drawing.Point(100, 618);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(180, 31);
+            this.label26.TabIndex = 16;
+            this.label26.Text = "Education ID:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
-            this.label2.Location = new System.Drawing.Point(165, 97);
+            this.label2.Location = new System.Drawing.Point(165, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 31);
             this.label2.TabIndex = 16;
@@ -518,18 +676,44 @@ namespace EManagementSystem
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
-            this.label1.Location = new System.Drawing.Point(178, 40);
+            this.label1.Location = new System.Drawing.Point(178, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 31);
             this.label1.TabIndex = 6;
             this.label1.Text = "Title :";
             // 
+            // txid
+            // 
+            this.txid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.txid.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txid.ForeColor = System.Drawing.Color.White;
+            this.txid.Location = new System.Drawing.Point(807, 433);
+            this.txid.Name = "txid";
+            this.txid.Size = new System.Drawing.Size(159, 38);
+            this.txid.TabIndex = 1;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
+            this.label28.Location = new System.Drawing.Point(862, 396);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(44, 31);
+            this.label28.TabIndex = 6;
+            this.label28.Text = "ID";
+            // 
             // tabAcademic
             // 
             this.tabAcademic.BackColor = System.Drawing.Color.MidnightBlue;
-            this.tabAcademic.Controls.Add(this.dataGridView1);
-            this.tabAcademic.Controls.Add(this.button1);
-            this.tabAcademic.Controls.Add(this.button2);
+            this.tabAcademic.Controls.Add(this.txtACid);
+            this.tabAcademic.Controls.Add(this.label24);
+            this.tabAcademic.Controls.Add(this.btnACdelete);
+            this.tabAcademic.Controls.Add(this.btnACupdate);
+            this.tabAcademic.Controls.Add(this.btnACsearch);
+            this.tabAcademic.Controls.Add(this.dataGridAC);
+            this.tabAcademic.Controls.Add(this.btnACsave);
+            this.tabAcademic.Controls.Add(this.btnACclear);
             this.tabAcademic.Controls.Add(this.groupBox2);
             this.tabAcademic.Location = new System.Drawing.Point(4, 22);
             this.tabAcademic.Name = "tabAcademic";
@@ -538,124 +722,346 @@ namespace EManagementSystem
             this.tabAcademic.TabIndex = 1;
             this.tabAcademic.Text = "Academic Data";
             // 
-            // dataGridView1
+            // txtACid
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Indigo;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(537, 56);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(647, 489);
-            this.dataGridView1.TabIndex = 7;
+            this.txtACid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.txtACid.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtACid.ForeColor = System.Drawing.Color.White;
+            this.txtACid.Location = new System.Drawing.Point(543, 681);
+            this.txtACid.Multiline = true;
+            this.txtACid.Name = "txtACid";
+            this.txtACid.Size = new System.Drawing.Size(145, 37);
+            this.txtACid.TabIndex = 2;
+            this.txtACid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button1
+            // label24
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(295, 585);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(154, 65);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = false;
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.White;
+            this.label24.Location = new System.Drawing.Point(570, 649);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(87, 25);
+            this.label24.TabIndex = 12;
+            this.label24.Text = "AC-ID :";
             // 
-            // button2
+            // btnACdelete
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(95, 585);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(154, 65);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnACdelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnACdelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnACdelete.FlatAppearance.BorderSize = 2;
+            this.btnACdelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnACdelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnACdelete.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnACdelete.ForeColor = System.Drawing.Color.White;
+            this.btnACdelete.Location = new System.Drawing.Point(1102, 674);
+            this.btnACdelete.Name = "btnACdelete";
+            this.btnACdelete.Size = new System.Drawing.Size(130, 50);
+            this.btnACdelete.TabIndex = 5;
+            this.btnACdelete.Text = "Delete";
+            this.btnACdelete.UseVisualStyleBackColor = false;
+            this.btnACdelete.Click += new System.EventHandler(this.btnACdelete_Click);
+            // 
+            // btnACupdate
+            // 
+            this.btnACupdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnACupdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnACupdate.FlatAppearance.BorderSize = 2;
+            this.btnACupdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnACupdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnACupdate.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnACupdate.ForeColor = System.Drawing.Color.White;
+            this.btnACupdate.Location = new System.Drawing.Point(922, 674);
+            this.btnACupdate.Name = "btnACupdate";
+            this.btnACupdate.Size = new System.Drawing.Size(130, 50);
+            this.btnACupdate.TabIndex = 4;
+            this.btnACupdate.Text = "Update";
+            this.btnACupdate.UseVisualStyleBackColor = false;
+            this.btnACupdate.Click += new System.EventHandler(this.btnACupdate_Click);
+            // 
+            // btnACsearch
+            // 
+            this.btnACsearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnACsearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnACsearch.FlatAppearance.BorderSize = 2;
+            this.btnACsearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnACsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnACsearch.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnACsearch.ForeColor = System.Drawing.Color.White;
+            this.btnACsearch.Location = new System.Drawing.Point(733, 674);
+            this.btnACsearch.Name = "btnACsearch";
+            this.btnACsearch.Size = new System.Drawing.Size(130, 50);
+            this.btnACsearch.TabIndex = 3;
+            this.btnACsearch.Text = "Search";
+            this.btnACsearch.UseVisualStyleBackColor = false;
+            this.btnACsearch.Click += new System.EventHandler(this.btnACsearch_Click);
+            // 
+            // dataGridAC
+            // 
+            this.dataGridAC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridAC.BackgroundColor = System.Drawing.Color.Indigo;
+            this.dataGridAC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridAC.GridColor = System.Drawing.Color.White;
+            this.dataGridAC.Location = new System.Drawing.Point(514, 56);
+            this.dataGridAC.Name = "dataGridAC";
+            this.dataGridAC.Size = new System.Drawing.Size(793, 575);
+            this.dataGridAC.TabIndex = 7;
+            // 
+            // btnACsave
+            // 
+            this.btnACsave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnACsave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnACsave.FlatAppearance.BorderSize = 2;
+            this.btnACsave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnACsave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnACsave.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnACsave.ForeColor = System.Drawing.Color.White;
+            this.btnACsave.Location = new System.Drawing.Point(80, 659);
+            this.btnACsave.Name = "btnACsave";
+            this.btnACsave.Size = new System.Drawing.Size(154, 65);
+            this.btnACsave.TabIndex = 0;
+            this.btnACsave.Text = "Save";
+            this.btnACsave.UseVisualStyleBackColor = false;
+            this.btnACsave.Click += new System.EventHandler(this.btnACsave_Click);
+            // 
+            // btnACclear
+            // 
+            this.btnACclear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnACclear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnACclear.FlatAppearance.BorderSize = 2;
+            this.btnACclear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnACclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnACclear.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnACclear.ForeColor = System.Drawing.Color.White;
+            this.btnACclear.Location = new System.Drawing.Point(301, 659);
+            this.btnACclear.Name = "btnACclear";
+            this.btnACclear.Size = new System.Drawing.Size(154, 65);
+            this.btnACclear.TabIndex = 1;
+            this.btnACclear.Text = "Clear";
+            this.btnACclear.UseVisualStyleBackColor = false;
+            this.btnACclear.Click += new System.EventHandler(this.btnACclear_Click);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txtSpecial);
-            this.groupBox2.Controls.Add(this.txtMast);
-            this.groupBox2.Controls.Add(this.txtHons);
-            this.groupBox2.Controls.Add(this.txtHsc);
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.txtSsc);
+            this.groupBox2.Controls.Add(this.pictureBox2);
+            this.groupBox2.Controls.Add(this.txtACspecialvalue);
+            this.groupBox2.Controls.Add(this.txtACsresult);
+            this.groupBox2.Controls.Add(this.txtACmresult);
+            this.groupBox2.Controls.Add(this.label31);
+            this.groupBox2.Controls.Add(this.txtACHresult);
+            this.groupBox2.Controls.Add(this.txtACiresult);
+            this.groupBox2.Controls.Add(this.txtACaresult);
+            this.groupBox2.Controls.Add(this.txtaid);
+            this.groupBox2.Controls.Add(this.txtACOresult);
+            this.groupBox2.Controls.Add(this.comboBoxACmasters);
+            this.groupBox2.Controls.Add(this.comboBoxAChonus);
+            this.groupBox2.Controls.Add(this.comboBoxIlevel);
+            this.groupBox2.Controls.Add(this.comboBoxACalevel);
+            this.groupBox2.Controls.Add(this.comboBoxAcOlevel);
+            this.groupBox2.Controls.Add(this.pictureBox3);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.label25);
             this.groupBox2.Controls.Add(this.label22);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox2.Location = new System.Drawing.Point(81, 45);
+            this.groupBox2.Location = new System.Drawing.Point(30, 45);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(415, 500);
+            this.groupBox2.Size = new System.Drawing.Size(466, 586);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Academic";
             // 
-            // txtSpecial
+            // pictureBox2
             // 
-            this.txtSpecial.Location = new System.Drawing.Point(130, 416);
-            this.txtSpecial.Name = "txtSpecial";
-            this.txtSpecial.Size = new System.Drawing.Size(238, 32);
-            this.txtSpecial.TabIndex = 1;
-            this.txtSpecial.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.ErrorImage = null;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(397, 26);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(38, 35);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // txtMast
+            // txtACspecialvalue
             // 
-            this.txtMast.Location = new System.Drawing.Point(130, 340);
-            this.txtMast.Name = "txtMast";
-            this.txtMast.Size = new System.Drawing.Size(238, 32);
-            this.txtMast.TabIndex = 1;
-            this.txtMast.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtACspecialvalue.Location = new System.Drawing.Point(197, 503);
+            this.txtACspecialvalue.Name = "txtACspecialvalue";
+            this.txtACspecialvalue.Size = new System.Drawing.Size(238, 32);
+            this.txtACspecialvalue.TabIndex = 8;
             // 
-            // txtHons
+            // txtACsresult
             // 
-            this.txtHons.Location = new System.Drawing.Point(130, 263);
-            this.txtHons.Name = "txtHons";
-            this.txtHons.Size = new System.Drawing.Size(238, 32);
-            this.txtHons.TabIndex = 1;
-            this.txtHons.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtACsresult.Location = new System.Drawing.Point(235, 541);
+            this.txtACsresult.Name = "txtACsresult";
+            this.txtACsresult.Size = new System.Drawing.Size(149, 32);
+            this.txtACsresult.TabIndex = 8;
+            this.txtACsresult.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtHsc
+            // txtACmresult
             // 
-            this.txtHsc.Location = new System.Drawing.Point(130, 192);
-            this.txtHsc.Name = "txtHsc";
-            this.txtHsc.Size = new System.Drawing.Size(238, 32);
-            this.txtHsc.TabIndex = 1;
-            this.txtHsc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtACmresult.Location = new System.Drawing.Point(235, 464);
+            this.txtACmresult.Name = "txtACmresult";
+            this.txtACmresult.Size = new System.Drawing.Size(149, 32);
+            this.txtACmresult.TabIndex = 8;
+            this.txtACmresult.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox6
+            // label31
             // 
-            this.textBox6.Location = new System.Drawing.Point(130, 50);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(238, 32);
-            this.textBox6.TabIndex = 1;
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label31.AutoSize = true;
+            this.label31.BackColor = System.Drawing.Color.Transparent;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.White;
+            this.label31.Location = new System.Drawing.Point(142, 33);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(87, 25);
+            this.label31.TabIndex = 12;
+            this.label31.Text = "AC-ID :";
             // 
-            // txtSsc
+            // txtACHresult
             // 
-            this.txtSsc.Location = new System.Drawing.Point(130, 118);
-            this.txtSsc.Name = "txtSsc";
-            this.txtSsc.Size = new System.Drawing.Size(238, 32);
-            this.txtSsc.TabIndex = 1;
-            this.txtSsc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtACHresult.Location = new System.Drawing.Point(235, 388);
+            this.txtACHresult.Name = "txtACHresult";
+            this.txtACHresult.Size = new System.Drawing.Size(149, 32);
+            this.txtACHresult.TabIndex = 8;
+            this.txtACHresult.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtACiresult
+            // 
+            this.txtACiresult.Location = new System.Drawing.Point(235, 312);
+            this.txtACiresult.Name = "txtACiresult";
+            this.txtACiresult.Size = new System.Drawing.Size(149, 32);
+            this.txtACiresult.TabIndex = 8;
+            this.txtACiresult.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtACaresult
+            // 
+            this.txtACaresult.Location = new System.Drawing.Point(235, 236);
+            this.txtACaresult.Name = "txtACaresult";
+            this.txtACaresult.Size = new System.Drawing.Size(149, 32);
+            this.txtACaresult.TabIndex = 8;
+            this.txtACaresult.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtaid
+            // 
+            this.txtaid.Location = new System.Drawing.Point(235, 29);
+            this.txtaid.Name = "txtaid";
+            this.txtaid.Size = new System.Drawing.Size(149, 32);
+            this.txtaid.TabIndex = 8;
+            // 
+            // txtACOresult
+            // 
+            this.txtACOresult.Location = new System.Drawing.Point(235, 160);
+            this.txtACOresult.Name = "txtACOresult";
+            this.txtACOresult.Size = new System.Drawing.Size(149, 32);
+            this.txtACOresult.TabIndex = 8;
+            this.txtACOresult.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // comboBoxACmasters
+            // 
+            this.comboBoxACmasters.FormattingEnabled = true;
+            this.comboBoxACmasters.Items.AddRange(new object[] {
+            "Accounting",
+            "Management",
+            "Finance",
+            "Marketing",
+            "Maths",
+            "Chemistry",
+            "Zoology",
+            "Physics",
+            "English",
+            "CSE",
+            "EEE",
+            "IT",
+            "ICT",
+            "Other"});
+            this.comboBoxACmasters.Location = new System.Drawing.Point(197, 426);
+            this.comboBoxACmasters.Name = "comboBoxACmasters";
+            this.comboBoxACmasters.Size = new System.Drawing.Size(238, 32);
+            this.comboBoxACmasters.TabIndex = 7;
+            // 
+            // comboBoxAChonus
+            // 
+            this.comboBoxAChonus.FormattingEnabled = true;
+            this.comboBoxAChonus.Items.AddRange(new object[] {
+            "Accounting",
+            "Management",
+            "Finance",
+            "Marketing",
+            "Maths",
+            "Chemistry",
+            "Zoology",
+            "Physics",
+            "English",
+            "CSE",
+            "EEE",
+            "IT",
+            "ICT",
+            "Other"});
+            this.comboBoxAChonus.Location = new System.Drawing.Point(197, 350);
+            this.comboBoxAChonus.Name = "comboBoxAChonus";
+            this.comboBoxAChonus.Size = new System.Drawing.Size(238, 32);
+            this.comboBoxAChonus.TabIndex = 7;
+            // 
+            // comboBoxIlevel
+            // 
+            this.comboBoxIlevel.FormattingEnabled = true;
+            this.comboBoxIlevel.Items.AddRange(new object[] {
+            "HSC",
+            "Alim",
+            "Equivalent"});
+            this.comboBoxIlevel.Location = new System.Drawing.Point(197, 274);
+            this.comboBoxIlevel.Name = "comboBoxIlevel";
+            this.comboBoxIlevel.Size = new System.Drawing.Size(238, 32);
+            this.comboBoxIlevel.TabIndex = 7;
+            // 
+            // comboBoxACalevel
+            // 
+            this.comboBoxACalevel.FormattingEnabled = true;
+            this.comboBoxACalevel.Items.AddRange(new object[] {
+            "SSC",
+            "Dakhil",
+            "Equivalent"});
+            this.comboBoxACalevel.Location = new System.Drawing.Point(197, 198);
+            this.comboBoxACalevel.Name = "comboBoxACalevel";
+            this.comboBoxACalevel.Size = new System.Drawing.Size(238, 32);
+            this.comboBoxACalevel.TabIndex = 7;
+            // 
+            // comboBoxAcOlevel
+            // 
+            this.comboBoxAcOlevel.FormattingEnabled = true;
+            this.comboBoxAcOlevel.Items.AddRange(new object[] {
+            "JSC",
+            "JDC",
+            "NA"});
+            this.comboBoxAcOlevel.Location = new System.Drawing.Point(197, 122);
+            this.comboBoxAcOlevel.Name = "comboBoxAcOlevel";
+            this.comboBoxAcOlevel.Size = new System.Drawing.Size(238, 32);
+            this.comboBoxAcOlevel.TabIndex = 7;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.ErrorImage = null;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(346, 80);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(38, 35);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(38, 420);
+            this.label12.Location = new System.Drawing.Point(104, 506);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(86, 24);
             this.label12.TabIndex = 0;
@@ -664,7 +1070,7 @@ namespace EManagementSystem
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(25, 344);
+            this.label11.Location = new System.Drawing.Point(91, 430);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(99, 24);
             this.label11.TabIndex = 0;
@@ -673,44 +1079,52 @@ namespace EManagementSystem
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(20, 267);
+            this.label10.Location = new System.Drawing.Point(86, 354);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(104, 24);
             this.label10.TabIndex = 0;
             this.label10.Text = "Honour\'s :";
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(249, 85);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(91, 24);
+            this.label25.TabIndex = 0;
+            this.label25.Text = "RESULT";
+            // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(63, 54);
+            this.label22.Location = new System.Drawing.Point(109, 126);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(60, 24);
+            this.label22.Size = new System.Drawing.Size(81, 24);
             this.label22.TabIndex = 0;
-            this.label22.Text = "JSC :";
+            this.label22.Text = "O-level:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(59, 196);
+            this.label9.Location = new System.Drawing.Point(10, 278);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 24);
+            this.label9.Size = new System.Drawing.Size(182, 24);
             this.label9.TabIndex = 0;
-            this.label9.Text = "HSC :";
+            this.label9.Text = "Intermediate level :";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(63, 122);
+            this.label8.Location = new System.Drawing.Point(105, 202);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 24);
+            this.label8.Size = new System.Drawing.Size(85, 24);
             this.label8.TabIndex = 0;
-            this.label8.Text = "SSC :";
+            this.label8.Text = "A-level :";
             // 
             // tabOfficial
             // 
             this.tabOfficial.BackColor = System.Drawing.Color.LightSeaGreen;
             this.tabOfficial.Controls.Add(this.txtFOid);
-            this.tabOfficial.Controls.Add(this.btnOFshow);
             this.tabOfficial.Controls.Add(this.label23);
             this.tabOfficial.Controls.Add(this.btnOFdelete);
             this.tabOfficial.Controls.Add(this.btnOFupdate);
@@ -736,25 +1150,18 @@ namespace EManagementSystem
             this.txtFOid.Multiline = true;
             this.txtFOid.Name = "txtFOid";
             this.txtFOid.Size = new System.Drawing.Size(145, 37);
-            this.txtFOid.TabIndex = 11;
+            this.txtFOid.TabIndex = 3;
             this.txtFOid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btnOFshow
+            // label23
             // 
-            this.btnOFshow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnOFshow.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOFshow.FlatAppearance.BorderSize = 2;
-            this.btnOFshow.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btnOFshow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOFshow.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOFshow.ForeColor = System.Drawing.Color.White;
-            this.btnOFshow.Location = new System.Drawing.Point(841, 230);
-            this.btnOFshow.Name = "btnOFshow";
-            this.btnOFshow.Size = new System.Drawing.Size(242, 65);
-            this.btnOFshow.TabIndex = 9;
-            this.btnOFshow.Text = "Show";
-            this.btnOFshow.UseVisualStyleBackColor = false;
-            this.btnOFshow.Click += new System.EventHandler(this.btnOFshow_Click);
+            this.label23.AutoSize = true;
+            this.label23.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label23.Location = new System.Drawing.Point(107, 517);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(62, 24);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Of-ID";
             // 
             // btnOFdelete
             // 
@@ -768,7 +1175,7 @@ namespace EManagementSystem
             this.btnOFdelete.Location = new System.Drawing.Point(627, 542);
             this.btnOFdelete.Name = "btnOFdelete";
             this.btnOFdelete.Size = new System.Drawing.Size(130, 50);
-            this.btnOFdelete.TabIndex = 9;
+            this.btnOFdelete.TabIndex = 6;
             this.btnOFdelete.Text = "Delete";
             this.btnOFdelete.UseVisualStyleBackColor = false;
             this.btnOFdelete.Click += new System.EventHandler(this.btnOFdelete_Click);
@@ -785,7 +1192,7 @@ namespace EManagementSystem
             this.btnOFupdate.Location = new System.Drawing.Point(447, 542);
             this.btnOFupdate.Name = "btnOFupdate";
             this.btnOFupdate.Size = new System.Drawing.Size(130, 50);
-            this.btnOFupdate.TabIndex = 9;
+            this.btnOFupdate.TabIndex = 5;
             this.btnOFupdate.Text = "Update";
             this.btnOFupdate.UseVisualStyleBackColor = false;
             this.btnOFupdate.Click += new System.EventHandler(this.btnOFupdate_Click);
@@ -802,7 +1209,7 @@ namespace EManagementSystem
             this.btnOFsearch.Location = new System.Drawing.Point(258, 542);
             this.btnOFsearch.Name = "btnOFsearch";
             this.btnOFsearch.Size = new System.Drawing.Size(130, 50);
-            this.btnOFsearch.TabIndex = 9;
+            this.btnOFsearch.TabIndex = 4;
             this.btnOFsearch.Text = "Search";
             this.btnOFsearch.UseVisualStyleBackColor = false;
             this.btnOFsearch.Click += new System.EventHandler(this.btnOFsearch_Click);
@@ -816,10 +1223,10 @@ namespace EManagementSystem
             this.btnOFsave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOFsave.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOFsave.ForeColor = System.Drawing.Color.White;
-            this.btnOFsave.Location = new System.Drawing.Point(841, 99);
+            this.btnOFsave.Location = new System.Drawing.Point(841, 133);
             this.btnOFsave.Name = "btnOFsave";
             this.btnOFsave.Size = new System.Drawing.Size(242, 65);
-            this.btnOFsave.TabIndex = 9;
+            this.btnOFsave.TabIndex = 0;
             this.btnOFsave.Text = "Save";
             this.btnOFsave.UseVisualStyleBackColor = false;
             this.btnOFsave.Click += new System.EventHandler(this.btnOFsave_Click);
@@ -833,10 +1240,10 @@ namespace EManagementSystem
             this.btnOFclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOFclear.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOFclear.ForeColor = System.Drawing.Color.White;
-            this.btnOFclear.Location = new System.Drawing.Point(841, 361);
+            this.btnOFclear.Location = new System.Drawing.Point(841, 269);
             this.btnOFclear.Name = "btnOFclear";
             this.btnOFclear.Size = new System.Drawing.Size(242, 65);
-            this.btnOFclear.TabIndex = 10;
+            this.btnOFclear.TabIndex = 2;
             this.btnOFclear.Text = "Clear";
             this.btnOFclear.UseVisualStyleBackColor = false;
             this.btnOFclear.Click += new System.EventHandler(this.btnOFclear_Click);
@@ -854,11 +1261,14 @@ namespace EManagementSystem
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.pictureBoxofshow);
             this.groupBox4.Controls.Add(this.label15);
-            this.groupBox4.Controls.Add(this.txtOFproPosition);
-            this.groupBox4.Controls.Add(this.txtOFpresPosition);
-            this.groupBox4.Controls.Add(this.txtOFprePosition);
+            this.groupBox4.Controls.Add(this.comboBoxOFPro);
+            this.groupBox4.Controls.Add(this.comboBoxOFPre);
+            this.groupBox4.Controls.Add(this.comboBoxOFPri);
+            this.groupBox4.Controls.Add(this.txtOfid);
             this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.label29);
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.Color.DarkBlue;
@@ -869,55 +1279,153 @@ namespace EManagementSystem
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Position";
             // 
+            // pictureBoxofshow
+            // 
+            this.pictureBoxofshow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxofshow.ErrorImage = null;
+            this.pictureBoxofshow.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxofshow.Image")));
+            this.pictureBoxofshow.Location = new System.Drawing.Point(275, 28);
+            this.pictureBoxofshow.Name = "pictureBoxofshow";
+            this.pictureBoxofshow.Size = new System.Drawing.Size(26, 25);
+            this.pictureBoxofshow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxofshow.TabIndex = 14;
+            this.pictureBoxofshow.TabStop = false;
+            this.pictureBoxofshow.Visible = false;
+            this.pictureBoxofshow.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(83, 301);
+            this.label15.Location = new System.Drawing.Point(83, 353);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(182, 24);
             this.label15.TabIndex = 0;
             this.label15.Text = "Promotion Position";
             // 
-            // txtOFproPosition
+            // comboBoxOFPro
             // 
-            this.txtOFproPosition.ForeColor = System.Drawing.Color.DarkBlue;
-            this.txtOFproPosition.Location = new System.Drawing.Point(48, 355);
-            this.txtOFproPosition.Name = "txtOFproPosition";
-            this.txtOFproPosition.Size = new System.Drawing.Size(251, 32);
-            this.txtOFproPosition.TabIndex = 2;
-            this.txtOFproPosition.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.comboBoxOFPro.FormattingEnabled = true;
+            this.comboBoxOFPro.Items.AddRange(new object[] {
+            "IT Technician",
+            "Information Security Analyst",
+            "QA Analyst",
+            "IT Manager",
+            "Systems Analyst",
+            "Computer Support Specialist",
+            "Computer Engineer",
+            "Salesforce Administrator",
+            "Oracle DBA",
+            "Sales Engineer",
+            "IT Director",
+            "Cyber Security Analyst",
+            "Devops Engineer",
+            "Network Technician",
+            "Help Desk Technician",
+            "PC Technician",
+            "Computer Hardware Engineer",
+            "Entry Level Data Analyst",
+            "Junior Dev Ops Engineer",
+            "Junior Salesforce Administrator",
+            "junior programmer",
+            "programmer"});
+            this.comboBoxOFPro.Location = new System.Drawing.Point(48, 403);
+            this.comboBoxOFPro.Name = "comboBoxOFPro";
+            this.comboBoxOFPro.Size = new System.Drawing.Size(251, 32);
+            this.comboBoxOFPro.TabIndex = 2;
             // 
-            // txtOFpresPosition
+            // comboBoxOFPre
             // 
-            this.txtOFpresPosition.ForeColor = System.Drawing.Color.DarkBlue;
-            this.txtOFpresPosition.Location = new System.Drawing.Point(48, 237);
-            this.txtOFpresPosition.Name = "txtOFpresPosition";
-            this.txtOFpresPosition.Size = new System.Drawing.Size(251, 32);
-            this.txtOFpresPosition.TabIndex = 2;
-            this.txtOFpresPosition.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.comboBoxOFPre.FormattingEnabled = true;
+            this.comboBoxOFPre.Items.AddRange(new object[] {
+            "IT Technician",
+            "Information Security Analyst",
+            "QA Analyst",
+            "IT Manager",
+            "Systems Analyst",
+            "Computer Support Specialist",
+            "Computer Engineer",
+            "Salesforce Administrator",
+            "Oracle DBA",
+            "Sales Engineer",
+            "IT Director",
+            "Cyber Security Analyst",
+            "Devops Engineer",
+            "Network Technician",
+            "Help Desk Technician",
+            "PC Technician",
+            "Computer Hardware Engineer",
+            "Entry Level Data Analyst",
+            "Junior Dev Ops Engineer",
+            "Junior Salesforce Administrator",
+            "junior programmer",
+            "programmer"});
+            this.comboBoxOFPre.Location = new System.Drawing.Point(48, 285);
+            this.comboBoxOFPre.Name = "comboBoxOFPre";
+            this.comboBoxOFPre.Size = new System.Drawing.Size(251, 32);
+            this.comboBoxOFPre.TabIndex = 2;
             // 
-            // txtOFprePosition
+            // comboBoxOFPri
             // 
-            this.txtOFprePosition.ForeColor = System.Drawing.Color.DarkBlue;
-            this.txtOFprePosition.Location = new System.Drawing.Point(48, 112);
-            this.txtOFprePosition.Name = "txtOFprePosition";
-            this.txtOFprePosition.Size = new System.Drawing.Size(251, 32);
-            this.txtOFprePosition.TabIndex = 2;
-            this.txtOFprePosition.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.comboBoxOFPri.FormattingEnabled = true;
+            this.comboBoxOFPri.Items.AddRange(new object[] {
+            "IT Technician",
+            "Information Security Analyst",
+            "QA Analyst",
+            "IT Manager",
+            "Systems Analyst",
+            "Computer Support Specialist",
+            "Computer Engineer",
+            "Salesforce Administrator",
+            "Oracle DBA",
+            "Sales Engineer",
+            "IT Director",
+            "Cyber Security Analyst",
+            "Devops Engineer",
+            "Network Technician",
+            "Help Desk Technician",
+            "PC Technician",
+            "Computer Hardware Engineer",
+            "Entry Level Data Analyst",
+            "Junior Dev Ops Engineer",
+            "Junior Salesforce Administrator",
+            "junior programmer",
+            "programmer"});
+            this.comboBoxOFPri.Location = new System.Drawing.Point(48, 173);
+            this.comboBoxOFPri.Name = "comboBoxOFPri";
+            this.comboBoxOFPri.Size = new System.Drawing.Size(251, 32);
+            this.comboBoxOFPri.TabIndex = 2;
+            // 
+            // txtOfid
+            // 
+            this.txtOfid.ForeColor = System.Drawing.Color.DarkBlue;
+            this.txtOfid.Location = new System.Drawing.Point(48, 71);
+            this.txtOfid.Name = "txtOfid";
+            this.txtOfid.Size = new System.Drawing.Size(251, 32);
+            this.txtOfid.TabIndex = 0;
+            this.txtOfid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(83, 181);
+            this.label14.Location = new System.Drawing.Point(83, 229);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(155, 24);
             this.label14.TabIndex = 0;
             this.label14.Text = "Present Position";
             // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(122, 28);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(103, 24);
+            this.label29.TabIndex = 0;
+            this.label29.Text = "Official ID";
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(83, 59);
+            this.label13.Location = new System.Drawing.Point(83, 124);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(165, 24);
             this.label13.TabIndex = 0;
@@ -925,64 +1433,53 @@ namespace EManagementSystem
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.comboBoxOFBC);
             this.groupBox3.Controls.Add(this.txtOFbranch);
-            this.groupBox3.Controls.Add(this.txtOFbrCode);
             this.groupBox3.Controls.Add(this.label20);
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.DarkBlue;
             this.groupBox3.Location = new System.Drawing.Point(411, 40);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(279, 452);
+            this.groupBox3.Size = new System.Drawing.Size(356, 452);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Branch Code";
             // 
+            // comboBoxOFBC
+            // 
+            this.comboBoxOFBC.FormattingEnabled = true;
+            this.comboBoxOFBC.Location = new System.Drawing.Point(27, 126);
+            this.comboBoxOFBC.Name = "comboBoxOFBC";
+            this.comboBoxOFBC.Size = new System.Drawing.Size(294, 32);
+            this.comboBoxOFBC.TabIndex = 2;
+            // 
             // txtOFbranch
             // 
             this.txtOFbranch.ForeColor = System.Drawing.Color.DarkBlue;
-            this.txtOFbranch.Location = new System.Drawing.Point(28, 217);
+            this.txtOFbranch.Location = new System.Drawing.Point(27, 229);
             this.txtOFbranch.Name = "txtOFbranch";
-            this.txtOFbranch.Size = new System.Drawing.Size(212, 32);
-            this.txtOFbranch.TabIndex = 2;
+            this.txtOFbranch.Size = new System.Drawing.Size(294, 32);
+            this.txtOFbranch.TabIndex = 1;
             this.txtOFbranch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtOFbrCode
-            // 
-            this.txtOFbrCode.ForeColor = System.Drawing.Color.DarkBlue;
-            this.txtOFbrCode.Location = new System.Drawing.Point(28, 111);
-            this.txtOFbrCode.Name = "txtOFbrCode";
-            this.txtOFbrCode.Size = new System.Drawing.Size(212, 32);
-            this.txtOFbrCode.TabIndex = 2;
-            this.txtOFbrCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(99, 181);
+            this.label20.Location = new System.Drawing.Point(108, 193);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(76, 24);
+            this.label20.Size = new System.Drawing.Size(134, 24);
             this.label20.TabIndex = 0;
-            this.label20.Text = "Branch";
+            this.label20.Text = "Branch Name";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(68, 75);
+            this.label19.Location = new System.Drawing.Point(111, 75);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(128, 24);
             this.label19.TabIndex = 0;
             this.label19.Text = "Branch Code";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label23.Location = new System.Drawing.Point(107, 517);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(62, 24);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Of-ID";
             // 
             // frmCEPnewdata
             // 
@@ -994,25 +1491,31 @@ namespace EManagementSystem
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCEPnewdata";
-            this.Text = "frmCEPnewdata";
+            this.Text = "d";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPersonal.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picShow)).EndInit();
+            this.tabPersonal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PEpicShow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSearchinfor)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picNIDinfo)).EndInit();
             this.tabAcademic.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabAcademic.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAC)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tabOfficial.ResumeLayout(false);
             this.tabOfficial.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridOF)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxofshow)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -1028,18 +1531,17 @@ namespace EManagementSystem
         private System.Windows.Forms.TabPage tabAcademic;
         private System.Windows.Forms.TabPage tabOfficial;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkBoxMaritalStatus;
         private System.Windows.Forms.RadioButton rdFemale;
         private System.Windows.Forms.RadioButton rdMale;
-        private System.Windows.Forms.DateTimePicker dateTimeJoinDate;
-        private System.Windows.Forms.DateTimePicker dateTimeDateofBirth;
-        private System.Windows.Forms.TextBox txtSocialId;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtPhone;
-        private System.Windows.Forms.TextBox txtFatherName;
-        private System.Windows.Forms.TextBox txtNid;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.ComboBox comboBoxTitle;
+        private System.Windows.Forms.DateTimePicker PEdateTimeJoinDate;
+        private System.Windows.Forms.DateTimePicker PEdateTimeDateofBirth;
+        private System.Windows.Forms.TextBox txtPESocialId;
+        private System.Windows.Forms.TextBox txtPEEmail;
+        private System.Windows.Forms.TextBox txtPEPhone;
+        private System.Windows.Forms.TextBox txtPEFatherName;
+        private System.Windows.Forms.TextBox txtPENid;
+        private System.Windows.Forms.TextBox txtPEName;
+        private System.Windows.Forms.ComboBox PEcomboBoxTitle;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label18;
@@ -1052,23 +1554,18 @@ namespace EManagementSystem
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewPersonal;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox picNIDinfo;
+        private System.Windows.Forms.Button btnPESave;
+        private System.Windows.Forms.Button btnPEClear;
+        private System.Windows.Forms.Button btnACsave;
+        private System.Windows.Forms.Button btnACclear;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtSpecial;
-        private System.Windows.Forms.TextBox txtMast;
-        private System.Windows.Forms.TextBox txtHons;
-        private System.Windows.Forms.TextBox txtHsc;
-        private System.Windows.Forms.TextBox txtSsc;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridAC;
         private System.Windows.Forms.DataGridView dataGridOF;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label15;
@@ -1076,23 +1573,57 @@ namespace EManagementSystem
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txtOFbranch;
-        private System.Windows.Forms.TextBox txtOFbrCode;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button btnOFsave;
         private System.Windows.Forms.Button btnOFclear;
-        private System.Windows.Forms.TextBox txtOFpresPosition;
-        private System.Windows.Forms.TextBox txtOFprePosition;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox txtOFproPosition;
-        private System.Windows.Forms.Button btnUpload;
-        private System.Windows.Forms.PictureBox picShow;
+        private System.Windows.Forms.Button btnPEUpload;
+        private System.Windows.Forms.PictureBox PEpicShow;
         private System.Windows.Forms.Button btnOFdelete;
         private System.Windows.Forms.Button btnOFupdate;
         private System.Windows.Forms.Button btnOFsearch;
-        private System.Windows.Forms.Button btnOFshow;
         private System.Windows.Forms.TextBox txtFOid;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox txtACid;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Button btnACdelete;
+        private System.Windows.Forms.Button btnACupdate;
+        private System.Windows.Forms.Button btnACsearch;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.ComboBox PEcomboBoxMstatus;
+        private System.Windows.Forms.ComboBox comboBox2PEid;
+        private System.Windows.Forms.ComboBox comboBoxPEId;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Button btnPEdelete;
+        private System.Windows.Forms.Button btnPEupdate;
+        private System.Windows.Forms.Button btnPEsearch;
+        private System.Windows.Forms.PictureBox picSearchinfor;
+        private System.Windows.Forms.TextBox txid;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox txtOfid;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox txtACmresult;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox txtACHresult;
+        private System.Windows.Forms.TextBox txtACiresult;
+        private System.Windows.Forms.TextBox txtACaresult;
+        private System.Windows.Forms.TextBox txtaid;
+        private System.Windows.Forms.TextBox txtACOresult;
+        private System.Windows.Forms.ComboBox comboBoxACmasters;
+        private System.Windows.Forms.ComboBox comboBoxAChonus;
+        private System.Windows.Forms.ComboBox comboBoxIlevel;
+        private System.Windows.Forms.ComboBox comboBoxACalevel;
+        private System.Windows.Forms.ComboBox comboBoxAcOlevel;
+        private System.Windows.Forms.ComboBox comboBoxOFPro;
+        private System.Windows.Forms.ComboBox comboBoxOFPre;
+        private System.Windows.Forms.ComboBox comboBoxOFPri;
+        private System.Windows.Forms.ComboBox comboBoxOFBC;
+        private System.Windows.Forms.TextBox txtACspecialvalue;
+        private System.Windows.Forms.TextBox txtACsresult;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBoxofshow;
     }
 }

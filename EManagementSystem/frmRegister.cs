@@ -15,7 +15,8 @@ namespace EManagementSystem
     public partial class frmRegister : Form
     {
         public Point mouseLocation;
-        SqlConnection con = new SqlConnection(@"Data Source=WALIDULHASAN\MAHMUDSABUJ;Initial Catalog=EMS;Integrated Security=True");
+        //SqlConnection con = new SqlConnection(@"Data Source=WALIDULHASAN\MAHMUDSABUJ;Initial Catalog=EMS;Integrated Security=True");
+        Connection c = new Connection();
         public frmRegister()
         {
             InitializeComponent();
@@ -35,17 +36,18 @@ namespace EManagementSystem
             }
             else if (txtPassword.Text == txtConfirmpassword.Text)
             {
-                con.Open();
-                SqlCommand cmd = new SqlCommand(@"INSERT INTO loginInfo VALUES ('" + txtUsername.Text + "','" + txtPassword.Text + "','" + txtEmail.Text + "')", con);
+                c.con.Open();
+                SqlCommand cmd = new SqlCommand(@"INSERT INTO loginInfo VALUES ('" + txtUsername.Text + "','" + txtPassword.Text + "','" + txtEmail.Text + "')", c.con);
                 cmd.ExecuteNonQuery();
-                con.Close();
+                c.con.Close();
                 clear();
                 //this.Hide();
                 MessageBox.Show("Your Account has been Successfully Created","Registration Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                txtUsername.Focus();
                 //frmLogin log = new frmLogin();
                 //log.Show();
 
-                
+
             }
             else
             {
