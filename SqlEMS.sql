@@ -130,6 +130,8 @@ CREATE TABLE tblEpersonla
 	eoId INT REFERENCES tblOfficial(eoId),
 )
 GO
+select eImage from tblEpersonla where eId=103
+go
 
 --UPDATE tblEpersonla SET eTitle='Mrs',eName='Suma Sintia',eDob='2021-04-13',eFatherName='Kamal Hossen',eGender='Female',eNationalIdNo='1994225465573',ePhoneNo='01787767345',eEmail='su@gmail.com',eSocialId='13131313',eMeritals='Engaged',eJoinDate='2021-04-18',eImage=NULL,eaId=1,eoId=1001 WHERE eId=11
 --GO
@@ -137,7 +139,34 @@ GO
 --GO
 --SELECT * FROM tblEpersonla
 --GO
-INSERT INTO tblEpersonla VALUES('Mr','Kamal Hossen','10/11/1993','Sumin Hazi Kazi','Male','1994223465578','01735538904','Fiverrwalid@gmail.com','0944345','Single','10/10/2020',NULL,1,1001);
+--INSERT INTO tblEpersonla VALUES('Mr','Kamal Hossen','10/11/1993','Sumin Hazi Kazi','Male','1994223465578','01735538904','Fiverrwalid@gmail.com','0944345','Single','10/10/2020',NULL,1,1001);
+--GO
+--DELETE FROM tblEpersonla WHERE eId=110
+--GO
+CREATE TABLE tblESalary
+(
+	salaryId INT IDENTITY(1000,1) PRIMARY KEY,
+	basicPay INT CHECK(basicPay>=8000) NOT NULL,
+	houseRent INT NOT NULL,
+	medicalAllowance INT CHECK(medicalAllowance<=1500) NOT NULL DEFAULT 0,
+	travle_allowance INT CHECK(travle_allowance<=2000) NOT NULL DEFAULT 0,
+	childrenEallwanc INT CHECK(childrenEallwanc<=500) NOT NULL DEFAULT 0,
+	grossSalary AS basicPay+houseRent+medicalAllowance+travle_allowance+childrenEallwanc,
+	loan INT DEFAULT 0 NOT NULL,
+	Gpf_Cpf INT DEFAULT 0 NOT NULL,
+	salaryDate DATE NOT NULL DEFAULT GETDATE(),
+	eId INT REFERENCES tblEpersonla(eId),
+	Cut_from_GrossSalary AS loan+Gpf_Cpf,
+	Net_Salary_Paid AS (basicPay+houseRent+medicalAllowance+travle_allowance+childrenEallwanc)-(loan+Gpf_Cpf)
+)
 GO
-DELETE FROM tblEpersonla WHERE eId=110
-GO
+drop table tblESalary
+go
+INSERT INTO tblESalary values (9000,3000,1000,1000,500,10000,40,GETDATE(),103)
+go
+select * from tblESalary
+
+UPDATE tblESalary(basicpay,houseRent,medicalAllowance,travle_allowance,childrenEallwanc,loan,Gpf_Cpf,salaryDate,eId) SET basicPay=50000,houseRent=4000,medicalAllowance=500,travle_allowance=1000,childrenEallwanc=300,loan=5000,Gpf_Cpf=200,salaryDate='10/10/2020',eId=103 WHERE salaryId=1004
+go
+
+update tblESalary SET basicpay=40000,houseRent=4000 where salaryId=1004

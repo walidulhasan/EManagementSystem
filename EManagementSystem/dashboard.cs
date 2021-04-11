@@ -101,5 +101,11 @@ namespace EManagementSystem
             frmCEPsearching ser = new frmCEPsearching();
             ser.Show();
         }
+
+        private void picSalary_Click(object sender, EventArgs e)
+        {
+            frmSalary sa = new frmSalary();
+            sa.Show();
+        }
     }
 }

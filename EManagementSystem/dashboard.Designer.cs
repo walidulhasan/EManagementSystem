@@ -44,9 +44,9 @@ namespace EManagementSystem
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.picSalary = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.picSearching = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -71,8 +71,8 @@ namespace EManagementSystem
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSalary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSearching)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -259,17 +259,18 @@ namespace EManagementSystem
             this.label5.TabIndex = 4;
             this.label5.Text = "Position";
             // 
-            // pictureBox7
+            // picSalary
             // 
-            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(554, 207);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(122, 165);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 3;
-            this.pictureBox7.TabStop = false;
+            this.picSalary.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picSalary.Image = ((System.Drawing.Image)(resources.GetObject("picSalary.Image")));
+            this.picSalary.Location = new System.Drawing.Point(554, 207);
+            this.picSalary.Margin = new System.Windows.Forms.Padding(2);
+            this.picSalary.Name = "picSalary";
+            this.picSalary.Size = new System.Drawing.Size(122, 165);
+            this.picSalary.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSalary.TabIndex = 3;
+            this.picSalary.TabStop = false;
+            this.picSalary.Click += new System.EventHandler(this.picSalary_Click);
             // 
             // label6
             // 
@@ -283,18 +284,18 @@ namespace EManagementSystem
             this.label6.TabIndex = 4;
             this.label6.Text = "View";
             // 
-            // pictureBox8
+            // picSearching
             // 
-            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(715, 207);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(122, 165);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 3;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
+            this.picSearching.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picSearching.Image = ((System.Drawing.Image)(resources.GetObject("picSearching.Image")));
+            this.picSearching.Location = new System.Drawing.Point(715, 207);
+            this.picSearching.Margin = new System.Windows.Forms.Padding(2);
+            this.picSearching.Name = "picSearching";
+            this.picSearching.Size = new System.Drawing.Size(122, 165);
+            this.picSearching.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSearching.TabIndex = 3;
+            this.picSearching.TabStop = false;
+            this.picSearching.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // label7
             // 
@@ -501,9 +502,9 @@ namespace EManagementSystem
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox14);
-            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.picSearching);
             this.Controls.Add(this.pictureBox13);
-            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.picSalary);
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox11);
@@ -528,8 +529,8 @@ namespace EManagementSystem
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSalary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSearching)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -556,9 +557,9 @@ namespace EManagementSystem
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox picSalary;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox picSearching;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label label8;

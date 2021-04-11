@@ -41,6 +41,15 @@
     <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="FlatButton">
+      <HintPath>C:\Users\User\Downloads\New folder (2)\FlatButton.dll</HintPath>
+    </Reference>
+    <Reference Include="JTextBox2">
+      <HintPath>C:\Users\User\Downloads\New folder (2)\JTextBox2.dll</HintPath>
+    </Reference>
+    <Reference Include="JThinButton">
+      <HintPath>C:\Users\User\Downloads\New folder (2)\JThinButton.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -118,6 +127,12 @@
     </Compile>
     <Compile Include="frmNotice.Designer.cs">
       <DependentUpon>frmNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalary.Designer.cs">
+      <DependentUpon>frmSalary.cs</DependentUpon>
     </Compile>
     <Compile Include="frmview.cs">
       <SubType>Form</SubType>
@@ -246,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNotice.resx">
       <DependentUpon>frmNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalary.resx">
+      <DependentUpon>frmSalary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmview.resx">
       <DependentUpon>frmview.cs</DependentUpon>
