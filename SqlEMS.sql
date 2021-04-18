@@ -70,7 +70,7 @@ GO
 --GO
 --SELECT * FROM tblOfficial WHERE eoId=1029
 --GO
-UPDATE tblOfficial SET eoPrePosition='officer',eoPresPosition='senior officer',eoPromPosition='Officer Head',bId=11,eoBranch='Dhaka ttt' WHERE eoId=1
+--UPDATE tblOfficial SET eoPrePosition='officer',eoPresPosition='senior officer',eoPromPosition='Officer Head',bId=11,eoBranch='Dhaka ttt' WHERE eoId=1
 --DELETE FROM tblOfficial WHERE eoId=1029
 --GO
 --CREATE TABLE tblGender
@@ -130,6 +130,12 @@ CREATE TABLE tblEpersonla
 	eoId INT REFERENCES tblOfficial(eoId),
 )
 GO
+
+CREATE INDEX IX_tblEpersonla_NAME
+    ON tblEpersonla
+    (eName)
+GO
+
 select eImage from tblEpersonla where eId=103
 go
 
@@ -160,13 +166,23 @@ CREATE TABLE tblESalary
 	Net_Salary_Paid AS (basicPay+houseRent+medicalAllowance+travle_allowance+childrenEallwanc)-(loan+Gpf_Cpf)
 )
 GO
-drop table tblESalary
-go
-INSERT INTO tblESalary values (9000,3000,1000,1000,500,10000,40,GETDATE(),103)
-go
-select * from tblESalary
+DELETE FROM tblESalary WHERE eId=103
+--drop table tblESalary
+--go
+--INSERT INTO tblESalary values (9000,3000,1000,1000,500,10000,40,GETDATE(),103)
+--go
+--select * from tblESalary
 
-UPDATE tblESalary(basicpay,houseRent,medicalAllowance,travle_allowance,childrenEallwanc,loan,Gpf_Cpf,salaryDate,eId) SET basicPay=50000,houseRent=4000,medicalAllowance=500,travle_allowance=1000,childrenEallwanc=300,loan=5000,Gpf_Cpf=200,salaryDate='10/10/2020',eId=103 WHERE salaryId=1004
-go
+--UPDATE tblESalary(basicpay,houseRent,medicalAllowance,travle_allowance,childrenEallwanc,loan,Gpf_Cpf,salaryDate,eId) SET basicPay=50000,houseRent=4000,medicalAllowance=500,travle_allowance=1000,childrenEallwanc=300,loan=5000,Gpf_Cpf=200,salaryDate='10/10/2020',eId=103 WHERE salaryId=1004
+--go
 
-update tblESalary SET basicpay=40000,houseRent=4000 where salaryId=1004
+--update tblESalary SET basicpay=40000,houseRent=4000 where salaryId=1004
+
+SELECT  EP.eId AS 'Employee Id',EP.eName,EP.eDob,EP.eJoinDate,EP.eGender,EP.eEmail,FO.eoPresPosition,AC.eaMast,BR.bNameCode,SA.Cut_from_GrossSalary,SA.grossSalary FROM tblEpersonla EP 
+INNER JOIN tblAcademic AC ON EP.eaId=AC.eaId
+INNER JOIN tblOfficial FO ON EP.eoId=FO.eoId
+INNER JOIN tblESalary SA ON EP.eId=SA.eId
+INNER JOIN tblBranch BR ON FO.bId=BR.bId where ep.eId=122
+GO
+--DELETE FROM tblEpersonla WHERE eId=103
+--SELECT * FROM tblEpersonla WHERE eId=103

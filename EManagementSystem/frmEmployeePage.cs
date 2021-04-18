@@ -77,6 +77,7 @@ namespace EManagementSystem
         private void btnverification_Click(object sender, EventArgs e)
         {
             openChildForm(new frmCEPsearching());
+
         }
 
         private void btnlawPolicy_Click(object sender, EventArgs e)

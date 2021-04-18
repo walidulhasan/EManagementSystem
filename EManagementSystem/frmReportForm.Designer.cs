@@ -32,6 +32,8 @@ namespace EManagementSystem
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.employeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeSalaryReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salaryReportIndividualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salaryRpeortInMonthToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.branchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.branchReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.branchJonalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,7 +70,9 @@ namespace EManagementSystem
             // employeeToolStripMenuItem
             // 
             this.employeeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.employeeSalaryReportToolStripMenuItem});
+            this.employeeSalaryReportToolStripMenuItem,
+            this.salaryReportIndividualToolStripMenuItem,
+            this.salaryRpeortInMonthToolStripMenuItem});
             this.employeeToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employeeToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
@@ -78,9 +82,23 @@ namespace EManagementSystem
             // employeeSalaryReportToolStripMenuItem
             // 
             this.employeeSalaryReportToolStripMenuItem.Name = "employeeSalaryReportToolStripMenuItem";
-            this.employeeSalaryReportToolStripMenuItem.Size = new System.Drawing.Size(358, 34);
-            this.employeeSalaryReportToolStripMenuItem.Text = "Employee salary report";
+            this.employeeSalaryReportToolStripMenuItem.Size = new System.Drawing.Size(365, 34);
+            this.employeeSalaryReportToolStripMenuItem.Text = "All salary report";
             this.employeeSalaryReportToolStripMenuItem.Click += new System.EventHandler(this.employeeSalaryReportToolStripMenuItem_Click);
+            // 
+            // salaryReportIndividualToolStripMenuItem
+            // 
+            this.salaryReportIndividualToolStripMenuItem.Name = "salaryReportIndividualToolStripMenuItem";
+            this.salaryReportIndividualToolStripMenuItem.Size = new System.Drawing.Size(365, 34);
+            this.salaryReportIndividualToolStripMenuItem.Text = "Salary Report Individual";
+            this.salaryReportIndividualToolStripMenuItem.Click += new System.EventHandler(this.salaryReportIndividualToolStripMenuItem_Click);
+            // 
+            // salaryRpeortInMonthToolStripMenuItem
+            // 
+            this.salaryRpeortInMonthToolStripMenuItem.Name = "salaryRpeortInMonthToolStripMenuItem";
+            this.salaryRpeortInMonthToolStripMenuItem.Size = new System.Drawing.Size(365, 34);
+            this.salaryRpeortInMonthToolStripMenuItem.Text = "Salary Rpeort in Month";
+            this.salaryRpeortInMonthToolStripMenuItem.Click += new System.EventHandler(this.salaryRpeortInMonthToolStripMenuItem_Click);
             // 
             // branchToolStripMenuItem
             // 
@@ -268,5 +286,7 @@ namespace EManagementSystem
         private System.Windows.Forms.ToolStripMenuItem mOYearlyToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ToolStripMenuItem salaryReportIndividualToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salaryRpeortInMonthToolStripMenuItem;
     }
 }

@@ -98,6 +98,12 @@
     <Compile Include="About\frmAbout.Designer.cs">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </Compile>
+    <Compile Include="fmIndividualsreport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmIndividualsreport.Designer.cs">
+      <DependentUpon>fmIndividualsreport.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCEPabout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,11 +140,29 @@
     <Compile Include="frmSalary.Designer.cs">
       <DependentUpon>frmSalary.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\frmSalaryReportMonth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmSalaryReportMonth.Designer.cs">
+      <DependentUpon>frmSalaryReportMonth.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmview.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmview.Designer.cs">
       <DependentUpon>frmview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\crpEmpSalary.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crpEmpSalary.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\IndividualReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IndividualReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="SocialCon\github.cs">
       <SubType>Form</SubType>
@@ -247,6 +271,9 @@
     <EmbeddedResource Include="dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fmIndividualsreport.resx">
+      <DependentUpon>fmIndividualsreport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCEPabout.resx">
       <DependentUpon>frmCEPabout.cs</DependentUpon>
     </EmbeddedResource>
@@ -265,8 +292,19 @@
     <EmbeddedResource Include="frmSalary.resx">
       <DependentUpon>frmSalary.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmSalaryReportMonth.resx">
+      <DependentUpon>frmSalaryReportMonth.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmview.resx">
       <DependentUpon>frmview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\crpEmpSalary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crpEmpSalary.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\IndividualReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>IndividualReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="SocialCon\github.resx">
       <DependentUpon>github.cs</DependentUpon>
@@ -335,6 +373,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

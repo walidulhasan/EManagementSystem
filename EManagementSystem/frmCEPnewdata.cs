@@ -426,7 +426,8 @@ namespace EManagementSystem
 
         string imgloc = "";
         string gnd = "";
-        
+        string nid;
+
         private void btnPESave_Click(object sender, EventArgs e)
         {
             try
@@ -447,7 +448,17 @@ namespace EManagementSystem
                 {
                     MessageBox.Show("Can't Select Gender!!");
                 }
-                c.con.Open();
+                
+                if (txtPENid.TextLength == 13)
+                {
+                    nid = txtPENid.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Your NID will be 13 digit Like\n 1993123323456", "NID info...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    
+                }
+                
                 SqlCommand cmd = new SqlCommand("INSERT INTO tblEpersonla VALUES(@Title,@Name,@Dateofbirth,@FatherName,@Gender,@Nid,@Phone,@Email,@SocialId,@MaritalS,@Joindate,@Img,@Acid,@Ofid)", c.con);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.AddWithValue("@Title", PEcomboBoxTitle.Text.Trim());
@@ -455,7 +466,7 @@ namespace EManagementSystem
                 cmd.Parameters.AddWithValue("@Dateofbirth", PEdateTimeDateofBirth.Value);
                 cmd.Parameters.AddWithValue("@FatherName", txtPEFatherName.Text.Trim());
                 cmd.Parameters.AddWithValue("@Gender", gnd);
-                cmd.Parameters.AddWithValue("@Nid", txtPENid.Text.Trim());
+                cmd.Parameters.AddWithValue("@Nid", nid);
                 cmd.Parameters.AddWithValue("@Phone", txtPEPhone.Text.Trim());
                 cmd.Parameters.AddWithValue("@Email", txtPEEmail.Text.Trim());
                 cmd.Parameters.AddWithValue("@SocialId", txtPESocialId.Text.Trim());
@@ -464,6 +475,7 @@ namespace EManagementSystem
                 cmd.Parameters.AddWithValue("@Img", img);
                 cmd.Parameters.AddWithValue("@Acid", comboBoxPEId.Text.Trim());
                 cmd.Parameters.AddWithValue("@Ofid", comboBox2PEid.Text.Trim());
+                c.con.Open();
                 cmd.ExecuteNonQuery();
                 c.con.Close();
                 MessageBox.Show("Data Inserted Successfully!", "Sucessful", MessageBoxButtons.OK, MessageBoxIcon.Information);
