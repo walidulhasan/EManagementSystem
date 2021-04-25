@@ -15,6 +15,7 @@ namespace EManagementSystem
         public youtube()
         {
             InitializeComponent();
+            webBrowser1.ScriptErrorsSuppressed = true;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

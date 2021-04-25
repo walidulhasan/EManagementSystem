@@ -594,8 +594,10 @@ namespace EManagementSystem
                 cmd.Parameters.AddWithValue("@Acid", comboBoxPEId.Text.Trim());
                 cmd.Parameters.AddWithValue("@Ofid", comboBox2PEid.Text.Trim());
                 cmd.ExecuteNonQuery();
-
-        }
+                MessageBox.Show("Data Update Successfully");
+                tabPersonal_info_load();
+                PEallclearbox(); 
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);

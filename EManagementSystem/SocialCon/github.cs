@@ -15,6 +15,7 @@ namespace EManagementSystem
         public github()
         {
             InitializeComponent();
+            webBrowser1.ScriptErrorsSuppressed = true;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)

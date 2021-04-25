@@ -107,5 +107,11 @@ namespace EManagementSystem
             frmSalary sa = new frmSalary();
             sa.Show();
         }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            frmBLocation lo = new frmBLocation();
+            lo.Show();
+        }
     }
 }

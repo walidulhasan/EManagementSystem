@@ -151,6 +151,7 @@ namespace EManagementSystem
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.picInfoSearch);
             this.groupBox1.Controls.Add(this.picinfoNids);
             this.groupBox1.Controls.Add(this.comboBoxGender);
             this.groupBox1.Controls.Add(this.comboBoxMaritalStatusP);
@@ -1020,7 +1021,7 @@ namespace EManagementSystem
             // 
             // btnClear
             // 
-            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnClear.BackColor = System.Drawing.Color.Maroon;
             this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClear.FlatAppearance.BorderSize = 2;
             this.btnClear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
@@ -1037,14 +1038,14 @@ namespace EManagementSystem
             // 
             // btnUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnUpdate.BackColor = System.Drawing.Color.Navy;
             this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdate.FlatAppearance.BorderSize = 2;
             this.btnUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(590, 766);
+            this.btnUpdate.Location = new System.Drawing.Point(544, 766);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(134, 61);
             this.btnUpdate.TabIndex = 3;
@@ -1054,14 +1055,14 @@ namespace EManagementSystem
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.FlatAppearance.BorderSize = 2;
             this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(744, 766);
+            this.btnDelete.Location = new System.Drawing.Point(721, 766);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(134, 61);
             this.btnDelete.TabIndex = 3;
@@ -1071,7 +1072,7 @@ namespace EManagementSystem
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.FlatAppearance.BorderSize = 2;
             this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
@@ -1080,7 +1081,7 @@ namespace EManagementSystem
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(13, 766);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(104, 61);
+            this.btnSave.Size = new System.Drawing.Size(134, 61);
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -1088,14 +1089,14 @@ namespace EManagementSystem
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatAppearance.BorderSize = 2;
             this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(436, 766);
+            this.btnSearch.Location = new System.Drawing.Point(367, 766);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(134, 61);
             this.btnSearch.TabIndex = 3;
@@ -1108,7 +1109,7 @@ namespace EManagementSystem
             this.picInfoSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picInfoSearch.ErrorImage = null;
             this.picInfoSearch.Image = ((System.Drawing.Image)(resources.GetObject("picInfoSearch.Image")));
-            this.picInfoSearch.Location = new System.Drawing.Point(390, 780);
+            this.picInfoSearch.Location = new System.Drawing.Point(535, 59);
             this.picInfoSearch.Name = "picInfoSearch";
             this.picInfoSearch.Size = new System.Drawing.Size(40, 32);
             this.picInfoSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1125,9 +1126,9 @@ namespace EManagementSystem
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.Color.White;
-            this.btnNext.Location = new System.Drawing.Point(131, 766);
+            this.btnNext.Location = new System.Drawing.Point(190, 766);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(104, 61);
+            this.btnNext.Size = new System.Drawing.Size(134, 61);
             this.btnNext.TabIndex = 3;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = false;
@@ -1139,7 +1140,6 @@ namespace EManagementSystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(1323, 870);
-            this.Controls.Add(this.picInfoSearch);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnClear);

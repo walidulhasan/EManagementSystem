@@ -51,11 +51,14 @@ namespace EManagementSystem
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(657, 34);
             this.panel1.TabIndex = 1;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMove);
             // 
             // pictureBox1
             // 

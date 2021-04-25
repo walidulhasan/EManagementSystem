@@ -63,7 +63,7 @@ namespace EManagementSystem
             this.branchToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 38);
+            this.menuStrip1.Size = new System.Drawing.Size(1098, 38);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -230,15 +230,15 @@ namespace EManagementSystem
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 38);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 10);
+            this.panel1.Size = new System.Drawing.Size(1098, 10);
             this.panel1.TabIndex = 2;
             // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 445);
+            this.panel2.Location = new System.Drawing.Point(0, 662);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 5);
+            this.panel2.Size = new System.Drawing.Size(1098, 11);
             this.panel2.TabIndex = 3;
             // 
             // frmReportForm
@@ -246,7 +246,7 @@ namespace EManagementSystem
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1098, 673);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);

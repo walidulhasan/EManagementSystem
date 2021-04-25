@@ -246,6 +246,7 @@ namespace EManagementSystem
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // label5
             // 
@@ -255,9 +256,9 @@ namespace EManagementSystem
             this.label5.Location = new System.Drawing.Point(398, 374);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 30);
+            this.label5.Size = new System.Drawing.Size(125, 30);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Position";
+            this.label5.Text = "Location";
             // 
             // picSalary
             // 

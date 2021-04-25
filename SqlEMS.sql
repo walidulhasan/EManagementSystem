@@ -24,6 +24,7 @@ LOG ON
 GO
 USE EMS
 GO
+
 CREATE TABLE loginInfo
 (
 	userName VARCHAR(30) NOT NULL,
@@ -107,8 +108,8 @@ GO
 --GO
 --INSERT INTO tblAcademic VALUES (2,'JSC','A+','SSC','A+','HSC','A','ENGLISH','3.2','ENGLISH','3.5','IT CROUSE','5.00')
 --GO
-UPDATE tblAcademic SET O_level='JDC',O_result='A',A_level='DHAKIL',A_result='A',Intermediate_level='ALIM',Intermediate_result='A',eaHons='ENGLISH',Hons_result='4.00',eaMast='MATH',Mast_result='4.00',eaSpecial='IT',Special_result='PASS' WHERE eaId=1
-GO
+--UPDATE tblAcademic SET O_level='JDC',O_result='A',A_level='DHAKIL',A_result='A',Intermediate_level='ALIM',Intermediate_result='A',eaHons='ENGLISH',Hons_result='4.00',eaMast='MATH',Mast_result='4.00',eaSpecial='IT',Special_result='PASS' WHERE eaId=1
+--GO
 
 
 CREATE TABLE tblEpersonla
@@ -136,8 +137,8 @@ CREATE INDEX IX_tblEpersonla_NAME
     (eName)
 GO
 
-select eImage from tblEpersonla where eId=103
-go
+--select eImage from tblEpersonla where eId=103
+--go
 
 --UPDATE tblEpersonla SET eTitle='Mrs',eName='Suma Sintia',eDob='2021-04-13',eFatherName='Kamal Hossen',eGender='Female',eNationalIdNo='1994225465573',ePhoneNo='01787767345',eEmail='su@gmail.com',eSocialId='13131313',eMeritals='Engaged',eJoinDate='2021-04-18',eImage=NULL,eaId=1,eoId=1001 WHERE eId=11
 --GO
@@ -166,7 +167,7 @@ CREATE TABLE tblESalary
 	Net_Salary_Paid AS (basicPay+houseRent+medicalAllowance+travle_allowance+childrenEallwanc)-(loan+Gpf_Cpf)
 )
 GO
-DELETE FROM tblESalary WHERE eId=103
+--DELETE FROM tblESalary WHERE eId=103
 --drop table tblESalary
 --go
 --INSERT INTO tblESalary values (9000,3000,1000,1000,500,10000,40,GETDATE(),103)
@@ -178,11 +179,14 @@ DELETE FROM tblESalary WHERE eId=103
 
 --update tblESalary SET basicpay=40000,houseRent=4000 where salaryId=1004
 
-SELECT  EP.eId AS 'Employee Id',EP.eName,EP.eDob,EP.eJoinDate,EP.eGender,EP.eEmail,FO.eoPresPosition,AC.eaMast,BR.bNameCode,SA.Cut_from_GrossSalary,SA.grossSalary FROM tblEpersonla EP 
+SELECT  EP.eId AS 'Employee Id',EP.eTitle AS Title,EP.eName AS Name,EP.eDob AS 'Date of Birth',EP.eFatherName AS 'Father Name',EP.eGender AS Gender,EP.ePhoneNo AS 'Phone No',EP.eNationalIdNo AS 'National ID',EP.eEmail AS Email,EP.eSocialId AS 'Social Id',EP.eMeritals AS 'Merital Status',
+EP.eJoinDate AS 'Join Date',EP.eImage AS 'Image',FO.eoPresPosition AS Position,FO.eoPrePosition AS 'Previous Position',AC.eaMast AS 'Academic Exam',AC.Mast_result AS 'Result',AC.eaSpecial AS 'Special Exam',AC.Special_result AS Result,BR.bNameCode AS 'Branch Code',SA.basicPay AS 'Salary Basic',
+SA.houseRent AS 'House Rent',SA.medicalAllowance AS 'Medical Allowance',SA.travle_allowance AS 'Travle Allowance',SA.childrenEallwanc AS 'Children Allowance'
+,SA.grossSalary AS 'Gross Salary',SA.loan AS Load,SA.Gpf_Cpf AS 'GP Fund',SA.salaryDate AS 'Salary Date',SA.Cut_from_GrossSalary AS 'Cut From Salary',SA.Net_Salary_Paid AS 'Salary Paid'   FROM tblEpersonla EP 
 INNER JOIN tblAcademic AC ON EP.eaId=AC.eaId
 INNER JOIN tblOfficial FO ON EP.eoId=FO.eoId
 INNER JOIN tblESalary SA ON EP.eId=SA.eId
-INNER JOIN tblBranch BR ON FO.bId=BR.bId where ep.eId=122
+INNER JOIN tblBranch BR ON FO.bId=BR.bId --where ep.eId=122
 GO
 --DELETE FROM tblEpersonla WHERE eId=103
 --SELECT * FROM tblEpersonla WHERE eId=103

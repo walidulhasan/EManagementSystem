@@ -164,6 +164,7 @@ namespace EManagementSystem
                     txtPName.Text = dr[2].ToString();
                     dateTimeDateofBirthP.Value = (DateTime)dr[3];
                     txtPFatherName.Text = dr[4].ToString();
+                    comboBoxGender.Text = dr[5].ToString();
                     txtPNid.Text = dr[6].ToString();
                     txtPPhone.Text = dr[7].ToString();
                     txtPEmail.Text = dr[8].ToString();
@@ -414,15 +415,16 @@ namespace EManagementSystem
                 SqlCommand cmd1 = new SqlCommand("UPDATE tblAcademic SET O_level='" + comboBoxAcOlevel.Text + "',O_result='" + txtACOresult.Text + "',A_level='" + comboBoxACalevel.Text + "',A_result='" + txtACaresult.Text + "',Intermediate_level='" + comboBoxIlevel.Text + "',Intermediate_result='" + txtACiresult.Text + "',eaHons='" + comboBoxAChonus.Text + "',Hons_result='" + txtACHresult.Text + "',eaMast='" + comboBoxACmasters.Text + "',Mast_result='" + txtACmresult.Text + "',eaSpecial='" + txtACspecialvalue.Text + "',Special_result='" + txtACsresult.Text + "' WHERE eaId='" + txtAid.Text + "'", c.con, transaction);
                 cmd1.ExecuteNonQuery();
 
-                byte[] img = null;
-                FileStream fs = new FileStream(imgloc, FileMode.Open, FileAccess.Read);
-                BinaryReader br = new BinaryReader(fs);
-                img = br.ReadBytes((int)fs.Length);
+                
 
                 SqlCommand cmd2 = new SqlCommand("UPDATE tblEpersonla SET eTitle=@Title,eName=@Name,eDob=@Dateofbirth,eFatherName=@FatherName,eGender=@Gender,eNationalIdNo=@Nid,ePhoneNo=@Phone,eEmail=@Email,eSocialId=@SocialId,eMeritals=@MaritalS,eJoinDate=@Joindate,eImage=@Img,eaId=@Acid,eoId=@Ofid WHERE eId=@mid", c.con);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.AddWithValue("@mid", txtPid.Text.Trim());
 
+                byte[] img = null;
+                FileStream fs = new FileStream(imgloc, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                img = br.ReadBytes((int)fs.Length);
                 cmd.Parameters.AddWithValue("@Title", comboBoxPTitle.Text.Trim());
                 cmd.Parameters.AddWithValue("@Name", txtPName.Text.Trim());
                 cmd.Parameters.AddWithValue("@Dateofbirth", dateTimeDateofBirthP.Value);
@@ -441,17 +443,17 @@ namespace EManagementSystem
                 transaction.Commit();
                 MessageBox.Show("Data Updated Successfully!!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ealldataclear();
-
-
+                
+                
             }
             catch (Exception)
             {
                 transaction.Rollback();
-                MessageBox.Show("Invalid Data");
+                MessageBox.Show("Invalid Data You can't change picture");
             }
             finally
             {
-                c.con.Close();
+               c.con.Close();
             }
         }
     }
