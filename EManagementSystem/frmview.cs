@@ -62,5 +62,20 @@ namespace EManagementSystem
             dtview.DataSource = dt;
 
         }
+
+        private void frmview_Load(object sender, EventArgs e)
+        {
+            dtview.BorderStyle = BorderStyle.None;
+            dtview.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dtview.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dtview.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dtview.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dtview.BackgroundColor = Color.White;
+
+            dtview.EnableHeadersVisualStyles = false;
+            dtview.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dtview.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dtview.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+        }
     }
 }

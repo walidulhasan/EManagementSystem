@@ -69,6 +69,8 @@ namespace EManagementSystem
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1323, 43);
             this.panel1.TabIndex = 1;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMove);
             // 
             // pictureBox2
             // 
@@ -136,10 +138,10 @@ namespace EManagementSystem
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(26)))), ((int)(((byte)(0)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 117);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1323, 705);
+            this.dataGridView1.Size = new System.Drawing.Size(1323, 753);
             this.dataGridView1.TabIndex = 3;
             // 
             // frmCEPsearching
@@ -154,6 +156,7 @@ namespace EManagementSystem
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCEPsearching";
             this.Text = "frmCEPsearching";
+            this.Load += new System.EventHandler(this.frmCEPsearching_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

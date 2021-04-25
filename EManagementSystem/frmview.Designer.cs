@@ -101,9 +101,10 @@ namespace EManagementSystem
             // 
             this.dtview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtview.Location = new System.Drawing.Point(0, 45);
+            this.dtview.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtview.Location = new System.Drawing.Point(0, 42);
             this.dtview.Name = "dtview";
-            this.dtview.Size = new System.Drawing.Size(1453, 848);
+            this.dtview.Size = new System.Drawing.Size(1453, 846);
             this.dtview.TabIndex = 2;
             // 
             // bunifuElipse1
@@ -122,6 +123,7 @@ namespace EManagementSystem
             this.Name = "frmview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmview";
+            this.Load += new System.EventHandler(this.frmview_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
