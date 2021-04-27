@@ -30,10 +30,15 @@ namespace EManagementSystem
 
         private void employeeSalaryReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            pictureBox1.Visible = false;
+            AllSalaryReports sr = new AllSalaryReports();
+            sr.MdiParent = this;
+            sr.Show();
         }
 
         private void salaryReportIndividualToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
         }
     }
 }

@@ -29,6 +29,7 @@ namespace EManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSalary));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -70,6 +71,8 @@ namespace EManagementSystem
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnEditing = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -86,6 +89,7 @@ namespace EManagementSystem
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturebo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picsearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -157,6 +161,7 @@ namespace EManagementSystem
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.pictureBox12);
             this.groupBox1.Controls.Add(this.pictureBox11);
             this.groupBox1.Controls.Add(this.pictureBox10);
@@ -300,6 +305,7 @@ namespace EManagementSystem
             // 
             // comboBox
             // 
+            this.comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox.FormattingEnabled = true;
             this.comboBox.Location = new System.Drawing.Point(681, 75);
@@ -362,6 +368,7 @@ namespace EManagementSystem
             this.txtBasicPay.Name = "txtBasicPay";
             this.txtBasicPay.Size = new System.Drawing.Size(326, 39);
             this.txtBasicPay.TabIndex = 0;
+            this.txtBasicPay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBasicPay_KeyPress);
             // 
             // dateTimePicker
             // 
@@ -596,6 +603,19 @@ namespace EManagementSystem
             this.btnEditing.Visible = false;
             this.btnEditing.Click += new System.EventHandler(this.btnEditing_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(229, 113);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(0, 23);
+            this.label10.TabIndex = 6;
+            // 
             // frmSalary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -616,6 +636,7 @@ namespace EManagementSystem
             this.Name = "frmSalary";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSalary";
+            this.Load += new System.EventHandler(this.frmSalary_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -633,6 +654,7 @@ namespace EManagementSystem
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturebo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picsearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -680,5 +702,7 @@ namespace EManagementSystem
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnEditing;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label10;
     }
 }

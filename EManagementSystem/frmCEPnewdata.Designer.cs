@@ -39,6 +39,7 @@ namespace EManagementSystem
             this.dataGridViewPersonal = new System.Windows.Forms.DataGridView();
             this.picSearchinfor = new System.Windows.Forms.PictureBox();
             this.btnPEdelete = new System.Windows.Forms.Button();
+            this.picU = new System.Windows.Forms.Button();
             this.btnPEupdate = new System.Windows.Forms.Button();
             this.btnPEsearch = new System.Windows.Forms.Button();
             this.btnPESave = new System.Windows.Forms.Button();
@@ -195,6 +196,7 @@ namespace EManagementSystem
             this.tabPersonal.Controls.Add(this.dataGridViewPersonal);
             this.tabPersonal.Controls.Add(this.picSearchinfor);
             this.tabPersonal.Controls.Add(this.btnPEdelete);
+            this.tabPersonal.Controls.Add(this.picU);
             this.tabPersonal.Controls.Add(this.btnPEupdate);
             this.tabPersonal.Controls.Add(this.btnPEsearch);
             this.tabPersonal.Controls.Add(this.btnPESave);
@@ -208,7 +210,6 @@ namespace EManagementSystem
             this.tabPersonal.Size = new System.Drawing.Size(1315, 801);
             this.tabPersonal.TabIndex = 0;
             this.tabPersonal.Text = "Personla Information";
-
             // 
             // btnPEUpload
             // 
@@ -278,6 +279,25 @@ namespace EManagementSystem
             this.btnPEdelete.Text = "Delete";
             this.btnPEdelete.UseVisualStyleBackColor = false;
             this.btnPEdelete.Click += new System.EventHandler(this.btnPEdelete_Click);
+            // 
+            // picU
+            // 
+            this.picU.BackColor = System.Drawing.Color.DarkCyan;
+            this.picU.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picU.FlatAppearance.BorderSize = 2;
+            this.picU.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.picU.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.picU.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.picU.ForeColor = System.Drawing.Color.White;
+            this.picU.Location = new System.Drawing.Point(1035, 17);
+            this.picU.Name = "picU";
+            this.picU.Size = new System.Drawing.Size(108, 32);
+            this.picU.TabIndex = 3;
+            this.picU.Text = "Pic-Update";
+            this.picU.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.picU.UseVisualStyleBackColor = false;
+            this.picU.Visible = false;
+            this.picU.Click += new System.EventHandler(this.picU_Click);
             // 
             // btnPEupdate
             // 
@@ -388,6 +408,7 @@ namespace EManagementSystem
             // 
             // PEcomboBoxMstatus
             // 
+            this.PEcomboBoxMstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PEcomboBoxMstatus.Font = new System.Drawing.Font("Times New Roman", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PEcomboBoxMstatus.FormattingEnabled = true;
             this.PEcomboBoxMstatus.Items.AddRange(new object[] {
@@ -507,6 +528,7 @@ namespace EManagementSystem
             // 
             // comboBox2PEid
             // 
+            this.comboBox2PEid.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2PEid.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2PEid.FormattingEnabled = true;
             this.comboBox2PEid.Location = new System.Drawing.Point(596, 615);
@@ -516,6 +538,7 @@ namespace EManagementSystem
             // 
             // comboBoxPEId
             // 
+            this.comboBoxPEId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPEId.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxPEId.FormattingEnabled = true;
             this.comboBoxPEId.Location = new System.Drawing.Point(280, 614);
@@ -965,6 +988,7 @@ namespace EManagementSystem
             // 
             // comboBoxACmasters
             // 
+            this.comboBoxACmasters.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxACmasters.FormattingEnabled = true;
             this.comboBoxACmasters.Items.AddRange(new object[] {
             "Accounting",
@@ -988,6 +1012,7 @@ namespace EManagementSystem
             // 
             // comboBoxAChonus
             // 
+            this.comboBoxAChonus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxAChonus.FormattingEnabled = true;
             this.comboBoxAChonus.Items.AddRange(new object[] {
             "Accounting",
@@ -1011,6 +1036,7 @@ namespace EManagementSystem
             // 
             // comboBoxIlevel
             // 
+            this.comboBoxIlevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxIlevel.FormattingEnabled = true;
             this.comboBoxIlevel.Items.AddRange(new object[] {
             "HSC",
@@ -1023,6 +1049,7 @@ namespace EManagementSystem
             // 
             // comboBoxACalevel
             // 
+            this.comboBoxACalevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxACalevel.FormattingEnabled = true;
             this.comboBoxACalevel.Items.AddRange(new object[] {
             "SSC",
@@ -1035,6 +1062,7 @@ namespace EManagementSystem
             // 
             // comboBoxAcOlevel
             // 
+            this.comboBoxAcOlevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxAcOlevel.FormattingEnabled = true;
             this.comboBoxAcOlevel.Items.AddRange(new object[] {
             "JSC",
@@ -1304,6 +1332,7 @@ namespace EManagementSystem
             // 
             // comboBoxOFPro
             // 
+            this.comboBoxOFPro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxOFPro.FormattingEnabled = true;
             this.comboBoxOFPro.Items.AddRange(new object[] {
             "IT Technician",
@@ -1335,6 +1364,7 @@ namespace EManagementSystem
             // 
             // comboBoxOFPre
             // 
+            this.comboBoxOFPre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxOFPre.FormattingEnabled = true;
             this.comboBoxOFPre.Items.AddRange(new object[] {
             "IT Technician",
@@ -1366,6 +1396,7 @@ namespace EManagementSystem
             // 
             // comboBoxOFPri
             // 
+            this.comboBoxOFPri.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxOFPri.FormattingEnabled = true;
             this.comboBoxOFPri.Items.AddRange(new object[] {
             "IT Technician",
@@ -1448,6 +1479,7 @@ namespace EManagementSystem
             // 
             // comboBoxOFBC
             // 
+            this.comboBoxOFBC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxOFBC.FormattingEnabled = true;
             this.comboBoxOFBC.Location = new System.Drawing.Point(27, 126);
             this.comboBoxOFBC.Name = "comboBoxOFBC";
@@ -1625,5 +1657,6 @@ namespace EManagementSystem
         private System.Windows.Forms.TextBox txtACsresult;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBoxofshow;
+        private System.Windows.Forms.Button picU;
     }
 }

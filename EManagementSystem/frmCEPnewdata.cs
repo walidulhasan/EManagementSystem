@@ -25,10 +25,41 @@ namespace EManagementSystem
             academic_load();
             Branchcode_load();
             OfallClear();
+            pegrideview();
+            ofgrideview();
+        }
+        private void pegrideview()
+        {
+            dataGridViewPersonal.BorderStyle = BorderStyle.None;
+            dataGridViewPersonal.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGridViewPersonal.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewPersonal.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dataGridViewPersonal.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGridViewPersonal.BackgroundColor = Color.White;
+
+            dataGridViewPersonal.EnableHeadersVisualStyles = false;
+            dataGridViewPersonal.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewPersonal.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dataGridViewPersonal.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+        }
+        private void ofgrideview()
+        {
+            dataGridOF.BorderStyle = BorderStyle.None;
+            dataGridOF.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGridOF.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridOF.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dataGridOF.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGridOF.BackgroundColor = Color.White;
+
+            dataGridOF.EnableHeadersVisualStyles = false;
+            dataGridOF.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridOF.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dataGridOF.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            GC.Collect();
             this.Close();
         }
         #region OFFICE WITH OTHER TAB SECTION
@@ -157,28 +188,32 @@ namespace EManagementSystem
 
         private void btnOFdelete_Click(object sender, EventArgs e)
         {
-            try
+            if (DialogResult.Yes == MessageBox.Show("Do You Want Delete ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
             {
-                c.con.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = c.con;
-                cmd.CommandText = "DELETE FROM tblOfficial WHERE eoId=" + txtFOid.Text;
-                cmd.ExecuteNonQuery();
-                MessageBox.Show($"Data Delete Successfully!", "Sucessful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                OfallClear();
-                tabOfficial_load();
+                try
+                {
+                    c.con.Open();
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = c.con;
+                    cmd.CommandText = "DELETE FROM tblOfficial WHERE eoId=" + txtFOid.Text;
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show($"Data Delete Successfully!", "Sucessful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    OfallClear();
+                    tabOfficial_load();
 
-            }
-            catch (Exception ex)
-            {
+                }
+                catch (Exception ex)
+                {
 
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                c.con.Close();
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    c.con.Close();
 
+                }
             }
+            
         }
         #endregion
 
@@ -295,28 +330,32 @@ namespace EManagementSystem
 
         private void btnACdelete_Click(object sender, EventArgs e)
         {
-            try
+            if (DialogResult.Yes == MessageBox.Show("Do You Want Delete ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
             {
-                c.con.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = c.con;
-                cmd.CommandText = "DELETE FROM tblAcademic WHERE eaId=" + txtACid.Text;
-                cmd.ExecuteNonQuery();
-                MessageBox.Show($"Data Delete Successfully!", "Sucessful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ACallclear();
-                tabAcademic_load();
+                try
+                {
+                    c.con.Open();
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = c.con;
+                    cmd.CommandText = "DELETE FROM tblAcademic WHERE eaId=" + txtACid.Text;
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show($"Data Delete Successfully!", "Sucessful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ACallclear();
+                    tabAcademic_load();
 
-            }
-            catch (Exception ex)
-            {
+                }
+                catch (Exception ex)
+                {
 
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                c.con.Close();
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    c.con.Close();
 
+                }
             }
+            
         }
         private void btnACclear_Click(object sender, EventArgs e)
         {
@@ -345,6 +384,8 @@ namespace EManagementSystem
             PEcomboBoxTitle.SelectedIndex = -1;
             PEpicShow.ImageLocation = null;
             txid.Clear();
+            picU.Visible = false;
+            btnPESave.Enabled = true;
         }
         #endregion
 
@@ -494,6 +535,8 @@ namespace EManagementSystem
         {
             try
             {
+                picU.Visible = true;
+                btnPESave.Enabled = false;
                 c.con.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM tblEpersonla WHERE eId=@ID",c.con);
                 cmd.CommandType = CommandType.Text;
@@ -552,6 +595,22 @@ namespace EManagementSystem
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
             }
         }
+        private void picU_Click(object sender, EventArgs e)
+        {
+            c.con.Open();
+            byte[] img = null;
+            FileStream fs = new FileStream(imgloc, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(fs);
+            img = br.ReadBytes((int)fs.Length);
+            SqlCommand cmd = new SqlCommand("UPDATE tblEpersonla SET eImage=@Img WHERE eId=@mid", c.con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@mid", txid.Text.Trim());
+            cmd.Parameters.AddWithValue("@Img", img);
+            cmd.ExecuteNonQuery();
+            tabPersonal_info_load();
+            c.con.Close();
+
+        } 
 
         private void btnPEupdate_Click(object sender, EventArgs e)
         {
@@ -570,12 +629,12 @@ namespace EManagementSystem
                     MessageBox.Show("Can't Select Gender!!");
                 }
                 c.con.Open();
-                byte[] img = null;
-                FileStream fs = new FileStream(imgloc, FileMode.Open, FileAccess.Read);
-                BinaryReader br = new BinaryReader(fs);
-                img = br.ReadBytes((int)fs.Length);
+                //byte[] img = null;
+                //FileStream fs = new FileStream(imgloc, FileMode.Open, FileAccess.Read);
+                //BinaryReader br = new BinaryReader(fs);
+                //img = br.ReadBytes((int)fs.Length);
            
-            SqlCommand cmd = new SqlCommand("UPDATE tblEpersonla SET eTitle=@Title,eName=@Name,eDob=@Dateofbirth,eFatherName=@FatherName,eGender=@Gender,eNationalIdNo=@Nid,ePhoneNo=@Phone,eEmail=@Email,eSocialId=@SocialId,eMeritals=@MaritalS,eJoinDate=@Joindate,eImage=@Img,eaId=@Acid,eoId=@Ofid WHERE eId=@mid", c.con);
+                SqlCommand cmd = new SqlCommand("UPDATE tblEpersonla SET eTitle=@Title,eName=@Name,eDob=@Dateofbirth,eFatherName=@FatherName,eGender=@Gender,eNationalIdNo=@Nid,ePhoneNo=@Phone,eEmail=@Email,eSocialId=@SocialId,eMeritals=@MaritalS,eJoinDate=@Joindate,eaId=@Acid,eoId=@Ofid WHERE eId=@mid", c.con);
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.AddWithValue("@mid", txid.Text.Trim());
 
@@ -590,7 +649,7 @@ namespace EManagementSystem
                 cmd.Parameters.AddWithValue("@SocialId", txtPESocialId.Text.Trim());
                 cmd.Parameters.AddWithValue("@MaritalS", PEcomboBoxMstatus.Text.Trim());
                 cmd.Parameters.AddWithValue("@Joindate", PEdateTimeJoinDate.Value);
-                cmd.Parameters.AddWithValue("@Img", img);
+                //cmd.Parameters.AddWithValue("@Img", img);
                 cmd.Parameters.AddWithValue("@Acid", comboBoxPEId.Text.Trim());
                 cmd.Parameters.AddWithValue("@Ofid", comboBox2PEid.Text.Trim());
                 cmd.ExecuteNonQuery();
@@ -610,25 +669,29 @@ namespace EManagementSystem
 
         private void btnPEdelete_Click(object sender, EventArgs e)
         {
-            try
+            if (DialogResult.Yes == MessageBox.Show("Do You Want Delete ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
             {
-                c.con.Open();
-                SqlCommand cmd = new SqlCommand("DELETE FROM tblEpersonla WHERE eId=@ID", c.con);
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@ID", txid.Text.Trim());
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Data Deleted", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tabPersonal_info_load();
-                PEallclearbox();
+                try
+                {
+                    c.con.Open();
+                    SqlCommand cmd = new SqlCommand("DELETE FROM tblEpersonla WHERE eId=@ID", c.con);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@ID", txid.Text.Trim());
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Data Deleted", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    tabPersonal_info_load();
+                    PEallclearbox();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    c.con.Close();
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                c.con.Close();
-            }
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -641,6 +704,5 @@ namespace EManagementSystem
             txtOfid.Visible = true;
             pictureBoxofshow.Visible = false;
         }
-
     }
 }

@@ -30,10 +30,11 @@ namespace EManagementSystem
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCEPbranch));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.picBZname = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBname = new System.Windows.Forms.TextBox();
@@ -55,16 +56,15 @@ namespace EManagementSystem
             this.btnUpdate = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.picBZname = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBZname)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBZname)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -106,6 +106,19 @@ namespace EManagementSystem
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Branch";
+            // 
+            // picBZname
+            // 
+            this.picBZname.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBZname.ErrorImage = null;
+            this.picBZname.Image = ((System.Drawing.Image)(resources.GetObject("picBZname.Image")));
+            this.picBZname.Location = new System.Drawing.Point(318, 216);
+            this.picBZname.Name = "picBZname";
+            this.picBZname.Size = new System.Drawing.Size(42, 35);
+            this.picBZname.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBZname.TabIndex = 2;
+            this.picBZname.TabStop = false;
+            this.picBZname.Click += new System.EventHandler(this.picBZname_Click);
             // 
             // pictureBox2
             // 
@@ -288,8 +301,8 @@ namespace EManagementSystem
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(0)))), ((int)(((byte)(51)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -374,19 +387,6 @@ namespace EManagementSystem
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click_1);
             // 
-            // picBZname
-            // 
-            this.picBZname.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBZname.ErrorImage = null;
-            this.picBZname.Image = ((System.Drawing.Image)(resources.GetObject("picBZname.Image")));
-            this.picBZname.Location = new System.Drawing.Point(318, 216);
-            this.picBZname.Name = "picBZname";
-            this.picBZname.Size = new System.Drawing.Size(42, 35);
-            this.picBZname.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBZname.TabIndex = 2;
-            this.picBZname.TabStop = false;
-            this.picBZname.Click += new System.EventHandler(this.picBZname_Click);
-            // 
             // frmCEPbranch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -411,13 +411,13 @@ namespace EManagementSystem
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBZname)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBZname)).EndInit();
             this.ResumeLayout(false);
 
         }

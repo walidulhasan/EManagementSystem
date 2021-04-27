@@ -27,6 +27,7 @@ namespace EManagementSystem
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            GC.Collect();
             this.Close();
         }
         public Point mouseLocation; //part of Mouse drag and droup

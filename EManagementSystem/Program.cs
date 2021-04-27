@@ -16,7 +16,7 @@ namespace EManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCEPsearching());
+            Application.Run(new frmdashboard());
         }
     }
 }

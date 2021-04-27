@@ -21,8 +21,6 @@ namespace EManagementSystem
         private void button8_Click(object sender, EventArgs e)
         {
             this.Close();
-            frmdashboard dsb = new frmdashboard();
-            dsb.Show();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

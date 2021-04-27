@@ -33,6 +33,7 @@ namespace EManagementSystem
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.picInfoSearch = new System.Windows.Forms.PictureBox();
             this.picinfoNids = new System.Windows.Forms.PictureBox();
             this.comboBoxGender = new System.Windows.Forms.ComboBox();
             this.comboBoxMaritalStatusP = new System.Windows.Forms.ComboBox();
@@ -109,11 +110,11 @@ namespace EManagementSystem
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.picInfoSearch = new System.Windows.Forms.PictureBox();
             this.btnNext = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picInfoSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picinfoNids)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -123,7 +124,6 @@ namespace EManagementSystem
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picsearchO)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picInfoSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -186,6 +186,19 @@ namespace EManagementSystem
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personla";
             // 
+            // picInfoSearch
+            // 
+            this.picInfoSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picInfoSearch.ErrorImage = null;
+            this.picInfoSearch.Image = ((System.Drawing.Image)(resources.GetObject("picInfoSearch.Image")));
+            this.picInfoSearch.Location = new System.Drawing.Point(535, 59);
+            this.picInfoSearch.Name = "picInfoSearch";
+            this.picInfoSearch.Size = new System.Drawing.Size(40, 32);
+            this.picInfoSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picInfoSearch.TabIndex = 5;
+            this.picInfoSearch.TabStop = false;
+            this.picInfoSearch.Click += new System.EventHandler(this.picInfoSearch_Click);
+            // 
             // picinfoNids
             // 
             this.picinfoNids.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -201,6 +214,7 @@ namespace EManagementSystem
             // 
             // comboBoxGender
             // 
+            this.comboBoxGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxGender.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxGender.FormattingEnabled = true;
             this.comboBoxGender.Items.AddRange(new object[] {
@@ -213,6 +227,7 @@ namespace EManagementSystem
             // 
             // comboBoxMaritalStatusP
             // 
+            this.comboBoxMaritalStatusP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMaritalStatusP.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxMaritalStatusP.FormattingEnabled = true;
             this.comboBoxMaritalStatusP.Items.AddRange(new object[] {
@@ -564,6 +579,7 @@ namespace EManagementSystem
             // 
             // comboBoxACmasters
             // 
+            this.comboBoxACmasters.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxACmasters.FormattingEnabled = true;
             this.comboBoxACmasters.Items.AddRange(new object[] {
             "Accounting",
@@ -587,6 +603,7 @@ namespace EManagementSystem
             // 
             // comboBoxAChonus
             // 
+            this.comboBoxAChonus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxAChonus.FormattingEnabled = true;
             this.comboBoxAChonus.Items.AddRange(new object[] {
             "Accounting",
@@ -610,6 +627,7 @@ namespace EManagementSystem
             // 
             // comboBoxIlevel
             // 
+            this.comboBoxIlevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxIlevel.FormattingEnabled = true;
             this.comboBoxIlevel.Items.AddRange(new object[] {
             "HSC",
@@ -622,6 +640,7 @@ namespace EManagementSystem
             // 
             // comboBoxACalevel
             // 
+            this.comboBoxACalevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxACalevel.FormattingEnabled = true;
             this.comboBoxACalevel.Items.AddRange(new object[] {
             "SSC",
@@ -634,6 +653,7 @@ namespace EManagementSystem
             // 
             // comboBoxAcOlevel
             // 
+            this.comboBoxAcOlevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxAcOlevel.FormattingEnabled = true;
             this.comboBoxAcOlevel.Items.AddRange(new object[] {
             "JSC",
@@ -816,6 +836,7 @@ namespace EManagementSystem
             // 
             // comboBoxOFBC
             // 
+            this.comboBoxOFBC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxOFBC.FormattingEnabled = true;
             this.comboBoxOFBC.Location = new System.Drawing.Point(6, 383);
             this.comboBoxOFBC.Name = "comboBoxOFBC";
@@ -860,6 +881,7 @@ namespace EManagementSystem
             // 
             // comboBoxOFPro
             // 
+            this.comboBoxOFPro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxOFPro.FormattingEnabled = true;
             this.comboBoxOFPro.Items.AddRange(new object[] {
             "IT Technician",
@@ -891,6 +913,7 @@ namespace EManagementSystem
             // 
             // comboBoxOFPre
             // 
+            this.comboBoxOFPre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxOFPre.FormattingEnabled = true;
             this.comboBoxOFPre.Items.AddRange(new object[] {
             "IT Technician",
@@ -922,6 +945,7 @@ namespace EManagementSystem
             // 
             // comboBoxOFPri
             // 
+            this.comboBoxOFPri.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxOFPri.FormattingEnabled = true;
             this.comboBoxOFPri.Items.AddRange(new object[] {
             "IT Technician",
@@ -1104,19 +1128,6 @@ namespace EManagementSystem
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // picInfoSearch
-            // 
-            this.picInfoSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picInfoSearch.ErrorImage = null;
-            this.picInfoSearch.Image = ((System.Drawing.Image)(resources.GetObject("picInfoSearch.Image")));
-            this.picInfoSearch.Location = new System.Drawing.Point(535, 59);
-            this.picInfoSearch.Name = "picInfoSearch";
-            this.picInfoSearch.Size = new System.Drawing.Size(40, 32);
-            this.picInfoSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picInfoSearch.TabIndex = 5;
-            this.picInfoSearch.TabStop = false;
-            this.picInfoSearch.Click += new System.EventHandler(this.picInfoSearch_Click);
-            // 
             // btnNext
             // 
             this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -1160,6 +1171,7 @@ namespace EManagementSystem
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picInfoSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picinfoNids)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -1171,7 +1183,6 @@ namespace EManagementSystem
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picsearchO)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picInfoSearch)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -24,6 +24,7 @@ namespace EManagementSystem
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            GC.Collect();
             this.Close();
         }
 
@@ -243,26 +244,38 @@ namespace EManagementSystem
 
         private void button3_Click(object sender, EventArgs e)
         {
-            try
+            if (DialogResult.Yes == MessageBox.Show("Do You Want Delete ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
             {
-                c.con.Open();
-                SqlCommand cmd = new SqlCommand("DELETE FROM tblESalary WHERE salaryId=@ID", c.con);
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@ID", textBoxSearch.Text.Trim());
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Data Deleted", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                salarydataclear();
-                tblESalary_load();
+                if (textBoxSearch.Text=="")
+                {
+                    MessageBox.Show("You can't fill Data");
+                }
+                else
+                {
+                    try
+                    {
+                        c.con.Open();
+                        SqlCommand cmd = new SqlCommand("DELETE FROM tblESalary WHERE salaryId=@ID", c.con);
+                        cmd.CommandType = CommandType.Text;
+                        cmd.Parameters.AddWithValue("@ID", textBoxSearch.Text.Trim());
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Data Deleted", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        salarydataclear();
+                        tblESalary_load();
 
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        c.con.Close();
+                    }
+                }
+                
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                c.con.Close();
-            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -320,5 +333,35 @@ namespace EManagementSystem
             }
             
         }
+
+        private void frmSalary_Load(object sender, EventArgs e)
+        {
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGridView1.BackgroundColor = Color.White;
+
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+        }
+
+        private void txtBasicPay_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.Handled = !char.IsDigit(e.KeyChar))
+            {
+                errorProvider1.SetError(label10, "Allow Only Number Values!!!");
+                label10.Text = "Allow Only Number Values!!!";
+            }
+            else
+            {
+                errorProvider1.SetError(label10, "");
+                label10.Text = "";
+            }
+        }
+
     }
 }

@@ -29,6 +29,7 @@ namespace EManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.employeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeSalaryReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,7 +54,9 @@ namespace EManagementSystem
             this.allReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -236,10 +239,22 @@ namespace EManagementSystem
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 662);
+            this.panel2.Location = new System.Drawing.Point(0, 663);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1098, 11);
+            this.panel2.Size = new System.Drawing.Size(1098, 10);
             this.panel2.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 48);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1098, 615);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // frmReportForm
             // 
@@ -247,6 +262,7 @@ namespace EManagementSystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
             this.ClientSize = new System.Drawing.Size(1098, 673);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
@@ -257,6 +273,7 @@ namespace EManagementSystem
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,5 +305,6 @@ namespace EManagementSystem
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ToolStripMenuItem salaryReportIndividualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salaryRpeortInMonthToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

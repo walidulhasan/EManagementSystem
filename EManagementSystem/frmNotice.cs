@@ -104,6 +104,7 @@ namespace EManagementSystem
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             this.Close();
+            
         }
         private void datashow()
         {

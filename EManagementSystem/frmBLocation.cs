@@ -84,6 +84,7 @@ namespace EManagementSystem
 
         private void btnexit_Click(object sender, EventArgs e)
         {
+            GC.Collect();
             this.Close();
         }
 

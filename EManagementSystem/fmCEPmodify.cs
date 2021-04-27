@@ -43,6 +43,7 @@ namespace EManagementSystem
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            GC.Collect();
             this.Hide();
         }
 

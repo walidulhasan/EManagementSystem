@@ -30,6 +30,7 @@ namespace EManagementSystem
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            WindowState = FormWindowState.Minimized;
             youtube yt = new youtube();
             yt.Show();
         }

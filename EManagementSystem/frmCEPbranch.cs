@@ -24,6 +24,7 @@ namespace EManagementSystem
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            GC.Collect();
             this.Close();
         }
 
@@ -139,27 +140,31 @@ namespace EManagementSystem
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            try
+            if (DialogResult.Yes == MessageBox.Show("Do You Want Delete ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
             {
-                c.con.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = c.con;
-                cmd.CommandText = "DELETE FROM tblBranch WHERE bId=" + comboBox1.Text;
-                cmd.ExecuteNonQuery();
-                MessageBox.Show($"Data Delete Successfully!", "Sucessful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tblbranch_info_load();
+                try
+                {
+                    c.con.Open();
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = c.con;
+                    cmd.CommandText = "DELETE FROM tblBranch WHERE bId=" + comboBox1.Text;
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show($"Data Delete Successfully!", "Sucessful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    tblbranch_info_load();
 
-            }
-            catch (Exception ex)
-            {
+                }
+                catch (Exception ex)
+                {
 
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                c.con.Close();
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    c.con.Close();
 
+                }
             }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -190,3 +190,4 @@ INNER JOIN tblBranch BR ON FO.bId=BR.bId --where ep.eId=122
 GO
 --DELETE FROM tblEpersonla WHERE eId=103
 --SELECT * FROM tblEpersonla WHERE eId=103
+
