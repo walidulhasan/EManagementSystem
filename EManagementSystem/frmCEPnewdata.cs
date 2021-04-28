@@ -704,5 +704,19 @@ namespace EManagementSystem
             txtOfid.Visible = true;
             pictureBoxofshow.Visible = false;
         }
+
+        private void txtPENid_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.Handled = !char.IsDigit(e.KeyChar))
+            {
+                errorProvider1.SetError(label30, "Allow Only Number Values!!!");
+                label30.Text = "Allow Only Number Values!!!";
+            }
+            else
+            {
+                errorProvider1.SetError(label30, "");
+                label30.Text = "";
+            }
+        }
     }
 }

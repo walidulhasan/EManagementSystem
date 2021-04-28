@@ -7,16 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 
 namespace EManagementSystem
 {
     public partial class frmdashboard : Form
     {
+        
         public Point mouseLocation; //part of Mouse drag and droup
         public frmdashboard()
         {
             InitializeComponent();
+            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -126,6 +129,9 @@ namespace EManagementSystem
         {
             timer.Start();
             timer1.Start();
+            WindowsMediaPlayer wp = new WindowsMediaPlayer();
+            wp.URL = "dashboard.wav";
+            wp.controls.play();
             
         }
 

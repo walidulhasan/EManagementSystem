@@ -37,3 +37,10 @@ D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSys
 D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.frmBLocation.resources
 D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.csprojAssemblyReference.cache
 D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.MonthCalender.resources
+D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\bin\Debug\Interop.WMPLib.dll
+D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\bin\Debug\AxInterop.WMPLib.dll
+D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\Interop.WMPLib.dll
+D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\AxInterop.WMPLib.dll
+D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.csproj.ResolveComReference.cache
+D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.AllSalaryReports.resources
+D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.rpMsalary.resources

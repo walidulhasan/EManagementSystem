@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using WMPLib;
 
 namespace EManagementSystem
 {
@@ -66,6 +67,9 @@ namespace EManagementSystem
 
         private void frmview_Load(object sender, EventArgs e)
         {
+            WindowsMediaPlayer wp = new WindowsMediaPlayer();
+            wp.URL = "dashboard.wav";
+            wp.controls.play();
             dtview.BorderStyle = BorderStyle.None;
             dtview.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
             dtview.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;

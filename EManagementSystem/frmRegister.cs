@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
+using WMPLib;
 
 namespace EManagementSystem
 {
@@ -102,6 +103,13 @@ namespace EManagementSystem
         private void label8_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void frmRegister_Load(object sender, EventArgs e)
+        {
+            WindowsMediaPlayer wp = new WindowsMediaPlayer();
+            wp.URL = "dashboard.wav";
+            wp.controls.play();
         }
     }
 }

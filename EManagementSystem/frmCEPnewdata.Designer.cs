@@ -29,6 +29,7 @@ namespace EManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCEPnewdata));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -132,6 +133,8 @@ namespace EManagementSystem
             this.txtOFbranch = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label30 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -151,6 +154,7 @@ namespace EManagementSystem
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxofshow)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -369,6 +373,7 @@ namespace EManagementSystem
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label30);
             this.groupBox1.Controls.Add(this.PEcomboBoxMstatus);
             this.groupBox1.Controls.Add(this.rdFemale);
             this.groupBox1.Controls.Add(this.rdMale);
@@ -517,6 +522,7 @@ namespace EManagementSystem
             this.txtPENid.Name = "txtPENid";
             this.txtPENid.Size = new System.Drawing.Size(347, 38);
             this.txtPENid.TabIndex = 6;
+            this.txtPENid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPENid_KeyPress);
             // 
             // txtPEName
             // 
@@ -1513,6 +1519,19 @@ namespace EManagementSystem
             this.label19.TabIndex = 0;
             this.label19.Text = "Branch Code";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(283, 338);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(0, 14);
+            this.label30.TabIndex = 17;
+            // 
             // frmCEPnewdata
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1550,6 +1569,7 @@ namespace EManagementSystem
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxofshow)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1658,5 +1678,7 @@ namespace EManagementSystem
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBoxofshow;
         private System.Windows.Forms.Button picU;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label30;
     }
 }

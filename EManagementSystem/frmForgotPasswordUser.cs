@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace EManagementSystem
 {
@@ -47,6 +48,13 @@ namespace EManagementSystem
         {
             txtRecover.Text = "";
             label2.Text = "";
+        }
+
+        private void frmForgotPasswordUser_Load(object sender, EventArgs e)
+        {
+            WindowsMediaPlayer wp = new WindowsMediaPlayer();
+            wp.URL = "dashboard.wav";
+            wp.controls.play();
         }
     }
 }

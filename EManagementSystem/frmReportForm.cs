@@ -26,6 +26,10 @@ namespace EManagementSystem
 
         private void salaryRpeortInMonthToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            pictureBox1.Visible = false;
+            rpMsalary ms = new rpMsalary();
+            ms.MdiParent = this;
+            ms.Show();
         }
 
         private void employeeSalaryReportToolStripMenuItem_Click(object sender, EventArgs e)
@@ -38,7 +42,10 @@ namespace EManagementSystem
 
         private void salaryReportIndividualToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            pictureBox1.Visible = false;
+            frmCEPsearching iv = new frmCEPsearching();
+            iv.MdiParent = this;
+            iv.Show();
         }
     }
 }

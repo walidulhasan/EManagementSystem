@@ -29,6 +29,7 @@ namespace EManagementSystem
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmModify));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -111,6 +112,8 @@ namespace EManagementSystem
             this.btnSave = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -124,6 +127,7 @@ namespace EManagementSystem
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picsearchO)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -151,6 +155,7 @@ namespace EManagementSystem
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label24);
             this.groupBox1.Controls.Add(this.picInfoSearch);
             this.groupBox1.Controls.Add(this.picinfoNids);
             this.groupBox1.Controls.Add(this.comboBoxGender);
@@ -287,7 +292,7 @@ namespace EManagementSystem
             // txtPPhone
             // 
             this.txtPPhone.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPPhone.Location = new System.Drawing.Point(226, 393);
+            this.txtPPhone.Location = new System.Drawing.Point(226, 396);
             this.txtPPhone.Name = "txtPPhone";
             this.txtPPhone.Size = new System.Drawing.Size(347, 41);
             this.txtPPhone.TabIndex = 2;
@@ -319,6 +324,7 @@ namespace EManagementSystem
             this.txtPNid.Name = "txtPNid";
             this.txtPNid.Size = new System.Drawing.Size(347, 41);
             this.txtPNid.TabIndex = 2;
+            this.txtPNid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPNid_KeyPress);
             // 
             // txtPName
             // 
@@ -408,7 +414,7 @@ namespace EManagementSystem
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(63, 398);
+            this.label5.Location = new System.Drawing.Point(63, 401);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(144, 31);
             this.label5.TabIndex = 0;
@@ -1145,6 +1151,19 @@ namespace EManagementSystem
             this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(227, 379);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(0, 13);
+            this.label24.TabIndex = 7;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmModify
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1183,6 +1202,7 @@ namespace EManagementSystem
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picsearchO)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1270,5 +1290,7 @@ namespace EManagementSystem
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.ComboBox comboBoxGender;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -457,5 +457,19 @@ namespace EManagementSystem
                c.con.Close();
             }
         }
+
+        private void txtPNid_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.Handled = !char.IsDigit(e.KeyChar))
+            {
+                errorProvider1.SetError(label24, "Allow Only Number Values!!!");
+                label24.Text = "Allow Only Number Values!!!";
+            }
+            else
+            {
+                errorProvider1.SetError(label24, "");
+                label24.Text = "";
+            }
+        }
     }
 }

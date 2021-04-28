@@ -15,6 +15,7 @@ namespace EManagementSystem
         public AllSalaryReports()
         {
             InitializeComponent();
+            crystalReportViewer1.Visible = true;
         }
     }
 }

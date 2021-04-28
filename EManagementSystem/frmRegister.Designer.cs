@@ -284,6 +284,7 @@ namespace EManagementSystem
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "";
             this.Text = "frmRegister";
+            this.Load += new System.EventHandler(this.frmRegister_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

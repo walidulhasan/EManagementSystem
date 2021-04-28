@@ -407,6 +407,7 @@ namespace EManagementSystem
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCEPbranch";
             this.Text = "frmCEPbranch";
+            this.Load += new System.EventHandler(this.frmCEPbranch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using WMPLib;
 
 namespace EManagementSystem
 {
@@ -96,6 +97,43 @@ namespace EManagementSystem
                 mousePose.Offset(mouseLocation.X, mouseLocation.Y);
                 Location = mousePose;
             }
+        }
+
+        private void txtUsername_Validating(object sender, CancelEventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtUsername.Text))
+            {
+                e.Cancel = true;
+                txtUsername.Focus();
+                errorProvider1.SetError(txtUsername,"Please enter your user name !!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtUsername,null);
+            }
+        }
+
+        private void txtPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtPassword.Text))
+            {
+                e.Cancel = true;
+                txtUsername.Focus();
+                errorProvider1.SetError(txtPassword, "Please enter your user name !!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtPassword, null);
+            }
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            WindowsMediaPlayer wp = new WindowsMediaPlayer();
+            wp.URL = "dashboard.wav";
+            wp.controls.play();
         }
     }
 }

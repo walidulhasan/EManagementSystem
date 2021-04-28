@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
+
+
 namespace EManagementSystem
 {
     public partial class frmEmployeePage : Form
@@ -89,6 +92,13 @@ namespace EManagementSystem
         private void btnAbout_Click(object sender, EventArgs e)
         {
             openChildForm(new frmCEPabout());
+        }
+
+        private void panelChildForm_Paint(object sender, PaintEventArgs e)
+        {
+            WindowsMediaPlayer wp = new WindowsMediaPlayer();
+            wp.URL = "dashboard.wav";
+            wp.controls.play();
         }
     }
 }
