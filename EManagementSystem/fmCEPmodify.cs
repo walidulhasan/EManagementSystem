@@ -22,6 +22,7 @@ namespace EManagementSystem
             //academic_load();
             Branchcode_load();
         }
+       
         private void Branchcode_load()
         {
             try
@@ -55,10 +56,12 @@ namespace EManagementSystem
         private void btnClear_Click(object sender, EventArgs e)
         {
             ealldataclear();
+            
         }
         #region All Date Clear 
         private void ealldataclear()
         {
+            picU.Visible = false;
             comboBoxGender.SelectedIndex = -1;
             txtPEmail.Clear();
             txtPFatherName.Clear();
@@ -151,6 +154,7 @@ namespace EManagementSystem
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            picU.Visible = true;
             c.con.Open();
             SqlTransaction transaction = c.con.BeginTransaction();
             try
@@ -416,30 +420,30 @@ namespace EManagementSystem
                 SqlCommand cmd1 = new SqlCommand("UPDATE tblAcademic SET O_level='" + comboBoxAcOlevel.Text + "',O_result='" + txtACOresult.Text + "',A_level='" + comboBoxACalevel.Text + "',A_result='" + txtACaresult.Text + "',Intermediate_level='" + comboBoxIlevel.Text + "',Intermediate_result='" + txtACiresult.Text + "',eaHons='" + comboBoxAChonus.Text + "',Hons_result='" + txtACHresult.Text + "',eaMast='" + comboBoxACmasters.Text + "',Mast_result='" + txtACmresult.Text + "',eaSpecial='" + txtACspecialvalue.Text + "',Special_result='" + txtACsresult.Text + "' WHERE eaId='" + txtAid.Text + "'", c.con, transaction);
                 cmd1.ExecuteNonQuery();
 
-                
 
-                SqlCommand cmd2 = new SqlCommand("UPDATE tblEpersonla SET eTitle=@Title,eName=@Name,eDob=@Dateofbirth,eFatherName=@FatherName,eGender=@Gender,eNationalIdNo=@Nid,ePhoneNo=@Phone,eEmail=@Email,eSocialId=@SocialId,eMeritals=@MaritalS,eJoinDate=@Joindate,eImage=@Img,eaId=@Acid,eoId=@Ofid WHERE eId=@mid", c.con);
+
+                SqlCommand cmd2 = new SqlCommand("UPDATE tblEpersonla SET eTitle=@Title,eName=@Name,eDob=@Dateofbirth,eFatherName=@FatherName,eGender=@Gender,eNationalIdNo=@Nid,ePhoneNo=@Phone,eEmail=@Email,eSocialId=@SocialId,eMeritals=@MaritalS,eJoinDate=@Joindate,eaId=@Acid,eoId=@Ofid WHERE eId=@mid", c.con, transaction);
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@mid", txtPid.Text.Trim());
+                cmd.Parameters.AddWithValue("@mid", txtPid.Text);
 
-                byte[] img = null;
-                FileStream fs = new FileStream(imgloc, FileMode.Open, FileAccess.Read);
-                BinaryReader br = new BinaryReader(fs);
-                img = br.ReadBytes((int)fs.Length);
-                cmd.Parameters.AddWithValue("@Title", comboBoxPTitle.Text.Trim());
-                cmd.Parameters.AddWithValue("@Name", txtPName.Text.Trim());
+                //byte[] img = null;
+                //FileStream fs = new FileStream(imgloc, FileMode.Open, FileAccess.Read);
+                //BinaryReader br = new BinaryReader(fs);
+                //img = br.ReadBytes((int)fs.Length);
+                cmd.Parameters.AddWithValue("@Title", comboBoxPTitle.Text);
+                cmd.Parameters.AddWithValue("@Name", txtPName.Text);
                 cmd.Parameters.AddWithValue("@Dateofbirth", dateTimeDateofBirthP.Value);
-                cmd.Parameters.AddWithValue("@FatherName", txtPFatherName.Text.Trim());
-                cmd.Parameters.AddWithValue("@Gender", comboBoxGender.Text.Trim());
-                cmd.Parameters.AddWithValue("@Nid", txtPNid.Text.Trim());
-                cmd.Parameters.AddWithValue("@Phone", txtPPhone.Text.Trim());
-                cmd.Parameters.AddWithValue("@Email", txtPEmail.Text.Trim());
-                cmd.Parameters.AddWithValue("@SocialId", txtPSocialId.Text.Trim());
-                cmd.Parameters.AddWithValue("@MaritalS", comboBoxMaritalStatusP.Text.Trim());
+                cmd.Parameters.AddWithValue("@FatherName", txtPFatherName.Text);
+                cmd.Parameters.AddWithValue("@Gender", comboBoxGender.Text);
+                cmd.Parameters.AddWithValue("@Nid", txtPNid.Text);
+                cmd.Parameters.AddWithValue("@Phone", txtPPhone.Text);
+                cmd.Parameters.AddWithValue("@Email", txtPEmail.Text);
+                cmd.Parameters.AddWithValue("@SocialId", txtPSocialId.Text);
+                cmd.Parameters.AddWithValue("@MaritalS", comboBoxMaritalStatusP.Text);
                 cmd.Parameters.AddWithValue("@Joindate", dateTimeJoinDateP.Value);
-                cmd.Parameters.AddWithValue("@Img", img);
-                cmd.Parameters.AddWithValue("@Acid", txtACID.Text.Trim());
-                cmd.Parameters.AddWithValue("@Ofid", txtOfid.Text.Trim());
+                //cmd.Parameters.AddWithValue("@Img", img);
+                cmd.Parameters.AddWithValue("@Acid", txtACID.Text);
+                cmd.Parameters.AddWithValue("@Ofid", txtOfid.Text);
                 cmd.ExecuteNonQuery();
                 transaction.Commit();
                 MessageBox.Show("Data Updated Successfully!!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -470,6 +474,27 @@ namespace EManagementSystem
                 errorProvider1.SetError(label24, "");
                 label24.Text = "";
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmEBA eba = new frmEBA();
+            eba.Show();
+        }
+
+        private void picU_Click(object sender, EventArgs e)
+        {
+            c.con.Open();
+            byte[] img = null;
+            FileStream fs = new FileStream(imgloc, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(fs);
+            img = br.ReadBytes((int)fs.Length);
+            SqlCommand cmd = new SqlCommand("UPDATE tblEpersonla SET eImage=@Img WHERE eId=@mid", c.con);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@mid", txtPid.Text.Trim());
+            cmd.Parameters.AddWithValue("@Img", img);
+            cmd.ExecuteNonQuery();
+            c.con.Close();
         }
     }
 }

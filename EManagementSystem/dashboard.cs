@@ -170,5 +170,10 @@ namespace EManagementSystem
             MonthCalender moc = new MonthCalender();
             moc.Show();
         }
+
+        private void pictureBox7_DoubleClick(object sender, EventArgs e)
+        {
+            label16.Visible = false;
+        }
     }
 }

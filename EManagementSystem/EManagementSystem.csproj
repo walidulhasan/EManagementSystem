@@ -150,6 +150,12 @@
     <Compile Include="frmCEPsearching.Designer.cs">
       <DependentUpon>frmCEPsearching.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEBA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEBA.Designer.cs">
+      <DependentUpon>frmEBA.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNotice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCEPsearching.resx">
       <DependentUpon>frmCEPsearching.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEBA.resx">
+      <DependentUpon>frmEBA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNotice.resx">
       <DependentUpon>frmNotice.cs</DependentUpon>

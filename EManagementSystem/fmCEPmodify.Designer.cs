@@ -34,6 +34,7 @@ namespace EManagementSystem
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.picInfoSearch = new System.Windows.Forms.PictureBox();
             this.picinfoNids = new System.Windows.Forms.PictureBox();
             this.comboBoxGender = new System.Windows.Forms.ComboBox();
@@ -89,7 +90,6 @@ namespace EManagementSystem
             this.txtAid = new System.Windows.Forms.TextBox();
             this.picShow = new System.Windows.Forms.PictureBox();
             this.btnUpload = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.comboBoxOFBC = new System.Windows.Forms.ComboBox();
             this.txtOFbranch = new System.Windows.Forms.TextBox();
@@ -112,8 +112,9 @@ namespace EManagementSystem
             this.btnSave = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
-            this.label24 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.picU = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -124,7 +125,6 @@ namespace EManagementSystem
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picsearchA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picShow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picsearchO)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -190,6 +190,15 @@ namespace EManagementSystem
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personla";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(227, 379);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(0, 13);
+            this.label24.TabIndex = 7;
             // 
             // picInfoSearch
             // 
@@ -780,9 +789,9 @@ namespace EManagementSystem
             // picShow
             // 
             this.picShow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picShow.Location = new System.Drawing.Point(1063, 65);
+            this.picShow.Location = new System.Drawing.Point(1063, 92);
             this.picShow.Name = "picShow";
-            this.picShow.Size = new System.Drawing.Size(221, 187);
+            this.picShow.Size = new System.Drawing.Size(221, 165);
             this.picShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picShow.TabIndex = 2;
             this.picShow.TabStop = false;
@@ -804,16 +813,6 @@ namespace EManagementSystem
             this.btnUpload.UseVisualStyleBackColor = false;
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(0)))), ((int)(((byte)(5)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 841);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1299, 22);
-            this.dataGridView1.TabIndex = 4;
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.comboBoxOFBC);
@@ -833,9 +832,9 @@ namespace EManagementSystem
             this.groupBox3.Controls.Add(this.label27);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox3.Location = new System.Drawing.Point(1046, 319);
+            this.groupBox3.Location = new System.Drawing.Point(1046, 317);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(265, 504);
+            this.groupBox3.Size = new System.Drawing.Size(265, 501);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Branch Code";
@@ -1060,7 +1059,7 @@ namespace EManagementSystem
             this.btnClear.ForeColor = System.Drawing.Color.White;
             this.btnClear.Location = new System.Drawing.Point(898, 766);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(134, 61);
+            this.btnClear.Size = new System.Drawing.Size(134, 52);
             this.btnClear.TabIndex = 3;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -1077,7 +1076,7 @@ namespace EManagementSystem
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.Location = new System.Drawing.Point(544, 766);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(134, 61);
+            this.btnUpdate.Size = new System.Drawing.Size(134, 52);
             this.btnUpdate.TabIndex = 3;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -1094,7 +1093,7 @@ namespace EManagementSystem
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Location = new System.Drawing.Point(721, 766);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(134, 61);
+            this.btnDelete.Size = new System.Drawing.Size(134, 52);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -1111,7 +1110,7 @@ namespace EManagementSystem
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(13, 766);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(134, 61);
+            this.btnSave.Size = new System.Drawing.Size(134, 52);
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -1128,7 +1127,7 @@ namespace EManagementSystem
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Location = new System.Drawing.Point(367, 766);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(134, 61);
+            this.btnSearch.Size = new System.Drawing.Size(134, 52);
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -1145,32 +1144,60 @@ namespace EManagementSystem
             this.btnNext.ForeColor = System.Drawing.Color.White;
             this.btnNext.Location = new System.Drawing.Point(190, 766);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(134, 61);
+            this.btnNext.Size = new System.Drawing.Size(134, 52);
             this.btnNext.TabIndex = 3;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(227, 379);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(0, 13);
-            this.label24.TabIndex = 7;
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(287, 825);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(626, 42);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Data Show";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // picU
+            // 
+            this.picU.BackColor = System.Drawing.Color.DarkCyan;
+            this.picU.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picU.FlatAppearance.BorderSize = 2;
+            this.picU.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.picU.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.picU.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.picU.ForeColor = System.Drawing.Color.White;
+            this.picU.Location = new System.Drawing.Point(1119, 51);
+            this.picU.Name = "picU";
+            this.picU.Size = new System.Drawing.Size(108, 32);
+            this.picU.TabIndex = 4;
+            this.picU.Text = "Pic-Update";
+            this.picU.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.picU.UseVisualStyleBackColor = false;
+            this.picU.Visible = false;
+            this.picU.Click += new System.EventHandler(this.picU_Click);
             // 
             // frmModify
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1323, 870);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(1323, 911);
+            this.Controls.Add(this.picU);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnDelete);
@@ -1198,7 +1225,6 @@ namespace EManagementSystem
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picsearchA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picShow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picsearchO)).EndInit();
@@ -1215,7 +1241,6 @@ namespace EManagementSystem
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.PictureBox picShow;
         private System.Windows.Forms.Button btnUpload;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnUpdate;
@@ -1292,5 +1317,7 @@ namespace EManagementSystem
         private System.Windows.Forms.ComboBox comboBoxGender;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button picU;
     }
 }

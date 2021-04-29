@@ -44,3 +44,4 @@ D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\AxInterop.WMPL
 D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.csproj.ResolveComReference.cache
 D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.AllSalaryReports.resources
 D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.rpMsalary.resources
+D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.frmEBA.resources
