@@ -14,6 +14,7 @@ namespace EManagementSystem
 {
     public partial class frmLogin : Form
     {
+        int count = 1;
         public Point mouseLocation;
         //SqlConnection con = new SqlConnection(@"Data Source=WALIDULHASAN\MAHMUDSABUJ;Initial Catalog=EMS;Integrated Security=True");
         Connection c = new Connection();
@@ -54,21 +55,52 @@ namespace EManagementSystem
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            c.con.Open();
-            SqlCommand cmd = new SqlCommand(@"SELECT * FROM loginInfo WHERE userName='"+txtUsername.Text+"' and userPassword='"+txtPassword.Text+"'", c.con);
-            SqlDataReader dr = cmd.ExecuteReader();
-            if (dr.Read()== true)
+            try
             {
-                frmdashboard fdb = new frmdashboard();
-                fdb.Show();
-                this.Close();
+                if (count < 4)
+                {
+                    c.con.Open();
+                    SqlCommand cmd = new SqlCommand(@"SELECT * FROM loginInfo WHERE userName='" + txtUsername.Text + "' and userPassword='" + txtPassword.Text + "'", c.con);
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.Read() == true)
+                    {
+                        if (DialogResult.Yes == MessageBox.Show("Do You Want Login ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                        {
+                            frmdashboard fdb = new frmdashboard();
+                            fdb.Show();
+                            this.Close();
+                        }
+                        else
+                        {
+                            c.con.Close();
+                            MessageBox.Show("As your Wish");
+                        }
+
+                    }
+                    else
+                    {
+                        //MessageBox.Show("Invalid Username or Password,Please Correct data provide", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Try again and the no. of attempt is" + count, "information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //dataclear();
+                        c.con.Close();
+                    }
+                }
+                else if (count == 4)
+                {
+                    MessageBox.Show("Login attemtp exceed");
+                    c.con.Open();
+                    SqlCommand cmd = new SqlCommand(@"UPDATE loginInfo SET userPassword='admin' WHERE userName='" + txtUsername.Text + "'", c.con);
+                    cmd.ExecuteNonQuery();
+                    c.con.Close();
+                    pictureBox4.Visible = true;
+                }
+                count++;
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Invalid Username or Password,Please Correct data provide","Login Failed",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                dataclear();
-                c.con.Close();
+                MessageBox.Show(ex.Message);
             }
+    
             
         }
         private void dataclear()
@@ -134,6 +166,15 @@ namespace EManagementSystem
             WindowsMediaPlayer wp = new WindowsMediaPlayer();
             wp.URL = "dashboard.wav";
             wp.controls.play();
+        }
+
+        private void pictureBox4_DoubleClick(object sender, EventArgs e)
+        {
+            this.Close();
+            frmForgotPasswordUser fps = new frmForgotPasswordUser();
+            fps.lblbl.Enabled = false;
+            fps.label3.Visible = true;
+            fps.ShowDialog();
         }
     }
 }
