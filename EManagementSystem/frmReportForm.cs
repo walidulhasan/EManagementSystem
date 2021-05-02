@@ -47,5 +47,13 @@ namespace EManagementSystem
             iv.MdiParent = this;
             iv.Show();
         }
+
+        private void allBonusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Visible = false;
+            rpBonus bo = new rpBonus();
+            bo.MdiParent = this;
+            bo.Show();
+        }
     }
 }

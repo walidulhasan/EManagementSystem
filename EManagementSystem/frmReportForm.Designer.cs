@@ -55,6 +55,7 @@ namespace EManagementSystem
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.allBonusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -75,7 +76,8 @@ namespace EManagementSystem
             this.employeeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.employeeSalaryReportToolStripMenuItem,
             this.salaryReportIndividualToolStripMenuItem,
-            this.salaryRpeortInMonthToolStripMenuItem});
+            this.salaryRpeortInMonthToolStripMenuItem,
+            this.allBonusToolStripMenuItem});
             this.employeeToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employeeToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
@@ -256,6 +258,13 @@ namespace EManagementSystem
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // allBonusToolStripMenuItem
+            // 
+            this.allBonusToolStripMenuItem.Name = "allBonusToolStripMenuItem";
+            this.allBonusToolStripMenuItem.Size = new System.Drawing.Size(365, 34);
+            this.allBonusToolStripMenuItem.Text = "All Bonus";
+            this.allBonusToolStripMenuItem.Click += new System.EventHandler(this.allBonusToolStripMenuItem_Click);
+            // 
             // frmReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,5 +315,6 @@ namespace EManagementSystem
         private System.Windows.Forms.ToolStripMenuItem salaryReportIndividualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salaryRpeortInMonthToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem allBonusToolStripMenuItem;
     }
 }

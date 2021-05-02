@@ -382,7 +382,7 @@ namespace EManagementSystem
             comboBoxPEId.SelectedIndex = -1;
             PEcomboBoxMstatus.SelectedIndex = -1;
             PEcomboBoxTitle.SelectedIndex = -1;
-            PEpicShow.ImageLocation = null;
+            PEpicShow.Image = null;
             txid.Clear();
             picU.Visible = false;
             btnPESave.Enabled = true;

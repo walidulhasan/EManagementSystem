@@ -72,7 +72,7 @@ namespace EManagementSystem
             txtPSocialId.Clear();
             dateTimeDateofBirthP.Value = DateTime.Now;
             dateTimeJoinDateP.Value = DateTime.Now.AddDays(10);
-            picShow.ImageLocation = null;
+            picShow.Image = null;
             comboBoxPTitle.SelectedIndex = -1;
             comboBoxMaritalStatusP.SelectedIndex = -1;
             txtAid.Text = "";

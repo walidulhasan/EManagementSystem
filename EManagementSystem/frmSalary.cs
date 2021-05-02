@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -105,7 +106,7 @@ namespace EManagementSystem
             try
             {
                 c.con.Open();
-                SqlDataAdapter sda = new SqlDataAdapter("SELECT eId FROM tblEpersonla", c.con);
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT eId FROM tblEpersonla ORDER BY eId", c.con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 c.con.Close();
@@ -135,7 +136,7 @@ namespace EManagementSystem
             txtMedAllow.Clear();
             txtTravAllow.Clear();
             comboBox.SelectedIndex = -1;
-            pictureBox1.ImageLocation = null;
+            picturebo.Image = null;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -363,5 +364,25 @@ namespace EManagementSystem
             }
         }
 
+        private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlCommand cmd = new SqlCommand("select eImage from tblEpersonla where eId='" +comboBox.Text+ "'", c.con);
+            c.con.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read() == true)
+            {
+                byte[] img = (byte[])(dr[0]);
+                if (img == null)
+                {
+                    picturebo.Image = null;
+                }
+                else
+                {
+                    MemoryStream ms = new MemoryStream(img);
+                    picturebo.Image = Image.FromStream(ms);
+                }
+            }
+            c.con.Close();
+        }
     }
 }

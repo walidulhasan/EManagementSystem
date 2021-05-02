@@ -37,6 +37,7 @@ namespace EManagementSystem
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -72,7 +73,6 @@ namespace EManagementSystem
             this.button1 = new System.Windows.Forms.Button();
             this.btnEditing = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -198,6 +198,15 @@ namespace EManagementSystem
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Salary Making";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(229, 113);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(0, 23);
+            this.label10.TabIndex = 6;
+            // 
             // pictureBox12
             // 
             this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -312,6 +321,7 @@ namespace EManagementSystem
             this.comboBox.Name = "comboBox";
             this.comboBox.Size = new System.Drawing.Size(214, 35);
             this.comboBox.TabIndex = 8;
+            this.comboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
             // txtGpfCpf
             // 
@@ -606,15 +616,6 @@ namespace EManagementSystem
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(229, 113);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(0, 23);
-            this.label10.TabIndex = 6;
             // 
             // frmSalary
             // 

@@ -186,6 +186,24 @@
       <DependentUpon>allsalary.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Report\RPindividualSReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPindividualSReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\salarywithbonus.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>salarywithbonus.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rpBonus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rpBonus.Designer.cs">
+      <DependentUpon>rpBonus.cs</DependentUpon>
+    </Compile>
     <Compile Include="rpMsalary.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -324,6 +342,17 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>allsalary1.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\RPindividualSReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPindividualSReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\salarywithbonus.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>salarywithbonus.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpBonus.resx">
+      <DependentUpon>rpBonus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="rpMsalary.resx">
       <DependentUpon>rpMsalary.cs</DependentUpon>
     </EmbeddedResource>
@@ -375,6 +404,7 @@
     <EmbeddedResource Include="SocialCon\youtube.resx">
       <DependentUpon>youtube.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Fonts\IDAutomationHC39M Code 39 Barcode.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

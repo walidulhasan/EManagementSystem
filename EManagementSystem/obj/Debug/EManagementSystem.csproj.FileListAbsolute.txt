@@ -62,3 +62,4 @@ D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\bin\Debug\CrystalDecisio
 D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\bin\Debug\AxShockwaveFlashObjects.dll
 D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\Project\2.C#\EManagementSystem\EMS\EManagementSystem\obj\Debug\EManagementSystem.rpBonus.resources
