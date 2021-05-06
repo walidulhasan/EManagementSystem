@@ -86,6 +86,8 @@ namespace EManagementSystem
         {
             GC.Collect();
             this.Close();
+            frmdashboard db = (frmdashboard)Application.OpenForms["frmdashboard"];
+            db.WindowState = FormWindowState.Normal;
         }
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)

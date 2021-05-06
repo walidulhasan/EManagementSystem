@@ -28,7 +28,10 @@ namespace EManagementSystem
         #region Exit application
         private void btnexit_Click(object sender, EventArgs e)
         {
+            GC.Collect();
             this.Close();
+            frmdashboard db = (frmdashboard)Application.OpenForms["frmdashboard"];
+            db.WindowState = FormWindowState.Normal;
         }
         #endregion
         #region For Child Form Load

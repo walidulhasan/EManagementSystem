@@ -265,52 +265,59 @@ namespace EManagementSystem
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            c.con.Open();
-            SqlTransaction transaction = c.con.BeginTransaction();
-            try
+            if (txtPNid.TextLength==13)
             {
-                SqlCommand cmd1 = new SqlCommand("INSERT INTO tblAcademic VALUES ('" + txtACID.Text + "','" + comboBoxAcOlevel.Text + "','" + txtACOresult.Text + "','" + comboBoxACalevel.Text + "','" + txtACaresult.Text + "','" + comboBoxIlevel.Text + "','" + txtACiresult.Text + "','" + comboBoxAChonus.Text + "','" + txtACHresult.Text + "','" + comboBoxACmasters.Text + "','" + txtACmresult.Text + "','" + txtACspecialvalue.Text + "','" + txtACsresult.Text + "')", c.con, transaction);
-                cmd1.CommandType = CommandType.Text;
-                cmd1.ExecuteNonQuery();
+                c.con.Open();
+                SqlTransaction transaction = c.con.BeginTransaction();
+                try
+                {
+                    SqlCommand cmd1 = new SqlCommand("INSERT INTO tblAcademic VALUES ('" + txtACID.Text + "','" + comboBoxAcOlevel.Text + "','" + txtACOresult.Text + "','" + comboBoxACalevel.Text + "','" + txtACaresult.Text + "','" + comboBoxIlevel.Text + "','" + txtACiresult.Text + "','" + comboBoxAChonus.Text + "','" + txtACHresult.Text + "','" + comboBoxACmasters.Text + "','" + txtACmresult.Text + "','" + txtACspecialvalue.Text + "','" + txtACsresult.Text + "')", c.con, transaction);
+                    cmd1.CommandType = CommandType.Text;
+                    cmd1.ExecuteNonQuery();
 
-                byte[] img = null;
-                FileStream fs = new FileStream(imgloc, FileMode.Open, FileAccess.Read);
-                BinaryReader br = new BinaryReader(fs);
-                img = br.ReadBytes((int)fs.Length);
+                    byte[] img = null;
+                    FileStream fs = new FileStream(imgloc, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    img = br.ReadBytes((int)fs.Length);
 
-                SqlCommand cmd2 = new SqlCommand("INSERT INTO tblOfficial VALUES('" + txtOfid.Text + "','" + comboBoxOFPri.Text + "','" + comboBoxOFPre.Text + "','" + comboBoxOFPro.Text + "','" + comboBoxOFBC.Text + "','" + txtOFbranch.Text + "')", c.con, transaction);
-                cmd2.CommandType = CommandType.Text;
-                cmd2.ExecuteNonQuery();
-                transaction.Commit();
-                
-                SqlCommand cmd = new SqlCommand("INSERT INTO tblEpersonla VALUES(@Title,@Name,@Dateofbirth,@FatherName,@Gender,@Nid,@Phone,@Email,@SocialId,@MaritalS,@Joindate,@Img,@Acid,@Ofid)", c.con, transaction);
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@Title", comboBoxPTitle.Text.Trim());
-                cmd.Parameters.AddWithValue("@Name", txtPName.Text.Trim());
-                cmd.Parameters.AddWithValue("@Dateofbirth", dateTimeDateofBirthP.Value);
-                cmd.Parameters.AddWithValue("@FatherName", txtPFatherName.Text.Trim());
-                cmd.Parameters.AddWithValue("@Gender", comboBoxGender.Text.Trim());
-                cmd.Parameters.AddWithValue("@Nid", txtPNid.Text.Trim());
-                cmd.Parameters.AddWithValue("@Phone", txtPPhone.Text.Trim());
-                cmd.Parameters.AddWithValue("@Email", txtPEmail.Text.Trim());
-                cmd.Parameters.AddWithValue("@SocialId", txtPSocialId.Text.Trim());
-                cmd.Parameters.AddWithValue("@MaritalS", comboBoxMaritalStatusP.Text.Trim());
-                cmd.Parameters.AddWithValue("@Joindate", dateTimeJoinDateP.Value);
-                cmd.Parameters.AddWithValue("@Img", img);
-                cmd.Parameters.AddWithValue("@Acid", txtACID.Text);
-                cmd.Parameters.AddWithValue("@Ofid", txtOfid.Text);
-                cmd.ExecuteNonQuery();
-                c.con.Close();
-                MessageBox.Show("Data Inserted Successfully!!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ealldataclear();
-                //academic_load();
+                    SqlCommand cmd2 = new SqlCommand("INSERT INTO tblOfficial VALUES('" + txtOfid.Text + "','" + comboBoxOFPri.Text + "','" + comboBoxOFPre.Text + "','" + comboBoxOFPro.Text + "','" + comboBoxOFBC.Text + "','" + txtOFbranch.Text + "')", c.con, transaction);
+                    cmd2.CommandType = CommandType.Text;
+                    cmd2.ExecuteNonQuery();
+                    transaction.Commit();
+
+                    SqlCommand cmd = new SqlCommand("INSERT INTO tblEpersonla VALUES(@Title,@Name,@Dateofbirth,@FatherName,@Gender,@Nid,@Phone,@Email,@SocialId,@MaritalS,@Joindate,@Img,@Acid,@Ofid)", c.con, transaction);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@Title", comboBoxPTitle.Text.Trim());
+                    cmd.Parameters.AddWithValue("@Name", txtPName.Text.Trim());
+                    cmd.Parameters.AddWithValue("@Dateofbirth", dateTimeDateofBirthP.Value);
+                    cmd.Parameters.AddWithValue("@FatherName", txtPFatherName.Text.Trim());
+                    cmd.Parameters.AddWithValue("@Gender", comboBoxGender.Text.Trim());
+                    cmd.Parameters.AddWithValue("@Nid", txtPNid.Text.Trim());
+                    cmd.Parameters.AddWithValue("@Phone", txtPPhone.Text.Trim());
+                    cmd.Parameters.AddWithValue("@Email", txtPEmail.Text.Trim());
+                    cmd.Parameters.AddWithValue("@SocialId", txtPSocialId.Text.Trim());
+                    cmd.Parameters.AddWithValue("@MaritalS", comboBoxMaritalStatusP.Text.Trim());
+                    cmd.Parameters.AddWithValue("@Joindate", dateTimeJoinDateP.Value);
+                    cmd.Parameters.AddWithValue("@Img", img);
+                    cmd.Parameters.AddWithValue("@Acid", txtACID.Text);
+                    cmd.Parameters.AddWithValue("@Ofid", txtOfid.Text);
+                    cmd.ExecuteNonQuery();
+                    c.con.Close();
+                    MessageBox.Show("Data Inserted Successfully!!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ealldataclear();
+                    //academic_load();
+                }
+                catch (Exception)
+                {
+                    //transaction.Rollback();
+                    MessageBox.Show("Insert Failed. Some data is already exists", "Failed", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    c.con.Close();
+                }
             }
-            catch (Exception)
+            else
             {
-                //transaction.Rollback();
-                MessageBox.Show("Insert Failed. Some data is already exists", "Failed", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                MessageBox.Show("Nid will be 13 digite");
             }
-
         }
 
         private void btnNext_Click(object sender, EventArgs e)

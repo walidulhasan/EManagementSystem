@@ -27,6 +27,8 @@ namespace EManagementSystem
         {
             GC.Collect();
             this.Close();
+            frmdashboard db = (frmdashboard)Application.OpenForms["frmdashboard"];
+            db.WindowState = FormWindowState.Normal;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

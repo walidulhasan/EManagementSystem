@@ -20,6 +20,11 @@ namespace EManagementSystem
         private void btnexit_Click(object sender, EventArgs e)
         {
             this.Close();
+            //frmdashboard db = (frmdashboard)Application.OpenForms["frmdashboard"];
+            //db.WindowState = FormWindowState.Normal;
+
+            frmdashboard mo = (frmdashboard)Application.OpenForms["frmdashboard"];
+            mo.WindowState = FormWindowState.Normal;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

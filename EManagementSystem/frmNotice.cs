@@ -103,8 +103,11 @@ namespace EManagementSystem
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
+            GC.Collect();
             this.Close();
-            
+            frmdashboard db = (frmdashboard)Application.OpenForms["frmdashboard"];
+            db.WindowState = FormWindowState.Normal;
+
         }
         private void datashow()
         {

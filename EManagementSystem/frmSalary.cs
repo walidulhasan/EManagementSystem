@@ -27,6 +27,8 @@ namespace EManagementSystem
         {
             GC.Collect();
             this.Close();
+            frmdashboard db = (frmdashboard)Application.OpenForms["frmdashboard"];
+            db.WindowState = FormWindowState.Normal;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -179,6 +181,8 @@ namespace EManagementSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+
+
             }
             
         }
@@ -260,6 +264,7 @@ namespace EManagementSystem
                         cmd.CommandType = CommandType.Text;
                         cmd.Parameters.AddWithValue("@ID", textBoxSearch.Text.Trim());
                         cmd.ExecuteNonQuery();
+                        c.con.Close();
                         MessageBox.Show("Data Deleted", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         salarydataclear();
                         tblESalary_load();
@@ -268,9 +273,6 @@ namespace EManagementSystem
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message);
-                    }
-                    finally
-                    {
                         c.con.Close();
                     }
                 }

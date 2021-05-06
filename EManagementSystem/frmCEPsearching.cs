@@ -25,6 +25,8 @@ namespace EManagementSystem
         {
             GC.Collect();
             this.Close();
+            frmdashboard db = (frmdashboard)Application.OpenForms["frmdashboard"];
+            db.WindowState = FormWindowState.Normal;
         }
         private void tbldata_load()
         {

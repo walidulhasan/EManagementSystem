@@ -61,6 +61,8 @@ namespace EManagementSystem
         {
             GC.Collect();
             this.Close();
+            frmdashboard db = (frmdashboard)Application.OpenForms["frmdashboard"];
+            db.WindowState = FormWindowState.Normal;
         }
         #region OFFICE WITH OTHER TAB SECTION
         private void btnOFclear_Click(object sender, EventArgs e)
@@ -471,63 +473,70 @@ namespace EManagementSystem
 
         private void btnPESave_Click(object sender, EventArgs e)
         {
-            try
+            if (txtPENid.TextLength==13 && txtPEName.Text!=null && txtPEFatherName.Text!=null && txtPEPhone.Text!=null && PEcomboBoxMstatus.Text!=null && comboBoxPEId.Text!=null && comboBox2PEid.Text!=null)
             {
-                byte[] img = null;
-                FileStream fs = new FileStream(imgloc, FileMode.Open, FileAccess.Read);
-                BinaryReader br = new BinaryReader(fs);
-                img = br.ReadBytes((int)fs.Length);
-                if (rdMale.Checked == true)
+                try
                 {
-                    gnd = "Male";
-                }
-                else if (rdFemale.Checked == true)
-                {
-                    gnd = "Female";
-                }
-                else
-                {
-                    MessageBox.Show("Can't Select Gender!!");
-                }
-                
-                if (txtPENid.TextLength == 13)
-                {
-                    nid = txtPENid.Text;
-                }
-                else
-                {
-                    MessageBox.Show("Your NID will be 13 digit Like\n 1993123323456", "NID info...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    
-                }
-                
-                SqlCommand cmd = new SqlCommand("INSERT INTO tblEpersonla VALUES(@Title,@Name,@Dateofbirth,@FatherName,@Gender,@Nid,@Phone,@Email,@SocialId,@MaritalS,@Joindate,@Img,@Acid,@Ofid)", c.con);
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@Title", PEcomboBoxTitle.Text.Trim());
-                cmd.Parameters.AddWithValue("@Name", txtPEName.Text.Trim());
-                cmd.Parameters.AddWithValue("@Dateofbirth", PEdateTimeDateofBirth.Value);
-                cmd.Parameters.AddWithValue("@FatherName", txtPEFatherName.Text.Trim());
-                cmd.Parameters.AddWithValue("@Gender", gnd);
-                cmd.Parameters.AddWithValue("@Nid", nid);
-                cmd.Parameters.AddWithValue("@Phone", txtPEPhone.Text.Trim());
-                cmd.Parameters.AddWithValue("@Email", txtPEEmail.Text.Trim());
-                cmd.Parameters.AddWithValue("@SocialId", txtPESocialId.Text.Trim());
-                cmd.Parameters.AddWithValue("@MaritalS", PEcomboBoxMstatus.Text.Trim());
-                cmd.Parameters.AddWithValue("@Joindate", PEdateTimeJoinDate.Value);
-                cmd.Parameters.AddWithValue("@Img", img);
-                cmd.Parameters.AddWithValue("@Acid", comboBoxPEId.Text.Trim());
-                cmd.Parameters.AddWithValue("@Ofid", comboBox2PEid.Text.Trim());
-                c.con.Open();
-                cmd.ExecuteNonQuery();
-                c.con.Close();
-                MessageBox.Show("Data Inserted Successfully!", "Sucessful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tabPersonal_info_load();
-            }
-            catch (Exception ex)
-            {
+                    byte[] img = null;
+                    FileStream fs = new FileStream(imgloc, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    img = br.ReadBytes((int)fs.Length);
+                    if (rdMale.Checked == true)
+                    {
+                        gnd = "Male";
+                    }
+                    else if (rdFemale.Checked == true)
+                    {
+                        gnd = "Female";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Can't Select Gender!!");
+                    }
 
-                MessageBox.Show(ex.Message);
+                    if (txtPENid.TextLength == 13)
+                    {
+                        nid = txtPENid.Text;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Your NID will be 13 digit Like\n 1993123323456", "NID info...", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    }
+
+                    SqlCommand cmd = new SqlCommand("INSERT INTO tblEpersonla VALUES(@Title,@Name,@Dateofbirth,@FatherName,@Gender,@Nid,@Phone,@Email,@SocialId,@MaritalS,@Joindate,@Img,@Acid,@Ofid)", c.con);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@Title", PEcomboBoxTitle.Text.Trim());
+                    cmd.Parameters.AddWithValue("@Name", txtPEName.Text.Trim());
+                    cmd.Parameters.AddWithValue("@Dateofbirth", PEdateTimeDateofBirth.Value);
+                    cmd.Parameters.AddWithValue("@FatherName", txtPEFatherName.Text.Trim());
+                    cmd.Parameters.AddWithValue("@Gender", gnd);
+                    cmd.Parameters.AddWithValue("@Nid", nid);
+                    cmd.Parameters.AddWithValue("@Phone", txtPEPhone.Text.Trim());
+                    cmd.Parameters.AddWithValue("@Email", txtPEEmail.Text.Trim());
+                    cmd.Parameters.AddWithValue("@SocialId", txtPESocialId.Text.Trim());
+                    cmd.Parameters.AddWithValue("@MaritalS", PEcomboBoxMstatus.Text.Trim());
+                    cmd.Parameters.AddWithValue("@Joindate", PEdateTimeJoinDate.Value);
+                    cmd.Parameters.AddWithValue("@Img", img);
+                    cmd.Parameters.AddWithValue("@Acid", comboBoxPEId.Text.Trim());
+                    cmd.Parameters.AddWithValue("@Ofid", comboBox2PEid.Text.Trim());
+                    c.con.Open();
+                    cmd.ExecuteNonQuery();
+                    c.con.Close();
+                    MessageBox.Show("Data Inserted Successfully!", "Sucessful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    tabPersonal_info_load();
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                    c.con.Close();
+                }
             }
-            
+            else
+            {
+                MessageBox.Show("Can't taken Null and NID will must be 13 digits");
+            }
 
         }
 
@@ -591,24 +600,35 @@ namespace EManagementSystem
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                c.con.Close();
             }
         }
         private void picU_Click(object sender, EventArgs e)
         {
-            c.con.Open();
-            byte[] img = null;
-            FileStream fs = new FileStream(imgloc, FileMode.Open, FileAccess.Read);
-            BinaryReader br = new BinaryReader(fs);
-            img = br.ReadBytes((int)fs.Length);
-            SqlCommand cmd = new SqlCommand("UPDATE tblEpersonla SET eImage=@Img WHERE eId=@mid", c.con);
-            cmd.CommandType = CommandType.Text;
-            cmd.Parameters.AddWithValue("@mid", txid.Text.Trim());
-            cmd.Parameters.AddWithValue("@Img", img);
-            cmd.ExecuteNonQuery();
-            tabPersonal_info_load();
-            c.con.Close();
+            
+             try
+             {
+                 c.con.Open();
+                 byte[] img = null;
+                 FileStream fs = new FileStream(imgloc, FileMode.Open, FileAccess.Read);
+                 BinaryReader br = new BinaryReader(fs);
+                 img = br.ReadBytes((int)fs.Length);
+                 SqlCommand cmd = new SqlCommand("UPDATE tblEpersonla SET eImage=@Img WHERE eId=@mid", c.con);
+                 cmd.CommandType = CommandType.Text;
+                 cmd.Parameters.AddWithValue("@mid", txid.Text.Trim());
+                 cmd.Parameters.AddWithValue("@Img", img);
+                 cmd.ExecuteNonQuery();
+                 tabPersonal_info_load();
+                c.con.Close();
+                MessageBox.Show("Picture Updated Successful!!");
+             }
+             catch (Exception ex)
+             {
+                 MessageBox.Show(ex.Message);
+                 c.con.Close();
+             }
+            
 
         } 
 

@@ -29,7 +29,15 @@ namespace EManagementSystem
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             GC.Collect();
+            frmdashboard db = (frmdashboard)Application.OpenForms["frmdashboard"];
+            db.WindowState = FormWindowState.Normal;
             this.Close();
+            //this.minimized;
+            //frmview uf = new frmview();
+            //uf.ShowDialog(this);
+            //frmdashboard db = new frmdashboard();
+            //db.WindowState = FormWindowState.Normal;
+            //db.Show();
         }
         public Point mouseLocation; //part of Mouse drag and droup
         private void mousedown(object sender, MouseEventArgs e)
