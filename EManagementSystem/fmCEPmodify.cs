@@ -154,100 +154,111 @@ namespace EManagementSystem
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            picU.Visible = true;
-            c.con.Open();
-            SqlTransaction transaction = c.con.BeginTransaction();
-            try
+            if (txtPid.Enabled==false && txtAid.Enabled==false && txtOid.Enabled==false)
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM tblEpersonla WHERE eId=@ID", c.con, transaction);
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@ID", txtPid.Text);
-                SqlDataReader dr = cmd.ExecuteReader();
-                if (dr.Read())
+                txtPid.Enabled = true;
+                txtAid.Enabled = true;
+                txtOid.Enabled = true;
+                MessageBox.Show("Read TXET box is Active now");
+            }
+            else
+            {
+                picU.Visible = true;
+                c.con.Open();
+                SqlTransaction transaction = c.con.BeginTransaction();
+                try
                 {
-                    comboBoxPTitle.Text = dr[1].ToString();
-                    txtPName.Text = dr[2].ToString();
-                    dateTimeDateofBirthP.Value = (DateTime)dr[3];
-                    txtPFatherName.Text = dr[4].ToString();
-                    comboBoxGender.Text = dr[5].ToString();
-                    txtPNid.Text = dr[6].ToString();
-                    txtPPhone.Text = dr[7].ToString();
-                    txtPEmail.Text = dr[8].ToString();
-                    txtPSocialId.Text = dr[9].ToString();
-                    comboBoxMaritalStatusP.Text = dr[10].ToString();
-                    dateTimeJoinDateP.Value = (DateTime)dr[11];
-                    byte[] img = (byte[])(dr[12]);
-                    if (img == null)
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM tblEpersonla WHERE eId=@ID", c.con, transaction);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@ID", txtPid.Text);
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.Read())
                     {
-                        picShow.Image = null;
+                        comboBoxPTitle.Text = dr[1].ToString();
+                        txtPName.Text = dr[2].ToString();
+                        dateTimeDateofBirthP.Value = (DateTime)dr[3];
+                        txtPFatherName.Text = dr[4].ToString();
+                        comboBoxGender.Text = dr[5].ToString();
+                        txtPNid.Text = dr[6].ToString();
+                        txtPPhone.Text = dr[7].ToString();
+                        txtPEmail.Text = dr[8].ToString();
+                        txtPSocialId.Text = dr[9].ToString();
+                        comboBoxMaritalStatusP.Text = dr[10].ToString();
+                        dateTimeJoinDateP.Value = (DateTime)dr[11];
+                        byte[] img = (byte[])(dr[12]);
+                        if (img == null)
+                        {
+                            picShow.Image = null;
+                        }
+                        else
+                        {
+                            MemoryStream ms = new MemoryStream(img);
+                            picShow.Image = Image.FromStream(ms);
+                        }
+                        txtACID.Text = dr[13].ToString();
+                        txtOfid.Text = dr[14].ToString();
                     }
                     else
                     {
-                        MemoryStream ms = new MemoryStream(img);
-                        picShow.Image = Image.FromStream(ms);
+                        MessageBox.Show("Data Not Found !!!\n Provide Correct ID", "Personal ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    txtACID.Text = dr[13].ToString();
-                    txtOfid.Text = dr[14].ToString();
-                }
-                else
-                {
-                    MessageBox.Show("Data Not Found !!!\n Provide Correct ID", "Personal ID", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                dr.Close();
+                    dr.Close();
 
-                SqlCommand cmd1 = new SqlCommand("SELECT * FROM tblAcademic WHERE eaId=@ID", c.con, transaction);
-                cmd1.CommandType = CommandType.Text;
-                cmd1.Parameters.AddWithValue("@ID", txtAid.Text);
-                SqlDataReader dr1 = cmd1.ExecuteReader();
-                if (dr1.Read())
-                {
-                    comboBoxAcOlevel.Text = dr1[1].ToString();
-                    txtACOresult.Text = dr1[2].ToString();
-                    comboBoxACalevel.Text = dr1[3].ToString();
-                    txtACaresult.Text = dr1[4].ToString();
-                    comboBoxIlevel.Text = dr1[5].ToString();
-                    txtACiresult.Text = dr1[6].ToString();
-                    comboBoxAChonus.Text = dr1[7].ToString();
-                    txtACHresult.Text = dr1[8].ToString();
-                    comboBoxACmasters.Text = dr1[9].ToString();
-                    txtACmresult.Text = dr1[10].ToString();
-                    txtACspecialvalue.Text = dr1[11].ToString();
-                    txtACsresult.Text = dr1[12].ToString();
-                }
-                else
-                {
-                    MessageBox.Show("Data Not Found !!!\n Provide Correct ID", "Academic ID", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
-                }
-                dr1.Close();
+                    SqlCommand cmd1 = new SqlCommand("SELECT * FROM tblAcademic WHERE eaId=@ID", c.con, transaction);
+                    cmd1.CommandType = CommandType.Text;
+                    cmd1.Parameters.AddWithValue("@ID", txtAid.Text);
+                    SqlDataReader dr1 = cmd1.ExecuteReader();
+                    if (dr1.Read())
+                    {
+                        comboBoxAcOlevel.Text = dr1[1].ToString();
+                        txtACOresult.Text = dr1[2].ToString();
+                        comboBoxACalevel.Text = dr1[3].ToString();
+                        txtACaresult.Text = dr1[4].ToString();
+                        comboBoxIlevel.Text = dr1[5].ToString();
+                        txtACiresult.Text = dr1[6].ToString();
+                        comboBoxAChonus.Text = dr1[7].ToString();
+                        txtACHresult.Text = dr1[8].ToString();
+                        comboBoxACmasters.Text = dr1[9].ToString();
+                        txtACmresult.Text = dr1[10].ToString();
+                        txtACspecialvalue.Text = dr1[11].ToString();
+                        txtACsresult.Text = dr1[12].ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data Not Found !!!\n Provide Correct ID", "Academic ID", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                    }
+                    dr1.Close();
 
-                SqlCommand cmd2 = new SqlCommand("SELECT * FROM tblOfficial WHERE eoId=@ID", c.con, transaction);
-                cmd2.CommandType = CommandType.Text;
-                cmd2.Parameters.AddWithValue("@ID",txtOid.Text);
-                SqlDataReader dr2 = cmd2.ExecuteReader();
-                if (dr2.Read())
-                {
-                    comboBoxOFPri.Text = dr2[1].ToString();
-                    comboBoxOFPre.Text = dr2[2].ToString();
-                    comboBoxOFPro.Text = dr2[3].ToString();
-                    comboBoxOFBC.Text = dr2[4].ToString();
-                    txtOFbranch.Text = dr2[5].ToString();
+                    SqlCommand cmd2 = new SqlCommand("SELECT * FROM tblOfficial WHERE eoId=@ID", c.con, transaction);
+                    cmd2.CommandType = CommandType.Text;
+                    cmd2.Parameters.AddWithValue("@ID", txtOid.Text);
+                    SqlDataReader dr2 = cmd2.ExecuteReader();
+                    if (dr2.Read())
+                    {
+                        comboBoxOFPri.Text = dr2[1].ToString();
+                        comboBoxOFPre.Text = dr2[2].ToString();
+                        comboBoxOFPro.Text = dr2[3].ToString();
+                        comboBoxOFBC.Text = dr2[4].ToString();
+                        txtOFbranch.Text = dr2[5].ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data Not Found !!!\n Provide Correct ID", "Official ID ", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                    }
+                    dr2.Close();
+                    transaction.Commit();
                 }
-                else
+                catch (Exception)
                 {
-                    MessageBox.Show("Data Not Found !!!\n Provide Correct ID", "Official ID ", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                    transaction.Rollback();
+                    MessageBox.Show("ID is needed to make the search operation", "Failed", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                 }
-                dr2.Close();
-                transaction.Commit();
+                finally
+                {
+                    c.con.Close();
+                }
             }
-            catch (Exception)
-            {
-                transaction.Rollback();
-                MessageBox.Show("ID is needed to make the search operation", "Failed", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                c.con.Close();
-            }
+            
 
 
         }
@@ -502,6 +513,13 @@ namespace EManagementSystem
             cmd.Parameters.AddWithValue("@Img", img);
             cmd.ExecuteNonQuery();
             c.con.Close();
+        }
+
+        private void frmModify_Load(object sender, EventArgs e)
+        {
+            txtPid.Enabled = false;
+            txtAid.Enabled = false;
+            txtOid.Enabled = false;
         }
     }
 }

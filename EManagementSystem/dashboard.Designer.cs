@@ -110,7 +110,7 @@ namespace EManagementSystem
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1088, 58);
+            this.panel1.Size = new System.Drawing.Size(960, 58);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouse_Down);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouse_Move);
@@ -120,7 +120,7 @@ namespace EManagementSystem
             this.pictureBox3.BackColor = System.Drawing.Color.Navy;
             this.pictureBox3.ErrorImage = null;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(960, 11);
+            this.pictureBox3.Location = new System.Drawing.Point(840, 11);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(42, 33);
@@ -133,7 +133,7 @@ namespace EManagementSystem
             // 
             this.pictureBox2.ErrorImage = null;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1021, 11);
+            this.pictureBox2.Location = new System.Drawing.Point(901, 11);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(46, 33);
@@ -160,10 +160,10 @@ namespace EManagementSystem
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox16);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 756);
+            this.panel2.Location = new System.Drawing.Point(0, 710);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1088, 25);
+            this.panel2.Size = new System.Drawing.Size(960, 25);
             this.panel2.TabIndex = 1;
             // 
             // label1
@@ -171,7 +171,7 @@ namespace EManagementSystem
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(992, 3);
+            this.label1.Location = new System.Drawing.Point(872, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 16);
             this.label1.TabIndex = 1;
@@ -181,7 +181,7 @@ namespace EManagementSystem
             // 
             this.pictureBox16.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
-            this.pictureBox16.Location = new System.Drawing.Point(1051, 3);
+            this.pictureBox16.Location = new System.Drawing.Point(931, 3);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(26, 19);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -194,7 +194,7 @@ namespace EManagementSystem
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(498, 93);
+            this.label2.Location = new System.Drawing.Point(382, 84);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 37);
@@ -207,7 +207,7 @@ namespace EManagementSystem
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.ErrorImage = null;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(71, 207);
+            this.pictureBox4.Location = new System.Drawing.Point(16, 190);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(122, 165);
@@ -221,7 +221,7 @@ namespace EManagementSystem
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label3.Location = new System.Drawing.Point(62, 375);
+            this.label3.Location = new System.Drawing.Point(7, 358);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(141, 30);
@@ -232,7 +232,7 @@ namespace EManagementSystem
             // 
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(232, 207);
+            this.pictureBox5.Location = new System.Drawing.Point(177, 190);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(122, 165);
@@ -246,7 +246,7 @@ namespace EManagementSystem
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label4.Location = new System.Drawing.Point(571, 375);
+            this.label4.Location = new System.Drawing.Point(516, 358);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 30);
@@ -257,7 +257,7 @@ namespace EManagementSystem
             // 
             this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(393, 207);
+            this.pictureBox6.Location = new System.Drawing.Point(338, 190);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(122, 165);
@@ -271,7 +271,7 @@ namespace EManagementSystem
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label5.Location = new System.Drawing.Point(398, 374);
+            this.label5.Location = new System.Drawing.Point(343, 357);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(125, 30);
@@ -282,7 +282,7 @@ namespace EManagementSystem
             // 
             this.picSalary.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picSalary.Image = ((System.Drawing.Image)(resources.GetObject("picSalary.Image")));
-            this.picSalary.Location = new System.Drawing.Point(554, 207);
+            this.picSalary.Location = new System.Drawing.Point(499, 190);
             this.picSalary.Margin = new System.Windows.Forms.Padding(2);
             this.picSalary.Name = "picSalary";
             this.picSalary.Size = new System.Drawing.Size(122, 165);
@@ -296,7 +296,7 @@ namespace EManagementSystem
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label6.Location = new System.Drawing.Point(255, 375);
+            this.label6.Location = new System.Drawing.Point(200, 358);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 30);
@@ -307,7 +307,7 @@ namespace EManagementSystem
             // 
             this.picSearching.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picSearching.Image = ((System.Drawing.Image)(resources.GetObject("picSearching.Image")));
-            this.picSearching.Location = new System.Drawing.Point(715, 207);
+            this.picSearching.Location = new System.Drawing.Point(660, 190);
             this.picSearching.Margin = new System.Windows.Forms.Padding(2);
             this.picSearching.Name = "picSearching";
             this.picSearching.Size = new System.Drawing.Size(122, 165);
@@ -321,7 +321,7 @@ namespace EManagementSystem
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label7.Location = new System.Drawing.Point(83, 612);
+            this.label7.Location = new System.Drawing.Point(28, 595);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(99, 30);
@@ -332,7 +332,7 @@ namespace EManagementSystem
             // 
             this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(876, 207);
+            this.pictureBox9.Location = new System.Drawing.Point(821, 190);
             this.pictureBox9.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(122, 165);
@@ -346,7 +346,7 @@ namespace EManagementSystem
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label8.Location = new System.Drawing.Point(889, 375);
+            this.label8.Location = new System.Drawing.Point(834, 358);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(97, 30);
@@ -357,7 +357,7 @@ namespace EManagementSystem
             // 
             this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(71, 444);
+            this.pictureBox10.Location = new System.Drawing.Point(16, 427);
             this.pictureBox10.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(122, 165);
@@ -370,7 +370,7 @@ namespace EManagementSystem
             // 
             this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(232, 444);
+            this.pictureBox11.Location = new System.Drawing.Point(177, 427);
             this.pictureBox11.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(125, 162);
@@ -383,7 +383,7 @@ namespace EManagementSystem
             // 
             this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(396, 444);
+            this.pictureBox12.Location = new System.Drawing.Point(341, 427);
             this.pictureBox12.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(120, 162);
@@ -396,7 +396,7 @@ namespace EManagementSystem
             // 
             this.pictureBox13.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(555, 444);
+            this.pictureBox13.Location = new System.Drawing.Point(500, 427);
             this.pictureBox13.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(123, 162);
@@ -408,10 +408,10 @@ namespace EManagementSystem
             // 
             this.pictureBox14.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(877, 444);
+            this.pictureBox14.Location = new System.Drawing.Point(822, 427);
             this.pictureBox14.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(135, 162);
+            this.pictureBox14.Size = new System.Drawing.Size(121, 162);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 3;
             this.pictureBox14.TabStop = false;
@@ -420,7 +420,7 @@ namespace EManagementSystem
             // 
             this.pictureBox15.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(717, 444);
+            this.pictureBox15.Location = new System.Drawing.Point(662, 427);
             this.pictureBox15.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(121, 162);
@@ -433,7 +433,7 @@ namespace EManagementSystem
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label9.Location = new System.Drawing.Point(550, 609);
+            this.label9.Location = new System.Drawing.Point(495, 592);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(132, 30);
@@ -445,7 +445,7 @@ namespace EManagementSystem
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label10.Location = new System.Drawing.Point(878, 609);
+            this.label10.Location = new System.Drawing.Point(823, 592);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(132, 30);
@@ -457,7 +457,7 @@ namespace EManagementSystem
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label11.Location = new System.Drawing.Point(711, 609);
+            this.label11.Location = new System.Drawing.Point(656, 592);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(132, 30);
@@ -469,7 +469,7 @@ namespace EManagementSystem
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label12.Location = new System.Drawing.Point(706, 375);
+            this.label12.Location = new System.Drawing.Point(651, 358);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(141, 30);
@@ -481,7 +481,7 @@ namespace EManagementSystem
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label13.Location = new System.Drawing.Point(230, 612);
+            this.label13.Location = new System.Drawing.Point(175, 595);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(129, 30);
@@ -493,7 +493,7 @@ namespace EManagementSystem
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label14.Location = new System.Drawing.Point(411, 612);
+            this.label14.Location = new System.Drawing.Point(356, 595);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(90, 30);
@@ -549,7 +549,7 @@ namespace EManagementSystem
             this.groupBox1.Controls.Add(this.lblDate);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.groupBox1.Location = new System.Drawing.Point(791, 74);
+            this.groupBox1.Location = new System.Drawing.Point(656, 67);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(236, 99);
             this.groupBox1.TabIndex = 9;
@@ -572,9 +572,9 @@ namespace EManagementSystem
             // 
             this.panel3.Controls.Add(this.label15);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 722);
+            this.panel3.Location = new System.Drawing.Point(0, 676);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1088, 34);
+            this.panel3.Size = new System.Drawing.Size(960, 34);
             this.panel3.TabIndex = 10;
             // 
             // label15
@@ -582,7 +582,7 @@ namespace EManagementSystem
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label15.Location = new System.Drawing.Point(1063, 7);
+            this.label15.Location = new System.Drawing.Point(940, 7);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(325, 20);
             this.label15.TabIndex = 0;
@@ -598,7 +598,7 @@ namespace EManagementSystem
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Red;
-            this.label16.Location = new System.Drawing.Point(1064, 8);
+            this.label16.Location = new System.Drawing.Point(941, 8);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(519, 25);
             this.label16.TabIndex = 0;
@@ -609,16 +609,16 @@ namespace EManagementSystem
             // 
             this.panel4.Controls.Add(this.label16);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 687);
+            this.panel4.Location = new System.Drawing.Point(0, 641);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1088, 35);
+            this.panel4.Size = new System.Drawing.Size(960, 35);
             this.panel4.TabIndex = 11;
             // 
             // pictureBox8
             // 
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(1033, 83);
+            this.pictureBox8.Location = new System.Drawing.Point(898, 76);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(43, 86);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -631,7 +631,7 @@ namespace EManagementSystem
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
-            this.ClientSize = new System.Drawing.Size(1088, 781);
+            this.ClientSize = new System.Drawing.Size(960, 735);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);

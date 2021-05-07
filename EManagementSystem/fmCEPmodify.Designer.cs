@@ -1213,6 +1213,7 @@ namespace EManagementSystem
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmModify";
             this.Text = "frmNewData";
+            this.Load += new System.EventHandler(this.frmModify_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
