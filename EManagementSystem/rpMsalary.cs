@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CrystalDecisions.CrystalReports.Engine;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CrystalDecisions.Shared;
 
 namespace EManagementSystem
 {
@@ -72,6 +74,21 @@ namespace EManagementSystem
             label4.Visible = false;
             tblESalary_load();
             label3.Visible = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //ReportDocument cryRpt = new ReportDocument();
+
+            //cryRpt.Load(@"D:\Project\2.C#\Windows Form Application\EMS\EManagementSystem\Report\salarywithbonus.rpt");
+
+            //crystalReportViewer1.ReportSource = cryRpt;
+
+            //crystalReportViewer1.Refresh();
+
+            //cryRpt.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, @"D:\ASD.pdf");
+
+            //MessageBox.Show("Exported Successful");
         }
     }
 }
